@@ -1,0 +1,56 @@
+.btn-xl {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
+  border-radius: 0;
+  font-size: 16px;
+  padding: 5px 30px;
+  font-weight: bold;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    //text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.btn-green{
+    background-color: $green; cursor:pointer;
+    color: #ffffff;
+}
+
+.btn-blue{
+    background-color: $oe-blue; cursor:pointer;
+}
+
+a.btn-green:focus, a.btn-green:hover,
+a.btn-blue:focus, a.btn-blue:hover {
+    cursor:pointer;
+    color: white;
+    transition: 0.4s;
+    background-color: darken($green,15%);
+}
+
+a.btn-blue:focus, a.btn-blue:hover {
+    cursor:pointer;
+    color: white;
+    transition: 0.4s;
+    background-color: darken($oe-blue,15%);
+}
+
+
+.btn-default{
+    background-color: #ccc;
+
+}
+
+.btn.disabled, .btn:disabled {
+    color: white;
+}
