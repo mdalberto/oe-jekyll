@@ -22,13 +22,30 @@ button.accordion {
 }
 
 .btn-green{
-    background-color: $green; cursor:pointer;
+    background-color: $green;
+    cursor:pointer;
     color: #ffffff;
 }
 
 .btn-blue{
-    background-color: $oe-blue; cursor:pointer;
+    background-color: $oe-blue;
+    cursor:pointer;
 }
+
+.btn-white{
+    border-color: $oe-blue;
+    color: $gray;
+    cursor:pointer;
+}
+
+.btn-gray2{
+    border-color: $oe-blue;
+    color: $gray;
+    cursor:pointer;
+        margin-bottom: 5px;
+
+}
+
 
 a.btn-green:focus, a.btn-green:hover,
 a.btn-blue:focus, a.btn-blue:hover {
@@ -48,6 +65,7 @@ a.btn-blue:focus, a.btn-blue:hover {
 
 .btn-default{
     background-color: #ccc;
+    color:white;
 
 }
 

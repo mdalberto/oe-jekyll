@@ -33,6 +33,14 @@ $( "#last-input" ).change(function() {
 });
 
 
+$( "#clickme" ).click(function() {
+  $( "#book" ).slideUp( "slow", function() {
+    // Animation complete.
+  });
+});
+
+
+
 
 // $(document).ready(function() {
 //   $('#user-form input').change(function() {
@@ -48,30 +56,35 @@ $( "#last-input" ).change(function() {
 
 $(function () {
 
-    $('#user-form input').blur(function()
-    {
+$('#user-form input').blur(function(){
     if( !$(this).val() ) {
-        $('#user-continue').attr('disabled');
-        $('#user-continue').addClass("btn-default");
-        $('#user-continue').removeClass("btn-green");
+        $('#user-btn-disabled').show();
+        $('#user-continue').hide();
     } 
 });
 
 
-    $("#birth, #first-input, #last-input, #phone-input").bind("change keyup", function () {      
+$("#birth, #first-input, #last-input, #phone-input").bind("change keyup", function () {      
     if (!$('#users').is(":visible") && $("#birth").val() != "" && $("#last-input").val() != "" && $("#first-input").val() != "" && $("#last-input").val() != "" && $("#phone-input").val() != ""){
-          $('#user-continue').removeAttr("disabled");
-        $('#user-continue').removeClass("btn-default");
-        $('#user-continue').addClass("btn-green");
+        $('#user-btn-disabled').hide();
+        $('#user-continue').show();
     }else{
-        $('#user-continue').attr('disabled');
-        $('#user-continue').addClass("btn-default");
-        $('#user-continue').removeClass("btn-green");
+        $('#user-btn-disabled').show();
+        $('#user-continue').hide();
     }
     });
 });
 
 
+$("#first-input2, #last-input2, #email-input2, #city-input2, #zip2").bind("change keyup", function () {      
+    if (!$('#users').is(":visible") && $("#first-input2").val() != "" && $("#last-input2").val() != "" && $("#email-input2").val() != "" && $("#city-input2").val() != "" && $("#zip2").val() != ""){
+        $('#user-btn-disabled').hide();
+        $('#user-continue').show();
+    }else{
+        $('#user-btn-disabled').show();
+        $('#user-continue').hide();
+    }
+    });
 
 // function enableForm(){
 //         $('#user-continue').removeAttr("disabled");
