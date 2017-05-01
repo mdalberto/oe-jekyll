@@ -1,4 +1,11 @@
 //
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+
 $(document).ready(function(){
     $('#transcript1').show();
 });
@@ -39,8 +46,11 @@ $( "#clickme" ).click(function() {
   });
 });
 
-
-
+ 
+// $( ".btn-package" ).click(function() {
+//   $(".btn-package" ).removeClass('btn-yellow');
+//   $(this).addClass('btn-yellow');
+// });
 
 // $(document).ready(function() {
 //   $('#user-form input').change(function() {

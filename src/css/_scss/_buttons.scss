@@ -1,3 +1,17 @@
+.btn{
+    padding: 0.75rem 1rem;
+}
+
+// reset btn-sm again
+.btn-sm, .btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-input-height{
+    padding: 0.5rem 1rem;
+}
+
 .btn-xl {
   color: #fff;
   background-color: $green;
@@ -44,6 +58,20 @@ button.accordion {
     cursor:pointer;
         margin-bottom: 5px;
 
+}
+
+.btn-yellow{
+    border-color: $yellow;
+       background-color: $oe-pale-yellow;
+    color: $gray;
+    cursor:pointer;
+        margin-bottom: 5px;
+
+}
+
+.btn-package:hover{
+     cursor:pointer !important;
+     background-color: $oe-pale-yellow !important;
 }
 
 
