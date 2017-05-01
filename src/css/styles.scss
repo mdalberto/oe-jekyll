@@ -4,7 +4,7 @@
 // This is the main scss index file which will 
 // pull everything together from _scss folder.
 
-@import "vars";
+@import "vars.scss";
 @import "_vendor/bootstrap/bootstrap";
 @import "_vendor/bootstrap/mixins/_breakpoints.scss";
 @import "_vendor/font-awesome.min.scss";
