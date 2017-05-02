@@ -23,14 +23,20 @@ permalink: /newbie-form3/
       <div class="row mt-5">
         <div class="col-md-4">
           <p class=" bold text-muted ">Credit Card </p>
-                    <p class="mb-4">Some helpful transcript can go here</p>
+          <p class="mb-4">Some helpful transcript can go here</p>
         </div>
         <div class=" col-md-8 col-lg-7">
           <div class="form-group row">
             <label for="first-input2" class="col-xs-12 col-md-3 col-form-label">Credit Card</label>
             <div class="col-md-7">
-              <input class="form-control" type="text" id="first-input2">
+              <div class="input-group">
+                <input type="text" class="form-control" id="first-input2">
+                <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button" id="useAni">Use IVR</button>
+            </span>
+              </div>
             </div>
+
           </div>
 
           <div class="form-group row">
@@ -194,7 +200,7 @@ permalink: /newbie-form3/
 
       <div class="row mt-5">
         <div class="col-md-4">
-          <p class=" bold text-muted ">Marketing Extras </p>
+          <p class=" bold text-muted ">Marketing Opt Ins </p>
                     <p class="mb-4">Some helpful transcript can go here</p>
         </div>
         <div class=" col-md-8 col-lg-7">
@@ -203,24 +209,30 @@ permalink: /newbie-form3/
 
 
           <div class="form-group row">
-            <label class="col-xs-12 col-md-3 col-form-label">Package</label>
+            <label class="col-xs-12 col-md-3 col-form-label">Kindness</label>
             <div class="col-md-7">
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                    $30.00 for 30 minutes
+                    <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios1" value="option1">
+                    Futures Without Violence  
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                    $20.00 for 20 minutes
+                    <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios2" value="option2">
+                    National Center for Housing & Child Welfare  
                   </label>
                 </div>
                 <div class="form-check ">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
-                    $10.00 for 10 minutes
+                    <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios3" value="option3" >
+                    Paws With a Cause 
+                  </label>
+                </div>
+                <div class="form-check ">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios2" id="gridRadios4" value="option4"  checked>
+                    No thanks
                   </label>
                 </div>
               </div>
@@ -228,60 +240,62 @@ permalink: /newbie-form3/
 
 
 
-         
-
-
-
           <div class="form-group row">
-            <label for="birth" class="col-xs-12 col-md-3 col-form-label">Experation</label>
+            <label for="birth" class="col-xs-12 col-md-3 col-form-label">Rewards</label>
             <div class="col-md-7">
               <div class="row">
-            <div class="col pr-0">
-              <select class="form-control" id="gender-select">
-              <option>Jan</option>
-             </select>
-
-            </div>
-            <div class="col">
-              <select class="form-control" id="gender-select2">
-            <option>2017</option>
-          </select>
-            </div>
+                <div class="col-md-7">
+                    <select class="form-control" id="gender-select">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+   
           </div>
           </div>
           </div>
 
           <div class="form-group row">
-            <label for="last-input" class="col-xs-12 col-md-3 col-form-label">Security Code</label>
-            <div class="col-6 col-sm-3 col-md-3 col-lg-2">
-              <input class="form-control" type="text" id="last-input2">
-            </div>
-          </div>
+            <label class="col-xs-12 col-md-3 col-form-label">Heard about us</label>
+               <div class="col-md-7">
+                    <select class="form-control" id="gender-select">
+                    <option>From a Friend</option>
+                    <option>Newspaper</option>
+                    <option>Magazine</option>
+                    <option>Internet</option>
+                    <option>TV</option>
+                    <option>Radio</option>
+                    <option>From a Friend</option>
+                    <option >Unspecified</option>
+                  </select>
+                </div>
+              </div>
 
 
 
-
-
-                <a href="{{ site.baseurl }}/newbie-form" class="btn btn-gray2 mt-4 " >Back</a>  
-                <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-green btn-fixed mt-4" id="user-continue" style="display:none" >Continue</a>   
+                <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-gray2 mt-4 " >Back</a>  
+                <a href="{{ site.baseurl }}/newbie-form4" class="btn btn-green btn-fixed mt-4" id="user-continue" style="display:none" >Continue</a>   
                 <div class="btn btn-default btn-fixed mt-4" id="user-btn-disabled" >Continue</div> 
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
+         </div>
 
 
         </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr class="mt-5 mb-3" />
+
+        
       </div>
 
 
@@ -289,9 +303,9 @@ permalink: /newbie-form3/
 
 
     </form>
-    <hr class="mt-5 mb-3" />
+
    
   </div>
-
+</div>
 
 </section>
