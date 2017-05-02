@@ -64,6 +64,23 @@ $( "#clickme" ).click(function() {
 //   });
 // });
 
+
+$('#capture1').on('click', function(){
+    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
+    $(this).hide();
+    $('#capturedCC').show();
+    return false;
+});
+
+$('#capture2').on('click', function(){
+    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
+
+    $('#capturedCC').hide();
+    $('#capturedCC').show('slow');
+    return false;
+});
+
+
 $(function () {
 
 $('#user-form input').blur(function(){
@@ -94,7 +111,7 @@ $("#first-input2, #last-input2, #email-input2, #city-input2, #zip2").bind("chang
         $('#user-btn-disabled').show();
         $('#user-continue').hide();
     }
-    });
+});
 
 // function enableForm(){
 //         $('#user-continue').removeAttr("disabled");

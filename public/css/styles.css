@@ -8873,6 +8873,9 @@ h1, h3 {
   font-size: 20px;
   margin-bottom: 3px; }
 
+h5, .h5 {
+  font-size: 1.1rem; }
+
 .h1-home {
   font-size: 26px; }
 
