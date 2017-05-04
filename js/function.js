@@ -80,6 +80,42 @@ $('#capture2').on('click', function(){
     return false;
 });
 
+$('#capture3').on('click', function(){
+    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
+    $('#captureCC').hide();
+    $('#capturedCC').show('slow');
+    return false;
+});
+
+$('#capture4').on('click', function(){
+    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
+
+    $('#capturedCC').hide();
+    $('#captureCC').show('slow');
+    return false;
+});
+
+$('#capture5').on('click', function(){
+    $('#capturedCC').hide();
+    $('#captureCC').hide();
+    return false;
+});
+
+$('#btn-matches').on('click', function(){
+    $('.footer2').css('bottom', '-290px');
+    $(this).hide();
+    $('#btn-matches2').show();
+    return false;
+});
+
+$('#btn-matches2').on('click', function(){
+    $('.footer2').css('bottom', '0px');
+    $(this).hide();
+    $('#btn-matches').show();
+    return false;
+});
+
+
 
 $(function () {
 
@@ -118,3 +154,34 @@ $("#first-input2, #last-input2, #email-input2, #city-input2, #zip2").bind("chang
 //         $('#user-continue').removeClass("btn-default");
 //         $('#user-continue').addClass("btn-green");
 // }
+
+
+/// bootstrap accordian add carots
+// $('#creditcardaccordion').on('shown.bs.collapse', function(){
+//     alert('he');
+// $(this).find(".accordion-toggle i.fa-caret-right").removeClass("fa-caret-right").addClass("fa-caret-down");
+// }).on('hidden.bs.collapse', function(){
+// $(this).find(".accordion-toggle i.fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-right");
+// });
+
+// function toggleIcon() {
+//     //$(this).parent().parent().find('.more-less').toggleClass('fa-caret-down fa-caret-right ');
+
+//     $('.card-heading')
+//         .find(".more-less")
+//         .toggleClass('fa-caret-right fa-caret-down');
+// }
+// $('#creditcardaccordion').on('hidden.bs.collapse', toggleIcon);
+// $('#creditcardaccordion').on('shown.bs.collapse', toggleIcon);
+
+/*******************************
+* ACCORDION WITH TOGGLE ICONS
+*******************************/
+	function toggleIcon(e) {
+        $(e.target).parent().find('.more-less').toggleClass('fa-caret-right fa-caret-down');
+        console.log( $(e.target).parent() );
+    }
+
+    $('#creditcardaccordion').on('hidden.bs.collapse', toggleIcon);
+    $('#creditcardaccordion').on('shown.bs.collapse', toggleIcon);
+

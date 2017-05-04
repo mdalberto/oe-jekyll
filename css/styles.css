@@ -8676,8 +8676,12 @@ body {
   padding-top: 55px;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 16px;
-  line-height: 25px;
+  line-height: inherit;
   background-color: #ececec; }
+
+.container-fluid > .row > .col-6 {
+  padding-right: 35px;
+  padding-left: 35px; }
 
 .navbar {
   min-height: 20px; }
@@ -8754,6 +8758,36 @@ hr {
 .users hr {
   margin-bottom: 5px;
   margin-top: 5px; }
+
+.footer, .footer2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  line-height: 60px;
+  background-color: #f5f5f5; }
+  .footer .container, .footer2 .container {
+    background-color: white; }
+
+.footer2 {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  line-height: 60px;
+  background-color: #f5f5f5;
+  z-index: 1000; }
+
+.card {
+  background-color: transparent; }
+
+.modal-lg {
+  max-width: 80%; }
+
+.modal-header, .modal-footer {
+  border: none; }
+
+.modal-body h3 {
+  margin-top: -40px; }
 
 .btn {
   padding: 0.75rem 1rem; }
@@ -8836,6 +8870,15 @@ a.btn-blue:focus, a.btn-blue:hover {
 .btn.disabled, .btn:disabled {
   color: white; }
 
+.btn-match {
+  padding: 0px 20px;
+  margin-top: -60px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -111px;
+  background-color: white; }
+
 .sections {
   color: red; }
 
@@ -8886,6 +8929,13 @@ a {
   color: #0275d8;
   font-weight: normal; }
 
+.text-small {
+  font-size: 13px;
+  line-height: 15px; }
+
+p {
+  line-height: 25px; }
+
 .tip {
   margin-top: 12px;
   margin-left: 5px; }
@@ -8912,3 +8962,7 @@ div.panel {
   background-color: #464a4c;
   display: none;
   border-radius: 0; }
+
+.transcript-panel {
+  padding: 20px;
+  background-color: white; }
