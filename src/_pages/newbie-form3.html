@@ -2,6 +2,7 @@
 layout: default 
 title: Newbie Script 1 
 permalink: /newbie-form3/ 
+prototype: 1
 ---
 
 <section id="services">
@@ -23,31 +24,31 @@ permalink: /newbie-form3/
                 </div>
 
                 <div class="col-md-8 col-lg-7">
-                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div id="creditcardaccordion" role="tablist" aria-multiselectable="true">
                         <div class="card">
                             <div class="card-header" role="tab" id="headingOne">
                                 <h5 class="mb-0">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Enter via IVR
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#creditcardaccordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="more-less fa fa-caret-down fa-lg"></i>  Enter via IVR
                                     </a>
                                 </h5>
                             </div>
 
                             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="card-block">
-                                    <a href="/" id="capture1" class="btn btn-green">Capture</a>
+                                    <a href="/" id="capture1" class="btn btn-primary btn-sm">Capture</a>
 
                                     <div id="capturedCC" style="display:none">
 
                                         <div class="form-group row">
-                                            <label for="first-input22" class="col-xs-12 col-md-3 col-form-label">Credit Card</label>
+                                            <label for="cc-numb" class="col-xs-12 col-md-3 col-form-label">Credit Card</label>
                                             <div class="col-md-7">
-                                                <input class="form-control" type="text" id="first-input22" placeholder="*******************" readonly>
+                                                <input class="form-control" type="text" id="cc-numb" placeholder="*******************" readonly>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="birth" class="col-xs-12 col-md-3 col-form-label">Experation</label>
+                                            <label for="experation" class="col-xs-12 col-md-3 col-form-label">Experation</label>
                                             <div class="col-md-7">
                                                 <div class="row">
 
@@ -71,9 +72,9 @@ permalink: /newbie-form3/
 
                                         </div>
                                         <div class="form-group row">
-                                            <label for="last-input" class="col-xs-12 col-md-3 col-form-label">Security Code</label>
+                                            <label for="security-code" class="col-xs-12 col-md-3 col-form-label">Security Code</label>
                                             <div class="col-6 col-sm-3 col-md-3 col-lg-2">
-                                                <input class="form-control" type="text" id="last-input2" placeholder="****" readonly>
+                                                <input class="form-control" type="text" id="security-code" placeholder="****" readonly>
                                             </div>
                                         </div>
                                         <a href="" id="capture2" class="btn btn-primary btn-sm">Redo</a>
@@ -85,8 +86,8 @@ permalink: /newbie-form3/
                         <div class="card">
                             <div class="card-header" role="tab" id="headingTwo">
                                     <h5 class="mb-0">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Enter Manually
+                                        <a class="accordion-toggle" class="collapsed" data-toggle="collapse" data-parent="#creditcardaccordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="more-less fa fa-caret-right fa-lg"></i> Enter Manually
                                         </a>
                                     </h5>
                                 </div>
@@ -94,14 +95,14 @@ permalink: /newbie-form3/
                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="card-block">
                                     <div class="form-group row">
-                                        <label for="first-input2" class="col-xs-12 col-md-3 col-form-label">Credit Card</label>
+                                        <label for="cc-numb2" class="col-xs-12 col-md-3 col-form-label">Credit Card</label>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" id="first-input2">
+                                            <input class="form-control" type="text" id="cc-numb2">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="birth" class="col-xs-12 col-md-3 col-form-label">Experation</label>
+                                        <label for="experation2" class="col-xs-12 col-md-3 col-form-label">Experation</label>
                                         <div class="col-md-7">
                                             <div class="row">
                                                 <div class="col pr-0">
@@ -120,9 +121,9 @@ permalink: /newbie-form3/
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="last-input" class="col-xs-12 col-md-3 col-form-label">Security Code</label>
+                                        <label for="security2" class="col-xs-12 col-md-3 col-form-label">Security Code</label>
                                         <div class="col-6 col-sm-3 col-md-3 col-lg-2">
-                                            <input class="form-control" type="text" id="last-input2">
+                                            <input class="form-control" type="text" id="security2">
                                         </div>
                                     </div>
                                 </div>
@@ -141,40 +142,40 @@ permalink: /newbie-form3/
                 <div class=" col-md-8 col-lg-7">
 
                     <div class="form-group row">
-                        <label for="email-input" class="col-xs-12 col-md-3 col-form-label">Address 1</label>
+                        <label for="address1-input" class="col-xs-12 col-md-3 col-form-label">Address 1</label>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" id="email-input2">
+                            <input class="form-control" type="text" >
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="email-input" class="col-xs-12 col-md-3 col-form-label">Address 2</label>
+                        <label for="address2-input" class="col-xs-12 col-md-3 col-form-label">Address 2</label>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" id="email-input0">
+                            <input class="form-control" type="text" >
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="City-input" class="col-xs-12 col-md-3 col-form-label">City/Town</label>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" id="city-input2">
+                            <input class="form-control" type="text" >
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="gender-select" class="col-xs-12 col-md-3 col-form-label">State/Province</label>
+                        <label for="state-select" class="col-xs-12 col-md-3 col-form-label">State/Province</label>
                         <div class="col-md-7">
 
-                            <select class="form-control" id="gender-select">
+                            <select class="form-control" >
                                 <option>PA</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="zip" class="col-xs-12 col-md-3 col-form-label">Zip</label>
+                        <label for="zip23" class="col-xs-12 col-md-3 col-form-label">Zip</label>
                         <div class="col-8 col-sm-5 col-md-6 col-lg-4">
-                            <input class="form-control" id="zip2" name="zip" type="text" />
+                            <input class="form-control"  name="zip" type="text" />
                         </div>
                     </div>
 
@@ -195,7 +196,7 @@ permalink: /newbie-form3/
                     <div class="form-group row">
                         <label for="first-input2" class="col-xs-12 col-md-3 col-form-label">DNIS</label>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" id="first-input2" placeholder="1-800-956-3049">
+                            <input class="form-control" type="text" placeholder="1-800-956-3049">
                         </div>
                     </div>
 
@@ -205,14 +206,6 @@ permalink: /newbie-form3/
 
                     <div class="form-group row">
                         <label class="col-xs-12 col-md-3 col-form-label">Package</label>
-                        <!--<div class="col-md-7">
-
-                           <div class="btn btn-white btn-yellow btn-block btn-package">$30.00 for 30 minutes</div>
-                           <div class="btn btn-white btn-block btn-package">$20.00 for 20 minutes</div>
-                           <div class="btn btn-white btn-block btn-package">$10.00 for 10 minutes</div>
-                        </div>-->
-
-
                         <div class="col-md-7">
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -282,8 +275,6 @@ permalink: /newbie-form3/
                         </div>
                     </div>
 
-
-
                     <div class="form-group row">
                         <label for="birth" class="col-xs-12 col-md-3 col-form-label">Rewards</label>
                         <div class="col-md-7">
@@ -314,20 +305,12 @@ permalink: /newbie-form3/
                             </select>
                         </div>
                     </div>
-
-
-
                     <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-gray2 mt-4 ">Back</a>
                     <a href="{{ site.baseurl }}/newbie-form4" class="btn btn-green btn-fixed mt-4" id="user-continue" >Continue</a>
                     <div class="btn btn-default btn-fixed mt-4" id="user-btn-disabled" style="display:none">Continue</div>
                 </div>
-
-
             </div>
-
-           
          </form>
-
         <hr class="mt-5 mb-3" />
     </div>
 

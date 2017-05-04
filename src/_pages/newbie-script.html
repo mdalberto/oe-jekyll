@@ -22,12 +22,14 @@ permalink: /newbie-script/
 
 		<div id="transcript1" class="transcript text-center">
 			<p>Hi! Thank you for calling (PS) my name is (your name).
-				</p><p class="mb-4">Have you ever used our service before?
 			</p>
-
-			<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript5">Yes</a>
-			<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript2">No</a>
-
+			<p class="mb-4">Have you ever used our service before?
+			</p>
+			<p>
+				<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript5">Yes</a>
+				<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript2">No</a>
+			</p>
+			{% include skiptranscript.html %}
 		</div>
 
 		<div id="transcript2" class="transcript">
@@ -45,33 +47,38 @@ permalink: /newbie-script/
 						how much you want to spend and when.
 					</p>
 
-					<p>Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards. 
-						</p>
+					<p>Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
+					</p>
 					<p>
 						Our best package is 30 minutes for $30.00.
 
 					</p>
+
+
+
 				</div>
 
 			</div>
 
 			<div class="text-center mt-4">
 				<p>
-				<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript3">Questions about Price</a>
-				<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Continue</a>
+					<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript3">Questions about Price</a>
+					<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Continue</a>
 				</p>
-						<a href="{{ site.baseurl }}/">End the simulation</a>
+				{% include skiptranscript.html %}
+
 			</div>
-			
+
 		</div>
 
 		<div id="transcript3" class="transcript">
 			<div class="row justify-content-md-center">
 				<div class="col-md-7 ">
 					<p>
-						You can get 1 long reading or you may try 2 or 3 short readings with different advisors.  You can divide up your time
-						any way you like. You do not have to use all the time on your first reading. Any time left remains on your account for a future reading. 
-						</p>
+						You can get 1 long reading or you may try 2 or 3 short readings with different advisors.  You can divide up your time any
+						way you like. You do not have to use all the time on your first reading. Any time left remains on your account for
+						a future reading.
+					</p>
 
 
 					<p>
@@ -84,10 +91,11 @@ permalink: /newbie-script/
 
 					<div class="text-center mt-4">
 						<p>
-						<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript4">Questions about rate <br />or future costs</a>
-						<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Continue</a>
+							<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript4">Questions about rate <br />or future costs</a>
+							<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Continue</a>
 						</p>
-						<a href="{{ site.baseurl }}/">End the simulation</a>
+						{% include skiptranscript.html %}
+
 					</div>
 				</div>
 			</div>
@@ -97,13 +105,16 @@ permalink: /newbie-script/
 			<div class="row justify-content-md-center">
 				<div class="col-md-7 ">
 					<p>
-						The introductory price is a really fantastic special first-time offer.  After your first purchase, you can select to put any amount from $5.00 and up on your account. You always decide how much you want to put on your account and when & how you want to spend it.  
+						The introductory price is a really fantastic special first-time offer. After your first purchase, you can select to put any
+						amount from $5.00 and up on your account. You always decide how much you want to put on your account and when & how
+						you want to spend it.
 					</p>
 
 					<div class="text-center">
 						<a href="" class="btn btn-green btn-fixed transcriptchanger" data-link="transcript6">No credit card</a>
 						<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Continue</a>
 					</div>
+					{% include skiptranscript.html %}
 				</div>
 			</div>
 		</div>
@@ -113,17 +124,17 @@ permalink: /newbie-script/
 		<div id="transcript5" class="transcript">
 			<div class="row justify-content-md-center">
 				<div class="col-md-7 text-center">
-	
+
 					<i class="fa fa-share fa-5x " aria-hidden="true"></i>
-	
-					
+
+
 					<p>
-						
+
 						Please redirect this person to a sessoned agent. <br />They will use OE and complete the call.
 					</p>
 
 					<div class="text-center mb-3">
-						<a href="{{ site.baseurl }}/newbie-form" class="btn btn-green btn-fixed">Maybe a button <br />that does this?</a>
+						<a href="{{ site.baseurl }}/" class="btn btn-green btn-fixed">Maybe a button <br />that does this?</a>
 					</div>
 
 					<p>At this point the simution is over</p>
@@ -136,7 +147,8 @@ permalink: /newbie-script/
 			<div class="row justify-content-md-center">
 				<div class="col-md-7 text-center">
 					<p>
-						Ok just call us back when you're ready to setup an account. </p><p>Would there be anything else?
+						Ok just call us back when you're ready to setup an account. </p>
+					<p>Would there be anything else?
 					</p>
 
 					<a href="{{ site.baseurl }}/">At this point the simution is over<br />Back to start</a>
@@ -148,3 +160,10 @@ permalink: /newbie-script/
 	</div>
 
 </section>
+
+
+<footer class="footer">
+	<div class="container text-center">
+		<a href="{{ site.baseurl }}/" class="text-warning">End the simulation</a>
+	</div>
+</footer>

@@ -8,6 +8,12 @@
     font-size: 0.875rem;
 }
 
+.btn-transcript{
+    
+   // margin-left:-80px;
+    
+}
+
 .btn-input-height{
     padding: 0.5rem 1rem;
 }
@@ -99,4 +105,15 @@ a.btn-blue:focus, a.btn-blue:hover {
 
 .btn.disabled, .btn:disabled {
     color: white;
+}
+
+.btn-match{
+    padding: 0px 20px; 
+    
+    margin-top: -60px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -111px;
+    background-color: white;
 }
