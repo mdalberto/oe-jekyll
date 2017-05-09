@@ -2,3 +2,53 @@
 .sections{
     color:red;
 }
+
+.newbieform5{
+    #sidebar{
+        position:relative;
+        padding-right:60px;
+    }
+        overflow:hidden;
+//            background-color:rgba(254, 255, 226, 0.64);
+
+    .card-header {
+        padding: 0;
+        margin-bottom: 0;
+        background-color:transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        text-align:center;
+        a{
+            display:block;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+        }
+    }
+    .card {
+        margin-left: -16px;
+        margin-right: -16px;
+        @include media-breakpoint-up("md") {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    label {
+        font-size:15px;
+        @include media-breakpoint-up("lg") {
+            text-align:right;
+        }
+        
+    }
+
+    #accordionTranscripts .card{
+        background-color:white;
+    }
+
+
+}    
+.no-border-card-headers{
+    .card-header{
+        border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+                border-top: 1px solid rgba(0, 0, 0, 0.125);
+    }
+}

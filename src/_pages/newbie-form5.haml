@@ -1,0 +1,419 @@
+--- 
+layout: default 
+title: Newbie Script 1 
+permalink: /newbie-form5/ 
+prototype: 5
+---
+
+%section#services.newbieform5
+  .container-fluid
+    .row
+      .col-lg-12.text-center
+        %h1.mt-3 New Psychic Source Customer
+        %p.text-muted ANI: 267-210-6381
+    %hr/
+
+    .row.justify-content-md-center
+      #sidebar.col-12.col-md-5.col-lg-4
+        %a#btn-transcript.btn.btn-primary.btn-sm.btn-transcript2
+          %i.fa.fa-comment.fa-lg
+          Transcript   
+
+        .transcript-panel
+  
+          %h3.mb-0 Transcript
+
+        #accordionTranscripts{"aria-multiselectable" => "true", :role => "tablist"}
+          .card
+            #headingOne.card-header{:role => "tab"}
+              %a{"aria-controls" => "TcollapseZero", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseZero"}
+                %h5.mb-0
+                  Intro
+            #TcollapseZero.collapse.show{"aria-labelledby" => "TheadingZero", :role => "tabpanel"}
+              .card-block
+                %p
+                  Hi! Thank you for calling (PS) my name is (your name).
+                %p.mb-4
+                  Have you ever used our service before?
+                %a.btn.btn-green.transcriptchanger{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseExample"}
+                  Yes
+                .btn.btn-green.transcriptchanger{:data-link => "transcript2" }
+                  No         
+                #collapseExample.collapse
+                  .card.card-block
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.                  
+          .card
+            #TheadingOne.card-header{:role => "tab"}
+              %a{"aria-controls" => "TcollapseOne", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseOne"}
+                %h5.mb-0
+                  Customer Information
+            #TcollapseOne.collapse{"aria-labelledby" => "TheadingOne", :role => "tabpanel"}
+              .card-block
+                %p
+                  Content
+
+              
+          .card
+            #TheadingTwo.card-header{:role => "tab"}
+              
+              %a.collapsed{"aria-controls" => "TcollapseTwo", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseTwo"}
+                %h5.mb-0
+                  Account Access Info
+            #TcollapseTwo.collapse{"aria-labelledby" => "TheadingTwo", :role => "tabpanel"}
+              .card-block
+                %p
+                  Content
+
+
+
+          .card
+            #TheadingThree.card-header{:role => "tab"}
+
+              %a.collapsed{"aria-controls" => "TcollapseThree", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseThree"}
+                %h5.mb-0
+                  Credit Card
+            #TcollapseThree.collapse{"aria-labelledby" => "TheadingThree", :role => "tabpanel"}
+              .card-block
+                %p
+                  Content
+                
+
+          .card
+            #TheadingFour.card-header{:role => "tab"}
+
+              %a.collapsed{"aria-controls" => "TcollapseFour", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseFour"}
+                %h5.mb-0
+                  Package & Promos
+            #TcollapseFour.collapse{"aria-labelledby" => "TheadingFour", :role => "tabpanel"}
+              .card-block
+                %p
+                  Content
+
+          -# %p
+          -#   Hi! Thank you for calling (PS) my name is (your name).
+          -# %p.mb-4
+          -#   Have you ever used our service before?
+          -# %p
+          -#   I would be happy to setup you up with an account, so you can talk with one of our advisor in just a few minutes.  We are a Pre-Paid Service, so as long as you are over the age of 18?   I&#x2019;ll just need your information and a credit card in your own name to create an account exclusively for you.  You can decide how much you want to spend and when.
+          -# %p Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
+          -# %p Our best package is 30 minutes for $30.00
+          -# %p
+          -#   You can get 1 long reading or you may try 2 or 3 short readings with different advisors. You can divide up your time any way you like.
+          -#   You do not have to use all the time on your first reading.
+          -#   Any time left remains on your account for a future reading.
+          -# %p
+          -#   There are no taxes, fees or other cost we charge to use our service.
+          -#   You can talk to almost any advisor. (Excludes Premium Advisors).
+          -# %p We do not offer the $1 per/min rate on the next purchase. The advisor&#x2019;s rates start from $4.99 per/min to $11.99 per/min, existing member rates are charged on 2nd purchases and on.
+          -# %p The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
+      .col-12.col-md-7.col-lg-6
+   
+
+        %h3.mb-3 Create New Customer
+
+        #accordion{"aria-multiselectable" => "true", :role => "tablist"}
+          .card
+            #headingOne.card-header{:role => "tab"}
+              %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                %h5.mb-0
+                  Customer Information
+            #collapseOne.collapse.show{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+              .card-block
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "first-input"} First Name
+                  .col-lg-7
+                    %input#first-input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "middle-input"} Middle
+                  .col-6.col-sm-3.col-md-3.col-lg-2
+                    %input#middle-input.form-control{:type => "search"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "last-input"} Last Name
+                  .col-lg-7
+                    %input#last-input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "email-input"} Email
+                  .col-lg-7
+                    %input#email-input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "gender-select"} Gender
+                  .col-8.col-sm-5.col-md-6.col-lg-4
+                    %select#gender-select.form-control
+                      %option Female
+                      %option Male
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "birth"} Birth Date
+                  .col-8.col-sm-5.col-md-6.col-lg-4
+                    %input#birth.form-control{:name => "date", :type => "text"}
+              
+          .card
+            #headingTwo.card-header{:role => "tab"}
+              
+              %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                %h5.mb-0
+                  Account Access Info
+            #collapseTwo.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+              .card-block
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "phone-input"} Phone Number
+                  .col-lg-7
+                    .input-group
+                      %input#phone-input.form-control{:type => "text"}
+                        %span.input-group-btn
+                          %button#useAni.btn.btn-secondary{:type => "button"} Use ANI
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "gender-select"} Phone Type
+                  .col-8.col-sm-5.col-md-6.col-lg-4
+                    %select#gender-select.form-control
+                      %option Cell
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "pin-input"} PIN
+                  .col-6.col-sm-3.col-md-3.col-lg-3
+                    .input-group
+                      %input#pin.form-control{:type => "search"}
+                        %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "4 digits required"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "phone-input"} Password
+                  .col-lg-7
+                    .input-group
+                      %input#pass.form-control{:type => "text"}
+                        %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Password is used for website login and promotional email"}
+
+
+          .card
+            #headingThree.card-header{:role => "tab"}
+
+              %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                %h5.mb-0
+                  Credit Card
+            #collapseThree.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
+              .card-block
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "phone-input"}
+                    Credit Card
+                  .col-lg-7
+                    .input-group
+                      %a#capture3.btn.btn-primary{:href => "/"} Capture Via IVR
+                      %i.tip.fa.fa-question-circle.fa-lg.pr-2{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "IVR will walk user through entering info (please always do 'Capture Via IVR first)"}
+
+                      %a#capture4.btn.btn-primary{:href => "/"} Manually Enter
+
+
+
+                
+                  / credit card
+                #capturedCC{:style => "display:none"}
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb"} Credit Card
+                    .col-lg-7
+                      %input#cc-numb.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}/
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "experation"} Experation
+                    .col-lg-7
+                      .row
+                        .col.pr-0
+                          %select#gender-select.form-control
+                            %option ***
+                        .col
+                          %select#gender-select2.form-control
+                            %option ***
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "security-code"} Security Code
+                    .col-6.col-sm-3.col-md-3.col-lg-2
+                      %input#security-code.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}/
+                    %a#capture2.btn.btn-primary.btn-sm{:href => ""} Redo
+
+                
+                / credit card
+                #captureCC{:style => 'display:none' }
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
+                    .col-lg-7
+                      %input#cc-numb2.form-control{:type => "text"}/
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation
+                    .col-lg-7
+                      .row
+                        .col.pr-0
+                          %select#gender-select.form-control
+                            %option Jan
+                        .col
+                          %select#gender-select2.form-control
+                            %option 2017
+                  .form-group.row
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+                    .col-6.col-sm-3.col-md-3.col-lg-2
+                      %input#security2.form-control{:type => "text"}/
+
+                
+                
+                
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "address1-input"} Address 1
+                  .col-lg-7
+                    %input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "address2-input"} Address 2
+                  .col-lg-7
+                    %input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "City-input"} City/Town
+                  .col-lg-7
+                    %input.form-control{:type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "state-select"} State/Province
+                  .col-lg-7
+                    %select.form-control
+                      %option PA
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "zip23"} Zip
+                  .col-8.col-sm-5.col-md-6.col-lg-4
+                    %input.form-control{:name => "zip", :type => "text"}
+
+          .card
+            #headingFour.card-header{:role => "tab"}
+
+              %a.collapsed{"aria-controls" => "collapseFour", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+                %h5.mb-0
+                  Package & Promos
+            #collapseFour.collapse{"aria-labelledby" => "headingFour", :role => "tabpanel"}
+              .card-block
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "first-input2"} DNIS
+                  .col-lg-7
+                    %input.form-control{:placeholder => "1-800-956-3049", :type => "text"}
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "promo-input"} Promo Code
+                  .col-8.col-sm-5.col-md-6.col-lg-4
+                    %input#promo-input.form-control{:type => "text"}
+                / packages
+                .form-group.row
+                  %label.col-lg-3.col-form-label Packages
+                  .col-lg-7
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios1.form-check-input{:name => "gridRadios", :type => "radio", :value => "option1"}
+                          $30.00 for 30 minutes
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}
+                          $20.00 for 20 minutes
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios3.form-check-input{:name => "gridRadios", :type => "radio", :value => "option3"}
+                          $10.00 for 10 minutes
+
+                .form-group.row
+                  %label.col-lg-3.col-form-label Kindness
+                  .col-lg-7
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios1.form-check-input{:name => "gridRadios2", :type => "radio", :value => "option1"}
+                          Futures Without Violence
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios2.form-check-input{:name => "gridRadios2", :type => "radio", :value => "option2"}
+                          National Center for Housing Child Welfare
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios3.form-check-input{:name => "gridRadios2", :type => "radio", :value => "option3"}
+                          Paws With a Cause
+                    .form-check
+                      %label.form-check-label
+                        %input#gridRadios4.form-check-input{:name => "gridRadios2", :type => "radio", :value => "option4"}
+                          No thanks
+                .form-group.row
+                  %label.col-lg-3.col-form-label{:for => "birth"} Rewards
+                  .col-lg-7
+                    .row
+                      .col-lg-7
+                        %select#gender-select.form-control
+                          %option Yes
+                          %option No
+                .form-group.row
+                  %label.col-lg-3.col-form-label Heard about us
+                  .col-lg-7
+                    %select#gender-select.form-control
+                      %option From a Friend
+                      %option Newspaper
+                      %option Magazine
+                      %option Internet
+                      %option TV
+                      %option Radio
+                      %option From a Friend
+                      %option Unspecified
+        .mb-5
+          / <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-gray2 mt-4 ">Back</a>
+          %a#user-continue.btn.btn-green.btn-fixed.mt-4{:href => "{{ site.baseurl }}/newbie-form4"} Continue
+          #user-btn-disabled.btn.btn-default.btn-fixed.mt-4{:style => "display:none"} Continue
+
+          
+%footer.footer2.clearfix
+  .container.text-center
+    #users.users{:style => "display:none"}
+      %a#btn-matches.text-warning.text-center.mb-3.font-weight-bold.btn-match{:href => ""}
+        %i.fa.fa-exclamation-triangle{"aria-hidden" => "true"}
+        4 match(es) found
+      %a#btn-matches2.text-warning.text-center.mb-3.font-weight-bold.btn-match{:href => "", :style => "display:none"}
+        %i.fa.fa-exclamation-triangle{"aria-hidden" => "true"}
+        4 match(es) found
+      .row
+        .col
+          Matt M
+          %span.text-warning Bee
+        .col 03/25/1979
+        .col mdal1388@gmail.com
+        .col 215-222-2211
+        .col.text-center
+          %button.btn.btn-default.btn-sm{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"} View
+      %hr/
+      .row
+        .col
+          Mat
+          %span.text-warning Bee
+        .col 03/20/1980
+        .col mdal138@gmail.com
+        .col 215-111-2222
+        .col.text-center
+          %a.btn.btn-default.btn-sm{:href => ""} View
+      %hr/
+      .row
+        .col
+          Mark
+          %span.text-warning Bee
+        .col 03/25/1980
+        .col mdal13833@gmail.com
+        .col 215-978-2222
+        .col.text-center
+          %a.btn.btn-default.btn-sm{:href => ""} View
+      %hr/
+      .row
+        .col
+          Joe
+          %span.text-warning Bee
+        .col 09/25/1980
+        .col joe@gmail.com
+        .col 215-121-2222
+        .col.text-center
+          %a.btn.btn-default.btn-sm{:href => ""} View
+      %hr/
+/ Modal
+#exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModal", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header.text-center
+        %h5#exampleModalLongTitle.modal-title
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"}
+      .modal-body
+        %h3.text-center
+          Psychic Source Customer
+          %br/
+          Matt M Bee
+        %hr.mt-4/
+        .container-fluid
+          .row
+            .col-6 Bunch of relevent details
+            .col-6 Bunch of relevent details
+      .modal-footer.text-center
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close

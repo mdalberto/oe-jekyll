@@ -19,8 +19,71 @@ div.panel {
     border-radius: 0;
 }
 
+$bright-green: #9dd02a;
+
 .transcript-panel{
 
     padding:20px;
     background-color: white;
 }
+
+.triangle-border {
+    position: relative;
+    padding: 15px;
+    margin: 1em;
+    border: 5px solid $bright-green;
+    color: #333;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.triangle-border.left {
+    margin-left: 0px;
+}
+
+.triangle-border:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: $bright-green transparent;
+    display: block;
+    width: 0;
+}
+
+.triangle-border.top:before {
+    top: -20px;
+    bottom: auto;
+    left: auto;
+    left: 40px;
+    border-width: 0 20px 20px;
+}
+.triangle-border.left:before {
+    top: 10px;
+    bottom: auto;
+    left: -30px;
+    border-width: 15px 30px 15px 0;
+    border-color: transparent $bright-green;
+}
+
+.triangle-border.left:before {
+    top: 10px;
+    bottom: auto;
+    left: -30px;
+    border-width: 15px 30px 15px 0;
+    border-color: transparent $bright-green;
+}
+
+
+.card-noborder{
+    .card{
+        border:none;
+    }
+}
+
+
+

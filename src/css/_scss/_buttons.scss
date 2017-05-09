@@ -2,6 +2,21 @@
     padding: 0.75rem 1rem;
 }
 
+
+.btn-fixed{
+  width:100%;
+  margin-bottom:5px;
+}
+
+@include media-breakpoint-up("lg") {
+  .btn-fixed{
+
+    width:220px;
+    display:inline-block;
+  }
+}
+
+
 // reset btn-sm again
 .btn-sm, .btn-group-sm > .btn {
     padding: 0.25rem 0.5rem;
@@ -41,10 +56,20 @@ button.accordion {
     transition: 0.4s;
 }
 
+
+//
+
 .btn-green{
     background-color: $green;
     cursor:pointer;
     color: #ffffff;
+}
+
+.btn-round{
+    .btn{
+        //background-color: #5a8f00;
+        border-radius: 6px;
+    }
 }
 
 .btn-blue{
@@ -116,4 +141,41 @@ a.btn-blue:focus, a.btn-blue:hover {
     left: 50%;
     margin-left: -111px;
     background-color: white;
+}
+
+.btn-transcript2{
+    position:absolute;
+    color:white !important;
+    padding:3px 10px;
+    cursor:pointer;
+    right:-12px;
+    top: 43px;
+
+
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+
+    /* IE */
+    -ms-transform: rotate(90deg);
+
+    /* Opera */
+   /// -o-transform: rotate(90deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+
+}
+
+#toggleTranscript{
+    cursor:pointer;
+    margin-top:-30px;
+    background-color:white;
+    border-radius:5px;
+    &:hover{
+            background-color:$green;
+    }
 }

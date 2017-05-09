@@ -8,4 +8,15 @@
 .tip.fa-lg{
 
            font-size: 1.2em;
-   }
+}
+
+.bold-labels{
+
+    label{
+        font-weight:bold;
+        font-size:16px;
+        @include media-breakpoint-up("lg") {
+            text-align:left;
+        }
+    }
+}
