@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Hotjar Tracking Code for https://mdalberto.github.io/oe-jekyll/newbie-script/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:489765,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+
+    <title>
+        
+    </title>
+
+    <!-- Fonts -->
+    <!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700">-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/oe-jekyll/css/styles.css">
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+    <body >
+        
+ 
+ 
+
+  <nav class="navbar navbar-toggleable bg-inverse bg-faded fixed-top">
+         
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars white"></i></span>
+            </button>
+
+            <a class="navbar-brand" href="/oe-jekyll/">Order Entry</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!--<li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>-->
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle mr-sm-3 mr-md-3 mr-lg-3" data-toggle="dropdown" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="agent">Matthew Dalberto</span> <i class="fa fa-lg fa-cog "></i> <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="notification">
+                <i class="fa fa-circle green"></i>
+            </div>
+
+    </nav>
+
+
+
+
+
+
+<!--
+<nav class="navbar bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Order Entry</a>
+
+    <div class="container">
+
+        <div class="navbar-collapse collapse" id="navbar1">
+            <ul class="nav navbar-nav"></ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="agent">Matthew Dalberto</span> <i class="fa fa-lg fa-cog "></i> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            <li>
+                <div class="notification">
+                    <i class="fa fa-circle green"></i>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+        <section class='newbieform5' id='services'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-lg-12 text-center'>
+<h1 class='mt-3'>New Psychic Source Customer</h1>
+<p class='text-muted'>ANI: 267-210-6381</p>
+</div>
+</div>
+<hr>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-5 col-lg-4' id='sidebar'>
+<a class='btn btn-primary btn-sm btn-transcript2' id='btn-transcript'>
+<i class='fa fa-comment fa-lg'></i>
+Transcript
+</a>
+<div class='transcript-panel'>
+<h3 class='mb-0'>Transcript</h3>
+</div>
+<div aria-multiselectable='true' id='accordionTranscripts' role='tablist'>
+<div class='card'>
+<div class='card-header' id='headingOne' role='tab'>
+<a aria-controls='TcollapseZero' aria-expanded='true' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseZero'>
+<h5 class='mb-0'>
+Intro
+</h5>
+</a>
+</div>
+<div aria-labelledby='TheadingZero' class='collapse show' id='TcollapseZero' role='tabpanel'>
+<div class='card-block'>
+<p>
+Hi! Thank you for calling (PS) my name is (your name).
+</p>
+<p class='mb-4'>
+Have you ever used our service before?
+</p>
+<a aria-controls='collapseExample' aria-expanded='false' class='btn btn-green transcriptchanger' data-toggle='collapse' href='#collapseExample'>
+Yes
+</a>
+<div class='btn btn-green transcriptchanger' data='transcript2'>
+No
+</div>
+<div class='collapse' id='collapseExample'>
+<div class='card card-block'>
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='TheadingOne' role='tab'>
+<a aria-controls='TcollapseOne' aria-expanded='true' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseOne'>
+<h5 class='mb-0'>
+Customer Information
+</h5>
+</a>
+</div>
+<div aria-labelledby='TheadingOne' class='collapse' id='TcollapseOne' role='tabpanel'>
+<div class='card-block'>
+<p>
+Content
+</p>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='TheadingTwo' role='tab'>
+<a aria-controls='TcollapseTwo' aria-expanded='false' class='collapsed' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseTwo'>
+<h5 class='mb-0'>
+Account Access Info
+</h5>
+</a>
+</div>
+<div aria-labelledby='TheadingTwo' class='collapse' id='TcollapseTwo' role='tabpanel'>
+<div class='card-block'>
+<p>
+Content
+</p>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='TheadingThree' role='tab'>
+<a aria-controls='TcollapseThree' aria-expanded='false' class='collapsed' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseThree'>
+<h5 class='mb-0'>
+Credit Card
+</h5>
+</a>
+</div>
+<div aria-labelledby='TheadingThree' class='collapse' id='TcollapseThree' role='tabpanel'>
+<div class='card-block'>
+<p>
+Content
+</p>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='TheadingFour' role='tab'>
+<a aria-controls='TcollapseFour' aria-expanded='false' class='collapsed' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseFour'>
+<h5 class='mb-0'>
+Package & Promos
+</h5>
+</a>
+</div>
+<div aria-labelledby='TheadingFour' class='collapse' id='TcollapseFour' role='tabpanel'>
+<div class='card-block'>
+<p>
+Content
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-7 col-lg-6'>
+<h3 class='mb-3'>Create New Customer</h3>
+<div aria-multiselectable='true' id='accordion' role='tablist'>
+<div class='card'>
+<div class='card-header' id='headingOne' role='tab'>
+<a aria-controls='collapseOne' aria-expanded='true' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
+<h5 class='mb-0'>
+Customer Information
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingOne' class='collapse show' id='collapseOne' role='tabpanel'>
+<div class='card-block'>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='first-input'>First Name</label>
+<div class='col-lg-7'>
+<input class='form-control' id='first-input' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='middle-input'>Middle</label>
+<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<input class='form-control' id='middle-input' type='search'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='last-input'>Last Name</label>
+<div class='col-lg-7'>
+<input class='form-control' id='last-input' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='email-input'>Email</label>
+<div class='col-lg-7'>
+<input class='form-control' id='email-input' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='gender-select'>Gender</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<select class='form-control' id='gender-select'>
+<option>Female</option>
+<option>Male</option>
+</select>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='birth'>Birth Date</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<input class='form-control' id='birth' name='date' type='text'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='headingTwo' role='tab'>
+<a aria-controls='collapseTwo' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseTwo'>
+<h5 class='mb-0'>
+Account Access Info
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingTwo' class='collapse' id='collapseTwo' role='tabpanel'>
+<div class='card-block'>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='phone-input'>Phone Number</label>
+<div class='col-lg-7'>
+<div class='input-group'>
+<input class='form-control' id='phone-input' type='text'>
+<span class='input-group-btn'>
+<button class='btn btn-secondary' id='useAni' type='button'>Use ANI</button>
+</span>
+</input>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='gender-select'>Phone Type</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<select class='form-control' id='gender-select'>
+<option>Cell</option>
+</select>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='pin-input'>PIN</label>
+<div class='col-6 col-sm-3 col-md-3 col-lg-3'>
+<div class='input-group'>
+<input class='form-control' id='pin' type='search'>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='4 digits required'></i>
+</input>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='phone-input'>Password</label>
+<div class='col-lg-7'>
+<div class='input-group'>
+<input class='form-control' id='pass' type='text'>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Password is used for website login and promotional email'></i>
+</input>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='headingThree' role='tab'>
+<a aria-controls='collapseThree' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseThree'>
+<h5 class='mb-0'>
+Credit Card
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingThree' class='collapse' id='collapseThree' role='tabpanel'>
+<div class='card-block'>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='phone-input'>
+Credit Card
+</label>
+<div class='col-lg-7'>
+<div class='input-group'>
+<a class='btn btn-primary' href='/' id='capture3'>Capture Via IVR</a>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-lg pr-2' data-toggle='tooltip' title='IVR will walk user through entering info (please always do &#39;Capture Via IVR first)'></i>
+<a class='btn btn-primary' href='/' id='capture4'>Manually Enter</a>
+</div>
+</div>
+<!-- credit card -->
+</div>
+<div id='capturedCC' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb'>Credit Card</label>
+<div class='col-lg-7'>
+<input class='form-control' id='cc-numb' placeholder='*******************' readonly='readonly' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='experation'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control' id='gender-select'>
+<option>***</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control' id='gender-select2'>
+<option>***</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='security-code'>Security Code</label>
+<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<input class='form-control' id='security-code' placeholder='****' readonly='readonly' type='text'>
+</div>
+<a class='btn btn-primary btn-sm' href='' id='capture2'>Redo</a>
+</div>
+</div>
+<!-- credit card -->
+<div id='captureCC' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
+<div class='col-lg-7'>
+<input class='form-control' id='cc-numb2' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='experation2'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control' id='gender-select'>
+<option>Jan</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control' id='gender-select2'>
+<option>2017</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
+<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<input class='form-control' id='security2' type='text'>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='address1-input'>Address 1</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='address2-input'>Address 2</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='City-input'>City/Town</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='state-select'>State/Province</label>
+<div class='col-lg-7'>
+<select class='form-control'>
+<option>PA</option>
+</select>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='zip23'>Zip</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<input class='form-control' name='zip' type='text'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='headingFour' role='tab'>
+<a aria-controls='collapseFour' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
+<h5 class='mb-0'>
+Package & Promos
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingFour' class='collapse' id='collapseFour' role='tabpanel'>
+<div class='card-block'>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='first-input2'>DNIS</label>
+<div class='col-lg-7'>
+<input class='form-control' placeholder='1-800-956-3049' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<input class='form-control' id='promo-input' type='text'>
+</div>
+</div>
+<!-- packages -->
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label'>Packages</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
+$30.00 for 30 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios2' name='gridRadios' type='radio' value='option2'>
+$20.00 for 20 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios3' name='gridRadios' type='radio' value='option3'>
+$10.00 for 10 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label'>Kindness</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios1' name='gridRadios2' type='radio' value='option1'>
+Futures Without Violence
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios2' name='gridRadios2' type='radio' value='option2'>
+National Center for Housing Child Welfare
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios3' name='gridRadios2' type='radio' value='option3'>
+Paws With a Cause
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios4' name='gridRadios2' type='radio' value='option4'>
+No thanks
+</input>
+</label>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='birth'>Rewards</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col-lg-7'>
+<select class='form-control' id='gender-select'>
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label'>Heard about us</label>
+<div class='col-lg-7'>
+<select class='form-control' id='gender-select'>
+<option>From a Friend</option>
+<option>Newspaper</option>
+<option>Magazine</option>
+<option>Internet</option>
+<option>TV</option>
+<option>Radio</option>
+<option>From a Friend</option>
+<option>Unspecified</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mb-5'>
+<!-- <a href="/oe-jekyll/newbie-form2" class="btn btn-gray2 mt-4 ">Back</a> -->
+<a class='btn btn-green btn-fixed mt-4' href='/oe-jekyll/newbie-form4' id='user-continue'>Continue</a>
+<div class='btn btn-default btn-fixed mt-4' id='user-btn-disabled' style='display:none'>Continue</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class='footer2 clearfix'>
+<div class='container text-center'>
+<div class='users' id='users' style='display:none'>
+<a class='text-warning text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
+4 match(es) found
+</a>
+<a class='text-warning text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches2' style='display:none'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
+4 match(es) found
+</a>
+<div class='row'>
+<div class='col'>
+Matt M
+<span class='text-warning'>Bee</span>
+</div>
+<div class='col'>03/25/1979</div>
+<div class='col'>mdal1388@gmail.com</div>
+<div class='col'>215-222-2211</div>
+<div class='col text-center'>
+<button class='btn btn-default btn-sm' data-target='#exampleModal' data-toggle='modal' type='button'>View</button>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col'>
+Mat
+<span class='text-warning'>Bee</span>
+</div>
+<div class='col'>03/20/1980</div>
+<div class='col'>mdal138@gmail.com</div>
+<div class='col'>215-111-2222</div>
+<div class='col text-center'>
+<a class='btn btn-default btn-sm' href=''>View</a>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col'>
+Mark
+<span class='text-warning'>Bee</span>
+</div>
+<div class='col'>03/25/1980</div>
+<div class='col'>mdal13833@gmail.com</div>
+<div class='col'>215-978-2222</div>
+<div class='col text-center'>
+<a class='btn btn-default btn-sm' href=''>View</a>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col'>
+Joe
+<span class='text-warning'>Bee</span>
+</div>
+<div class='col'>09/25/1980</div>
+<div class='col'>joe@gmail.com</div>
+<div class='col'>215-121-2222</div>
+<div class='col text-center'>
+<a class='btn btn-default btn-sm' href=''>View</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</footer>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='exampleModal' class='modal fade' id='exampleModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-lg' role='document'>
+<div class='modal-content'>
+<div class='modal-header text-center'>
+<h5 class='modal-title' id='exampleModalLongTitle'></h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'></span>
+</button>
+</div>
+<div class='modal-body'>
+<h3 class='text-center'>
+Psychic Source Customer
+<br>
+Matt M Bee
+</h3>
+<hr class='mt-4'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-6'>Bunch of relevent details</div>
+<div class='col-6'>Bunch of relevent details</div>
+</div>
+</div>
+</div>
+<div class='modal-footer text-center'>
+<button class='btn btn-default' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
+
+        
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="/oe-jekyll/js/function.js"></script>
+<script src="/oe-jekyll/js/sim-1.js"></script>
+
+<script src="/oe-jekyll/js/prototype-5.js"></script>
+
+
+    </body>
+</html>
