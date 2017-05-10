@@ -92,3 +92,26 @@ $bright-green: #9dd02a;
 
 
 
+
+
+
+.users{
+  font-size:14px;
+  line-height:20px;
+  .col{
+      padding-top: 10px;
+    padding-bottom: 10px;
+    }
+  hr{
+    margin-bottom:5px;
+    margin-top:5px;
+  }
+  .users-heading{
+    background-color:#ffeeba;
+    font-weight:bold;
+    //color:white;
+
+  }
+    background-color:#f9f3e0;
+
+}

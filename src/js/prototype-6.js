@@ -38,4 +38,14 @@ $(function () {
       return false;
   });
 
+  $('#toggleColor').on('click', function(){
+      $('#services').toggleClass('bluebubbles');
+      return false;
+  });
+
+  $('#toggleSlim').on('click', function(){
+      $('#services').toggleClass('slim');
+      return false;
+  });
+
 });

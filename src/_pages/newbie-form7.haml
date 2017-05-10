@@ -1,32 +1,25 @@
 --- 
 layout: default 
 title: Newbie Script 1 
-permalink: /newbie-form6/ 
+permalink: /newbie-form7/ 
 prototype: 6
 ---
 
 
 
-%section#services.newbieform5.bold-labels.card-noborder.btn-round.no-border-card-headers
+%section#services.newbieform5.bold-labels.card-noborder.btn-round.no-border-card-headers.prototype7
   .container-fluid
     .row
       .col-lg-12.text-center
         %h1.mt-3 New Psychic Source Customer
         %p.text-muted ANI: 267-210-6381
-        %controls
-          %a#toggleTranscript.btn.btn-default.btn-sm
-            %i.fa.fa-comment.fa-lg.green
-            Toggle
-            %br
-            Transcript
-          %a#toggleColor.btn.btn-default.btn-sm
-            Toggle
-            %br
-            Color
-          %a#toggleSlim.btn.btn-default.btn-sm
-            Toggle
-            %br
-            Slim
+        %hr
+        %a#toggleTranscript.btn.btn-default.btn-sm.float-right
+          %i.fa.fa-comment.fa-lg.green
+          Toggle
+          %br
+          Transcript
+ 
     .row.justify-content-md-center
       .col-12.col-md-7.col-lg-6
         #accordion{"aria-multiselectable" => "true", :role => "tablist"}
@@ -34,7 +27,7 @@ prototype: 6
             #headingOne.card-header{:role => "tab"}
               %a{"aria-controls" => "collapseZero", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseZero"}
                 %h5.mb-0
-                  Intro Transcript
+                  
             #collapseZero.collapse.show{"aria-labelledby" => "headingZero", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
@@ -62,7 +55,7 @@ prototype: 6
             #headingZeroInnerTwo.card-header{:role => "tab"}
               %a.collapsed#headingZeroInnerTwoClick{"aria-controls" => "collapseZeroInnerTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseZeroInnerTwo"}
                 %h5.mb-0
-                  Over 18 & New Member Offer
+                  
             #collapseZeroInnerTwo.collapse{"aria-labelledby" => "headingZeroInnerTwo", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
@@ -112,7 +105,7 @@ prototype: 6
             #headingOne.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
                 %h5.mb-0
-                  Customer Information
+                  
             #collapseOne.collapse{"aria-labelledby" => "headingOne", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
@@ -185,7 +178,7 @@ prototype: 6
               
               %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
                 %h5.mb-0
-                  Account Access Info
+                  
             #collapseTwo.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
               .card-block
 
@@ -209,7 +202,7 @@ prototype: 6
 
               %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
                 %h5.mb-0
-                  Address, How they Heard, Lang, Email
+                  
 
             #collapseThree.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
               .card-block
@@ -315,7 +308,7 @@ prototype: 6
 
               %a.collapsed{"aria-controls" => "collapseFour", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
                 %h5.mb-0
-                  Payment Information & Transaction
+                  
             #collapseFour.collapse{"aria-labelledby" => "headingFour", :role => "tabpanel"}
               .card-block
 
@@ -485,7 +478,7 @@ prototype: 6
             #headingOne2.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "collapseOne2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne2"}
                 %h5.mb-0
-                  Service Information
+                  
             #collapseOne2.collapse{"aria-labelledby" => "headingOne2", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
@@ -535,7 +528,7 @@ prototype: 6
             #headingTwo2.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "#collapseTwo2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo2"}
                 %h5.mb-0
-                  How to disconnect a reading with advisor
+                  
             #collapseTwo2.collapse{"aria-labelledby" => "headingTwo2", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
@@ -551,7 +544,7 @@ prototype: 6
             #headingThree2.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "collapseThree2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree2"}
                 %h5.mb-0
-                  Close the Call
+                  
             #collapseThree2.collapse{"aria-labelledby" => "headingThree2", :role => "tabpanel"}
               .card-block
                 .triangle-border.left

@@ -9710,20 +9710,6 @@ hr {
 .transcript {
   display: none; }
 
-.users {
-  font-size: 14px;
-  line-height: 20px;
-  background-color: #f9f3e0; }
-  .users .col {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .users hr {
-    margin-bottom: 5px;
-    margin-top: 5px; }
-  .users .users-heading {
-    background-color: #ffeeba;
-    font-weight: bold; }
-
 .footer, .footer2 {
   position: absolute;
   bottom: 0;
@@ -9905,6 +9891,8 @@ a.btn-blue:focus, a.btn-blue:hover {
       display: block;
       padding-top: 0.75rem;
       padding-bottom: 0.75rem; }
+    .newbieform5 .card-header a.collapsed {
+      color: gray; }
   .newbieform5 .card {
     margin-left: -16px;
     margin-right: -16px; }
@@ -9923,6 +9911,55 @@ a.btn-blue:focus, a.btn-blue:hover {
 .no-border-card-headers .card-header {
   border-bottom: 0px solid rgba(0, 0, 0, 0.125);
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
+
+.prototype7 .card-header {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+  border-top: 0px solid rgba(0, 0, 0, 0.125); }
+.prototype7 .triangle-border {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: #333;
+  background: transparent; }
+.prototype7 .triangle-border.left:before {
+  top: 0;
+  bottom: auto;
+  left: -30px;
+  border-width: 0;
+  border-color: none; }
+.prototype7 .card-header a {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.bluebubbles .triangle-border {
+  position: relative;
+  padding: 15px;
+  margin: 1em;
+  border: 5px solid #1497bf;
+  color: #fdfdfd;
+  background: #1497bf;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+.bluebubbles .triangle-border.left:before {
+  top: 10px;
+  bottom: auto;
+  left: -30px;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #1497bf; }
+.bluebubbles .btn-green {
+  background-color: #133d52; }
+  .bluebubbles .btn-green:hover {
+    background-color: #133d52; }
+
+.slim .card-header {
+  border: none; }
+  .slim .card-header a {
+    padding: 0; }
+  .slim .card-header h5 {
+    display: none; }
 
 .u-mar-top-30 {
   margin-top: 30px; }
@@ -10073,3 +10110,17 @@ div.panel {
   border: none; }
 .card-noborder .card-block {
   padding-top: 0; }
+
+.users {
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #f9f3e0; }
+  .users .col {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .users hr {
+    margin-bottom: 5px;
+    margin-top: 5px; }
+  .users .users-heading {
+    background-color: #ffeeba;
+    font-weight: bold; }
