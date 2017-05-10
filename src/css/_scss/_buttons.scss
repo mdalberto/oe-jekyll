@@ -62,7 +62,7 @@ button.accordion {
 .btn-green{
     background-color: $green;
     cursor:pointer;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .btn-round{
@@ -125,7 +125,7 @@ a.btn-blue:focus, a.btn-blue:hover {
 .btn-default{
     background-color: #ccc;
     color:white;
-
+    cursor:pointer;
 }
 
 .btn.disabled, .btn:disabled {
@@ -133,14 +133,16 @@ a.btn-blue:focus, a.btn-blue:hover {
 }
 
 .btn-match{
-    padding: 0px 20px; 
-    
-    margin-top: -60px;
+    margin-top: -43px;
     display: inline-block;
     position: absolute;
     left: 50%;
-    margin-left: -111px;
-    background-color: white;
+    margin-left: -122px;
+    background-color: #ffeeba !important;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 40px;
+    color: $oe-red !important;
+    font-size: 16px;
 }
 
 .btn-transcript2{

@@ -15,13 +15,27 @@ $(function () {
       $('.triangle-border, .transcriptOnlyCard').toggle();
       return false;
   });
-  
-  (".collapse").on("shown", function () {
-    var selected = $(this);
-    var collapseh = $(".collapse .in").height();
-    $.scrollTo(selected, 500, {
-        offset: -(collapseh)
-    });
-});
+
+
+  $('#processAccordian').on('click', function(){
+      $('#accordion').hide();
+       $('#confirmationScreen').show();     
+      return false;
+  });
+
+  $('#backAccordian').on('click', function(){
+      $('#accordion').show();
+       $('#confirmationScreen').hide();     
+      return false;
+  });
+
+  $('#submitAccordian').on('click', function(){
+      $('#confirmationScreen').hide();
+       $('#processMessage').show();
+       $('#accordion2').show();    
+       $('#headingOne2 .collapsed').click(); 
+
+      return false;
+  });
 
 });

@@ -9710,9 +9710,19 @@ hr {
 .transcript {
   display: none; }
 
-.users hr {
-  margin-bottom: 5px;
-  margin-top: 5px; }
+.users {
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #f9f3e0; }
+  .users .col {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .users hr {
+    margin-bottom: 5px;
+    margin-top: 5px; }
+  .users .users-heading {
+    background-color: #ffeeba;
+    font-weight: bold; }
 
 .footer, .footer2 {
   position: absolute;
@@ -9788,7 +9798,7 @@ button.accordion {
 .btn-green {
   background-color: #82bb02;
   cursor: pointer;
-  color: #ffffff; }
+  color: #ffffff !important; }
 
 .btn-round .btn {
   border-radius: 6px; }
@@ -9834,19 +9844,23 @@ a.btn-blue:focus, a.btn-blue:hover {
 
 .btn-default {
   background-color: #ccc;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 .btn.disabled, .btn:disabled {
   color: white; }
 
 .btn-match {
-  padding: 0px 20px;
-  margin-top: -60px;
+  margin-top: -43px;
   display: inline-block;
   position: absolute;
   left: 50%;
-  margin-left: -111px;
-  background-color: white; }
+  margin-left: -122px;
+  background-color: #ffeeba !important;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 40px;
+  color: #ff0000 !important;
+  font-size: 16px; }
 
 .btn-transcript2 {
   position: absolute;
@@ -9964,6 +9978,9 @@ a {
 p {
   line-height: 25px; }
 
+.text-red {
+  color: #ff0000 !important; }
+
 .tip {
   margin-top: 12px;
   margin-left: 5px; }
@@ -9977,6 +9994,9 @@ p {
   @media (min-width: 992px) {
     .bold-labels label {
       text-align: left; } }
+.bold-labels .form-group {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion, button.accordion.active, button.accordion:hover {
@@ -10014,7 +10034,8 @@ div.panel {
   border-radius: 10px; }
 
 .triangle-border.left {
-  margin-left: 0px; }
+  margin-left: 0px;
+  margin-right: 0px; }
 
 .triangle-border:before {
   content: "";
@@ -10050,3 +10071,5 @@ div.panel {
 
 .card-noborder .card {
   border: none; }
+.card-noborder .card-block {
+  padding-top: 0; }

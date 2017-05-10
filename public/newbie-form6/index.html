@@ -131,10 +131,11 @@
 <a class='btn btn-default btn-sm float-right' id='toggleTranscript'>
 <i class='fa fa-comment fa-lg green'></i>
 Toggle
+<br>
+Transcript
 </a>
 </div>
 </div>
-<!-- /%hr/ -->
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-7 col-lg-6'>
 <div aria-multiselectable='true' id='accordion' role='tablist'>
@@ -147,7 +148,8 @@ Intro Transcript
 </a>
 </div>
 <div aria-labelledby='headingZero' class='collapse show' id='collapseZero' role='tabpanel'>
-<div class='card-block triangle-border left'>
+<div class='card-block'>
+<div class='triangle-border left'>
 <p>
 Hi! Thank you for calling (PS) my name is (your name).
 </p>
@@ -160,22 +162,19 @@ Yes
 <div class='btn btn-green' id='transcript-1-no'>
 No
 </div>
+</div>
 <div class='collapse' id='collapseIsMember'>
 <div class='row justify-content-md-center'>
 <div class='col-md-7 text-center'>
-<i aria-hidden='true' class='fa fa-share fa-5x'></i>
+<i aria-hidden='true' class='fa fa-reply fa-5x'></i>
 <p>
 Please redirect this person to a sessoned agent.
-<br>
 </p>
-<div class='text-center mb-3'>
-<a class='btn btn-green btn-fixed' href='/oe-jekyll/'>
-Maybe a button
+<p class='mb-3'>
+At this point the simution is over
 <br>
-</a>
-</div>
-<p>At this point the simution is over</p>
-<a href='/oe-jekyll/'>Back to start</a>
+<a class='btn btn-defualt' href='/oe-jekyll/'>Back to start</a>
+</p>
 </div>
 </div>
 </div>
@@ -191,7 +190,8 @@ Over 18 & New Member Offer
 </a>
 </div>
 <div aria-labelledby='headingZeroInnerTwo' class='collapse' id='collapseZeroInnerTwo' role='tabpanel'>
-<div class='card-block triangle-border left'>
+<div class='card-block'>
+<div class='triangle-border left'>
 <p>
 I would be happy to setup you up with an account, so you can talk with one of our advisor in just a few minutes. We are a
 Pre-Paid Service, so as long as you are over the age of 18?
@@ -212,6 +212,8 @@ More on Price
 <a aria-controls='collapseOne' aria-expanded='false' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
 Continue
 </a>
+</div>
+</div>
 <div class='collapse mt-3' id='collapseMoreOnPrice'>
 <div class='triangle-border top'>
 <button aria-controls='collapseMoreOnPrice' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collapseMoreOnPrice' type='button'>
@@ -245,7 +247,6 @@ Continue
 </div>
 </div>
 </div>
-</div>
 <div class='card'>
 <div class='card-header' id='headingOne' role='tab'>
 <a aria-controls='collapseOne' aria-expanded='false' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
@@ -274,6 +275,9 @@ Please may I have your phone exactly as it’s listed with your credit card comp
 </span>
 </input>
 </div>
+<span class='small muted'>
+(Fraud search for duplicates will happen on this field)
+</span>
 </div>
 </div>
 <div class='triangle-border left'>
@@ -310,6 +314,9 @@ Now, your first, middle and last name exactly how it appears on the credit card.
 <label class='col-lg-3 col-form-label' for='last-input'>Last Name</label>
 <div class='col-lg-7'>
 <input class='form-control' id='last-input' type='text'>
+<span class='small muted'>
+(Fraud search for duplicates will happen on this field)
+</span>
 </div>
 </div>
 <div class='triangle-border left'>
@@ -351,7 +358,7 @@ Account Access Info
 <div aria-labelledby='headingTwo' class='collapse' id='collapseTwo' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
-<p>
+<p class='mb-0'>
 Please, select a 4-digit pin number to use access your account with our service.  Select any 4- numbers which are easy for you to remember?
 </p>
 </div>
@@ -361,19 +368,6 @@ Please, select a 4-digit pin number to use access your account with our service.
 <div class='input-group'>
 <input class='form-control' id='pin' type='search'>
 <i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='4 digits required'></i>
-</input>
-</div>
-</div>
-</div>
-<p>
-* Password is on web but not in Kevin's Script. Do we include it here? *
-</p>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='phone-input'>Password</label>
-<div class='col-lg-7'>
-<div class='input-group'>
-<input class='form-control' id='pass' type='text'>
-<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Password is used for website login and promotional email'></i>
 </input>
 </div>
 </div>
@@ -390,29 +384,177 @@ Continue
 <div class='card-header' id='headingThree' role='tab'>
 <a aria-controls='collapseThree' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseThree'>
 <h5 class='mb-0'>
-Credit Card
+Address, How they Heard, Lang, Email
 </h5>
 </a>
 </div>
 <div aria-labelledby='headingThree' class='collapse' id='collapseThree' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
+<p class='mb-0'>
+What is the address which verifies you with your credit card?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='address1-input'>Address 1</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='address2-input'>Address 2</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='City-input'>City/Town</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='state-select'>State/Province</label>
+<div class='col-lg-7'>
+<select class='form-control'>
+<option>PA</option>
+</select>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='zip23'>Zip</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<input class='form-control' name='zip' type='text'>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
+How did you hear about the service?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label'>Heard about us</label>
+<div class='col-lg-7'>
+<select class='form-control' id='gender-select'>
+<option>From a Friend</option>
+<option>Newspaper</option>
+<option>Magazine</option>
+<option>Internet</option>
+<option>TV</option>
+<option>Radio</option>
+<option>From a Friend</option>
+<option>Unspecified</option>
+</select>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
+We would like to know your preferred reading language for getting a reading. Spanish or English. We will deliver content in your preferred language.
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='language-select'>Language</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<select class='form-control' id='language-select'>
+<option>English</option>
+<option>Spanish</option>
+</select>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
+And your email address please?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='email-input'>Email</label>
+<div class='col-lg-7'>
+<input class='form-control' id='email-input' type='text'>
+<span class='small muted'>
+(Fraud search for duplicates will happen on this field)
+</span>
+</div>
+</div>
+<div class='triangle-border left'>
+<div aria-controls='collapseDeclinesEmail' aria-expanded='false' class='btn btn-green mb-0 btn-sm' data-toggle='collapse' href='#collapseDeclinesEmail' id='transcript-2-more'>
+Declines Email
+</div>
+</div>
+<div class='collapse mt-3' id='collapseDeclinesEmail'>
+<div class='triangle-border top'>
+<button aria-controls='collapseDeclinesEmail' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collapseDeclinesEmail' type='button'>
+<span aria='true'>
+&times
+</span>
+</button>
 <p>
+(Entice them) By sharing your email address, you are given added security;
+</p>
+<p>
+Benefits
+</p>
+<ul>
+<li>
+We send an electronic receipt with every purchase.
+</li>
+<li>
+We send you promotions and exclusive offers for just sharing your email.
+</li>
+<li>
+Your information is private and we don’t sell or trade any of your private information.
+</li>
+</ul>
+</div>
+</div>
+<p class='mt-3'>
+<a aria-controls='collapseFour' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
+Continue
+</a>
+</p>
+</div>
+</div>
+</div>
+<div class='card'>
+<div class='card-header' id='headingFour' role='tab'>
+<a aria-controls='collapseFour' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
+<h5 class='mb-0'>
+Payment Information & Transaction
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingFour' class='collapse' id='collapseFour' role='tabpanel'>
+<div class='card-block'>
+<div class='triangle-border left'>
+<p class='mb-0'>
+Mr/Mrs Smith, will you be using a credit or debit card?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='language-select'>Type of Card</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<select class='form-control' id='language-select'>
+<option>Debit</option>
+<option>Credit</option>
+</select>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
 I will transfer you over to our automated system to enter the credit card information. Once you have completed entering the information you will be transferred back to me.
 </p>
 </div>
-<p>
-Please press 'Capture Via IVR' first below so the Credit Card Automated IVR System can handle the entry. IVR will walk user through entering info.
-</p>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='phone-input'>
 Credit Card
 </label>
-<div class='col-lg-7'>
+<div class='col-lg-8'>
 <div class='input-group'>
 <a class='btn btn-green mr-1' href='/' id='capture3'>Capture Via IVR</a>
 <a class='btn btn-default' href='/' id='capture4'>Manually Enter</a>
 </div>
+<span class='small muted'>
+Please press 'Capture Via IVR' first below so the Credit Card Automated IVR System can handle the entry. IVR will walk user through entering info.
+</span>
 </div>
 <!-- credit card -->
 </div>
@@ -480,61 +622,6 @@ Credit Card
 </div>
 </div>
 </div>
-<div class='triangle-border left'>
-<p class='mb-0'>
-What is the address which verifies you with your credit card?
-</p>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='address1-input'>Address 1</label>
-<div class='col-lg-7'>
-<input class='form-control' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='address2-input'>Address 2</label>
-<div class='col-lg-7'>
-<input class='form-control' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='City-input'>City/Town</label>
-<div class='col-lg-7'>
-<input class='form-control' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='state-select'>State/Province</label>
-<div class='col-lg-7'>
-<select class='form-control'>
-<option>PA</option>
-</select>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='zip23'>Zip</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
-<input class='form-control' name='zip' type='text'>
-</div>
-</div>
-<p>
-<a aria-controls='collapseFour' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
-Continue
-</a>
-</p>
-</div>
-</div>
-</div>
-<div class='card'>
-<div class='card-header' id='headingFour' role='tab'>
-<a aria-controls='collapseFour' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
-<h5 class='mb-0'>
-Package & Promos
-</h5>
-</a>
-</div>
-<div aria-labelledby='headingFour' class='collapse' id='collapseFour' role='tabpanel'>
-<div class='card-block'>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='first-input2'>DNIS</label>
 <div class='col-lg-7'>
@@ -544,7 +631,11 @@ Package & Promos
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
 <div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<div class='input-group'>
 <input class='form-control' id='promo-input' type='text'>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
+</input>
+</div>
 </div>
 </div>
 <!-- packages -->
@@ -553,7 +644,7 @@ Package & Promos
 <div class='col-lg-7'>
 <div class='form-check'>
 <label class='form-check-label'>
-<input class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
+<input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
 $30.00 for 30 minutes
 </input>
 </label>
@@ -575,23 +666,9 @@ $10.00 for 10 minutes
 </div>
 </div>
 <div class='triangle-border left'>
-<p>
-For your privacy, your credit card charges will show as (insert Service Name).
+<p class='mb-0'>
+Something about the Kindness program goes here
 </p>
-<ul>
-<li>
-Hollywood Psychics appear as HPS and our 800#
-</li>
-<li>
-Love Coach appears as Expert Link and our 800#
-</li>
-<li>
-Psychics Source appear as Expert Link and our 800#
-</li>
-<li>
-Gay Live appears as Live Link and our 800#
-</li>
-</ul>
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label'>Kindness</label>
@@ -626,63 +703,86 @@ No thanks
 </div>
 </div>
 </div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='email-input'>Email</label>
-<div class='col-lg-7'>
-<input class='form-control' id='email-input' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='birth'>Rewards</label>
-<div class='col-lg-7'>
-<div class='row'>
-<div class='col-lg-7'>
-<select class='form-control' id='gender-select'>
-<option>Yes</option>
-<option>No</option>
-</select>
-</div>
-</div>
-</div>
-</div>
 <div class='triangle-border left'>
 <p class='mb-0'>
-How did you hear about the service?
+Now I will process your transaction for 30-minutes for $30.00.
 </p>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label'>Heard about us</label>
-<div class='col-lg-7'>
-<select class='form-control' id='gender-select'>
-<option>From a Friend</option>
-<option>Newspaper</option>
-<option>Magazine</option>
-<option>Internet</option>
-<option>TV</option>
-<option>Radio</option>
-<option>From a Friend</option>
-<option>Unspecified</option>
-</select>
-</div>
+<ul>
+<li>
+PAUSE!
+</li>
+<li>
+Wait before processing transaction.
+</li>
+<li>
+Gives the customer a chance to change their mind before processing.
+</li>
+</ul>
 </div>
 <p>
-<a aria-controls='collapseFive' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseFive'>
-Continue
+<a class='mt-2 btn btn-green btn-fixed' id='processAccordian'>
+Submit
 </a>
 </p>
 </div>
 </div>
 </div>
+</div>
+<div class='text-center' id='confirmationScreen' style='display:none'>
+<hr>
+<p>
+Summary screen before final submitting could go here?
+</p>
+<p>
+<a class='btn btn-default' id='backAccordian'>
+Back
+</a>
+<a class='mt-2 btn btn-green btn-fixed' id='submitAccordian'>
+Process
+</a>
+</p>
+</div>
+<div class='text-center' id='processMessage' style='display:none'>
+<hr>
+<div class='green'>
+<h1>
+Success!
+</h1>
+</div>
+<p>
+The account has been created!
+</p>
+</div>
+<div aria-multiselectable='true' id='accordion2' role='tablist' style='display:none'>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingFive' role='tab'>
-<a aria-controls='collapseFive' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseFive'>
+<div class='card-header' id='headingOne2' role='tab'>
+<a aria-controls='collapseOne2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseOne2'>
 <h5 class='mb-0'>
 Service Information
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingFive' class='collapse' id='collapseFive' role='tabpanel'>
+<div aria-labelledby='headingOne2' class='collapse' id='collapseOne2' role='tabpanel'>
 <div class='card-block'>
+<div class='triangle-border left'>
+<p>
+For your privacy, your credit card charges will show as (insert Service Name).
+</p>
+<ul>
+<li>
+Hollywood Psychics appear as HPS and our 800#
+</li>
+<li>
+Love Coach appears as Expert Link and our 800#
+</li>
+<li>
+Psychics Source appear as Expert Link and our 800#
+</li>
+<li>
+Gay Live appears as Live Link and our 800#
+</li>
+</ul>
+</div>
 <div class='triangle-border left'>
 <p>
 Now we have your account all setup, I’ll give you all the information you need to connect with an advisor.
@@ -723,7 +823,7 @@ From the Crossroads menu; Select option #1 again for the Advisor menu.
 You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
 </p>
 <p>
-<a aria-controls='collapseSix' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseSix'>
+<a aria-controls='#collapseTwo2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#collapseTwo2'>
 Continue
 </a>
 </p>
@@ -732,14 +832,14 @@ Continue
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingSix' role='tab'>
-<a aria-controls='collapseSix' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseSix'>
+<div class='card-header' id='headingTwo2' role='tab'>
+<a aria-controls='#collapseTwo2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseTwo2'>
 <h5 class='mb-0'>
 How to disconnect a reading with advisor
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingSix' class='collapse' id='collapseSix' role='tabpanel'>
+<div aria-labelledby='headingTwo2' class='collapse' id='collapseTwo2' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -748,19 +848,24 @@ If at any time during the reading you’re not satisfied, or don’t feel you’
 <p>
 Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
 </p>
+<p>
+<a aria-controls='#collapseThree2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#collapseThree2'>
+Continue
+</a>
+</p>
 </div>
 </div>
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingSeven' role='tab'>
-<a aria-controls='collapseSeven' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseSeven'>
+<div class='card-header' id='headingThree2' role='tab'>
+<a aria-controls='collapseThree2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseThree2'>
 <h5 class='mb-0'>
 Close the Call
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingSeven' class='collapse' id='collapseSeven' role='tabpanel'>
+<div aria-labelledby='headingThree2' class='collapse' id='collapseThree2' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -772,9 +877,16 @@ When you call into the service, if you ever have a question, just press “0”.
 <p>
 Is there anything else I can help you with?
 </p>
-<p class='mb-0'>
+<p>
 Thanks for calling (PS / HP / LC) Enjoy your reading!
 </p>
+</div>
+<div class='text-center'>
+<p class='mb-0 bold'>
+The End
+</p>
+<p>At this point the simution is over</p>
+<a href='/oe-jekyll/'>Back to start</a>
 </div>
 </div>
 </div>
@@ -785,24 +897,50 @@ Thanks for calling (PS / HP / LC) Enjoy your reading!
 </div>
 </section>
 <footer class='footer2 clearfix'>
-<div class='container text-center'>
-<div class='users' id='users' style='display:none'>
-<a class='text-warning text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches'>
+<div class='container-fluid text-center'>
+<div class='users' id='users' style='display: none'>
+<a class='text-red text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches'>
 <i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
 4 match(es) found
 </a>
-<a class='text-warning text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches2' style='display:none'>
+<a class='text-red text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches2' style='display:none'>
 <i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
 4 match(es) found
 </a>
+<div class='row users-heading'>
+<div class='col text-red'>
+Name
+<i class='fa fa-sort-desc'></i>
+</div>
+<div class='col'>
+DOB
+<i class='fa fa-sort-desc'></i>
+</div>
+<div class='col'>
+Email
+<i class='fa fa-sort-desc'></i>
+</div>
+<div class='col'>
+Phone
+<i class='fa fa-sort-desc'></i>
+</div>
+<div class='col'>
+Address
+<i class='fa fa-sort-desc'></i>
+</div>
+<div class='col text-center'>
+Investigate
+</div>
+</div>
 <div class='row'>
 <div class='col'>
 Matt M
-<span class='text-warning'>Bee</span>
+<span class='text-red'>Bee</span>
 </div>
 <div class='col'>03/25/1979</div>
 <div class='col'>mdal1388@gmail.com</div>
 <div class='col'>215-222-2211</div>
+<div class='col'>3543 Ainslie Street...</div>
 <div class='col text-center'>
 <button class='btn btn-default btn-sm' data-target='#exampleModal' data-toggle='modal' type='button'>View</button>
 </div>
@@ -811,11 +949,12 @@ Matt M
 <div class='row'>
 <div class='col'>
 Mat
-<span class='text-warning'>Bee</span>
+<span class='text-red'>Bee</span>
 </div>
 <div class='col'>03/20/1980</div>
 <div class='col'>mdal138@gmail.com</div>
 <div class='col'>215-111-2222</div>
+<div class='col'>1113 Chestnut Street...</div>
 <div class='col text-center'>
 <a class='btn btn-default btn-sm' href=''>View</a>
 </div>
@@ -824,11 +963,12 @@ Mat
 <div class='row'>
 <div class='col'>
 Mark
-<span class='text-warning'>Bee</span>
+<span class='text-red'>Bee</span>
 </div>
 <div class='col'>03/25/1980</div>
 <div class='col'>mdal13833@gmail.com</div>
 <div class='col'>215-978-2222</div>
+<div class='col'>545 Park Street...</div>
 <div class='col text-center'>
 <a class='btn btn-default btn-sm' href=''>View</a>
 </div>
@@ -837,11 +977,12 @@ Mark
 <div class='row'>
 <div class='col'>
 Joe
-<span class='text-warning'>Bee</span>
+<span class='text-red'>Bee</span>
 </div>
 <div class='col'>09/25/1980</div>
 <div class='col'>joe@gmail.com</div>
 <div class='col'>215-121-2222</div>
+<div class='col'>98 Car Street...</div>
 <div class='col text-center'>
 <a class='btn btn-default btn-sm' href=''>View</a>
 </div>
