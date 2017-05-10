@@ -1,0 +1,18 @@
+---
+---
+
+// This is the main scss index file which will 
+// pull everything together from _scss folder.
+
+@import "_vars";
+@import "_vendor/bootstrap/bootstrap";
+@import "_vendor/bootstrap/mixins/_breakpoints.scss";
+@import "_vendor/font-awesome.min.scss";
+@import "_vendor/animate.scss";
+@import "_layout";
+@import "_buttons";
+@import "_sections";
+@import "_helpers";
+@import "_text";
+@import "_forms";
+@import "_components";
