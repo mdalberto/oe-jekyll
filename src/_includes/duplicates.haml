@@ -1,0 +1,69 @@
+#users.users{:style => 'display: none'}
+  %a#btn-matches.text-red.text-center.mb-3.font-weight-bold.btn-match{:href => ""}
+    %i.fa.fa-exclamation-triangle{"aria-hidden" => "true"}
+    4 match(es) found
+  %a#btn-matches2.text-red.text-center.mb-3.font-weight-bold.btn-match{:href => "", :style => "display:none"}
+    %i.fa.fa-exclamation-triangle{"aria-hidden" => "true"}
+    4 match(es) found
+  .row.users-heading
+    .col.text-red
+      Name
+      %i.fa.fa-sort-desc
+    .col 
+      DOB
+      %i.fa.fa-sort-desc 
+    .col 
+      Email
+      %i.fa.fa-sort-desc 
+    .col 
+      Phone
+      %i.fa.fa-sort-desc 
+    .col 
+      Address
+      %i.fa.fa-sort-desc 
+    .col.text-center
+      Investigate
+
+  .row
+    .col
+      Matt M
+      %span.text-red Bee
+    .col 03/25/1979
+    .col mdal1388@gmail.com
+    .col 215-222-2211
+    .col 3543 Ainslie Street...
+    .col.text-center
+      %button.btn.btn-default.btn-sm{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"} View
+  %hr/
+  .row
+    .col
+      Mat
+      %span.text-red Bee
+    .col 03/20/1980
+    .col mdal138@gmail.com
+    .col 215-111-2222
+    .col 1113 Chestnut Street...
+    .col.text-center
+      %a.btn.btn-default.btn-sm{:href => ""} View
+  %hr/
+  .row
+    .col
+      Mark
+      %span.text-red Bee
+    .col 03/25/1980
+    .col mdal13833@gmail.com
+    .col 215-978-2222
+    .col 545 Park Street...
+    .col.text-center
+      %a.btn.btn-default.btn-sm{:href => ""} View
+  %hr/
+  .row
+    .col
+      Joe
+      %span.text-red Bee
+    .col 09/25/1980
+    .col joe@gmail.com
+    .col 215-121-2222
+    .col 98 Car Street...
+    .col.text-center
+      %a.btn.btn-default.btn-sm{:href => ""} View

@@ -5,111 +5,88 @@ permalink: /newbie-form5/
 prototype: 5
 ---
 
-%section#services.newbieform5
+%section#services.prototype5
   .container-fluid
     .row
       .col-lg-12.text-center
         %h1.mt-3 New Psychic Source Customer
         %p.text-muted ANI: 267-210-6381
     %hr/
-    
+
 
     .row.justify-content-md-center
       #sidebar.col-12.col-md-5.col-lg-4
-        %a#btn-transcript.btn.btn-primary.btn-sm.btn-transcript2
-          %i.fa.fa-comment.fa-lg
-          Transcript   
+        .sidebar-container
 
-        .transcript-panel
-  
-          %h3.mb-0 Transcript
-
-        #accordionTranscripts{"aria-multiselectable" => "true", :role => "tablist"}
-          .card
-            #headingOne.card-header{:role => "tab"}
-              %a{"aria-controls" => "TcollapseZero", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseZero"}
-                %h5.mb-0
-                  Intro
-            #TcollapseZero.collapse.show{"aria-labelledby" => "TheadingZero", :role => "tabpanel"}
+          #transcript
+            .card
               .card-block
                 %p
                   Hi! Thank you for calling (PS) my name is (your name).
-                %p.mb-4
+                %p
                   Have you ever used our service before?
-                %a.btn.btn-green.transcriptchanger{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseExample"}
-                  Yes
-                .btn.btn-green.transcriptchanger{:data-link => "transcript2" }
-                  No         
+                %p
+                  %a{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseExample"}
+                    If they say yes click here
                 #collapseExample.collapse
                   .card.card-block
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.                  
-          .card
-            #TheadingOne.card-header{:role => "tab"}
-              %a{"aria-controls" => "TcollapseOne", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseOne"}
-                %h5.mb-0
-                  Customer Information
-            #TcollapseOne.collapse{"aria-labelledby" => "TheadingOne", :role => "tabpanel"}
-              .card-block
+                    %p
+                      Please redirect this person to a sessoned agent.
+                    %p.mb-3 
+                      At this point the simution is over
+                      %br
+                      %a.btn.btn-default{:href => "{{ site.baseurl }}/"} Back to start
                 %p
-                  Content
-
-              
-          .card
-            #TheadingTwo.card-header{:role => "tab"}
-              
-              %a.collapsed{"aria-controls" => "TcollapseTwo", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseTwo"}
-                %h5.mb-0
-                  Account Access Info
-            #TcollapseTwo.collapse{"aria-labelledby" => "TheadingTwo", :role => "tabpanel"}
-              .card-block
+                  I would be happy to setup you up with an account, so you can talk with one of our advisor in just a few minutes. We are a
+                  Pre-Paid Service, so as long as you are over the age of 18?
                 %p
-                  Content
-
-
-
-          .card
-            #TheadingThree.card-header{:role => "tab"}
-
-              %a.collapsed{"aria-controls" => "TcollapseThree", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseThree"}
-                %h5.mb-0
-                  Credit Card
-            #TcollapseThree.collapse{"aria-labelledby" => "TheadingThree", :role => "tabpanel"}
-              .card-block
+                  I’ll just need your information and a credit card in your own name to create an account exclusively for you. You can decide
+                  how much you want to spend and when.
                 %p
-                  Content
-                
-
-          .card
-            #TheadingFour.card-header{:role => "tab"}
-
-              %a.collapsed{"aria-controls" => "TcollapseFour", "aria-expanded" => "false", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseFour"}
-                %h5.mb-0
-                  Package & Promos
-            #TcollapseFour.collapse{"aria-labelledby" => "TheadingFour", :role => "tabpanel"}
-              .card-block
+                  Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
                 %p
-                  Content
+                  Our best package is 30 minutes for $30.00.
+                %p
+                  %a{"aria-controls" => "collapseMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseMoreOnPrice"}
+                    More on Price                         
+                #collapseMoreOnPrice.collapse
+                  .card.card-block
+                    %ul.pl-3
+                      %li
+                        You can get 1 long reading or you may try 2 or 3 short readings with different advisors. You can divide up your time any way you like. 
+                      %li
+                        You do not have to use all the time on your first reading.  
+                      %li
+                        Any time left remains on your account for a future reading.
+                    %p
+                      There are no taxes, fees or other cost we charge to use our service. You can talk to almost any advisor. (Excludes Premium Advisors). We do not offer the $1 per/min rate on the next purchase. The advisor’s rates start from $4.99 per/min to $11.99 per/min, existing member rates are charged on 2nd purchases and on.
 
-          -# %p
-          -#   Hi! Thank you for calling (PS) my name is (your name).
-          -# %p.mb-4
-          -#   Have you ever used our service before?
-          -# %p
-          -#   I would be happy to setup you up with an account, so you can talk with one of our advisor in just a few minutes.  We are a Pre-Paid Service, so as long as you are over the age of 18?   I&#x2019;ll just need your information and a credit card in your own name to create an account exclusively for you.  You can decide how much you want to spend and when.
-          -# %p Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
-          -# %p Our best package is 30 minutes for $30.00
-          -# %p
-          -#   You can get 1 long reading or you may try 2 or 3 short readings with different advisors. You can divide up your time any way you like.
-          -#   You do not have to use all the time on your first reading.
-          -#   Any time left remains on your account for a future reading.
-          -# %p
-          -#   There are no taxes, fees or other cost we charge to use our service.
-          -#   You can talk to almost any advisor. (Excludes Premium Advisors).
-          -# %p We do not offer the $1 per/min rate on the next purchase. The advisor&#x2019;s rates start from $4.99 per/min to $11.99 per/min, existing member rates are charged on 2nd purchases and on.
-          -# %p The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
+                    %p
+                      The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account. 
+                %p
+                  The information I need, is what verifies you to your credit card.
+                %p
+                  Please may I have your phone exactly as it’s listed with your credit card company? 
+                %p
+                  What type of phone are you using? 
+                %p
+                  Now, your first, middle and last name exactly how it appears on the credit card. 
+                %p
+                  Your date of birth please.  Thank you.
+                %p
+                  Please, select a 4-digit pin number to use access your account with our service.  Select any 4- numbers which are easy for you to remember?
+                .mb-4
+                .mb-4
+                .mb-4
+                .mb-4
+          %a#btn-transcript.btn.btn-primary.btn-sm.btn-transcript2
+            %i.fa.fa-comment.fa-lg
+            Transcript
+          %a#btn-transcript2.btn.btn-primary.btn-sm.btn-transcript2{:style => 'display:none'}
+            %i.fa.fa-comment.fa-lg
+            Transcript
+
       .col-12.col-md-7.col-lg-6
-   
-
         %h3.mb-3 Create New Customer
 
         #accordion{"aria-multiselectable" => "true", :role => "tablist"}
@@ -146,6 +123,8 @@ prototype: 5
                   %label.col-lg-3.col-form-label{:for => "birth"} Birth Date
                   .col-8.col-sm-5.col-md-6.col-lg-4
                     %input#birth.form-control{:name => "date", :type => "text"}
+                %a.btn.btn-green.btn-fixed.mt-4{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"} Continue
+
               
           .card
             #headingTwo.card-header{:role => "tab"}
@@ -173,13 +152,7 @@ prototype: 5
                     .input-group
                       %input#pin.form-control{:type => "search"}
                         %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "4 digits required"}
-                .form-group.row
-                  %label.col-lg-3.col-form-label{:for => "phone-input"} Password
-                  .col-lg-7
-                    .input-group
-                      %input#pass.form-control{:type => "text"}
-                        %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Password is used for website login and promotional email"}
-
+                %a.btn.btn-green.btn-fixed.mt-4{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"} Continue
 
           .card
             #headingThree.card-header{:role => "tab"}
@@ -270,6 +243,8 @@ prototype: 5
                   %label.col-lg-3.col-form-label{:for => "zip23"} Zip
                   .col-8.col-sm-5.col-md-6.col-lg-4
                     %input.form-control{:name => "zip", :type => "text"}
+                %a.btn.btn-green.btn-fixed.mt-4{"aria-controls" => "collapseFour", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"} Continue
+
 
           .card
             #headingFour.card-header{:role => "tab"}
@@ -323,14 +298,7 @@ prototype: 5
                       %label.form-check-label
                         %input#gridRadios4.form-check-input{:name => "gridRadios2", :type => "radio", :value => "option4"}
                           No thanks
-                .form-group.row
-                  %label.col-lg-3.col-form-label{:for => "birth"} Rewards
-                  .col-lg-7
-                    .row
-                      .col-lg-7
-                        %select#gender-select.form-control
-                          %option Yes
-                          %option No
+
                 .form-group.row
                   %label.col-lg-3.col-form-label Heard about us
                   .col-lg-7
@@ -343,14 +311,16 @@ prototype: 5
                       %option Radio
                       %option From a Friend
                       %option Unspecified
-        .mb-5
-          / <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-gray2 mt-4 ">Back</a>
-          %a#user-continue.btn.btn-green.btn-fixed.mt-4{:href => "{{ site.baseurl }}/newbie-form4"} Continue
-          #user-btn-disabled.btn.btn-default.btn-fixed.mt-4{:style => "display:none"} Continue
+                .mb-5
+                  / <a href="{{ site.baseurl }}/newbie-form2" class="btn btn-gray2 mt-4 ">Back</a>
+                  %a#user-continue.btn.btn-green.btn-fixed.mt-4{:href => "{{ site.baseurl }}/newbie-form4"} Submit
 
-          
+
+                
 %footer.footer2.clearfix
   .container.text-center
+
+  
     #users.users{:style => "display:none"}
       %a#btn-matches.text-warning.text-center.mb-3.font-weight-bold.btn-match{:href => ""}
         %i.fa.fa-exclamation-triangle{"aria-hidden" => "true"}

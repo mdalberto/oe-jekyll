@@ -135,11 +135,6 @@
 
 }
 
-.controls{
- 
-
-}
-
 .slim{
 
     .card-header {
@@ -154,8 +149,28 @@
         }
     }
 
-    .transcriptOnlyCard{
+}
 
+#transcript{
+    border-bottom: 1px solid #0275d8;
+    height:500px;
+    overflow-y:scroll;
+        border:2px solid #0275d8;
+        position:relative;
+}
 
+.prototype5{
+    .col-12, .col-md-5, .col-lg-4{
+        padding-right: 25px;
+        padding-left: 25px;
     }
+}
+#sidebar > .card{
+    
+        border:none;
+    
+}
+
+.sidebar-container{
+    position:relative;
 }

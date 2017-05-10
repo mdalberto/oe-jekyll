@@ -9853,7 +9853,7 @@ a.btn-blue:focus, a.btn-blue:hover {
   color: white !important;
   padding: 3px 10px;
   cursor: pointer;
-  right: -12px;
+  right: -67px;
   top: 43px;
   /* Safari */
   -webkit-transform: rotate(90deg);
@@ -9961,6 +9961,23 @@ a.btn-blue:focus, a.btn-blue:hover {
   .slim .card-header h5 {
     display: none; }
 
+#transcript {
+  border-bottom: 1px solid #0275d8;
+  height: 500px;
+  overflow-y: scroll;
+  border: 2px solid #0275d8;
+  position: relative; }
+
+.prototype5 .col-12, .prototype5 .col-md-5, .prototype5 .col-lg-4 {
+  padding-right: 25px;
+  padding-left: 25px; }
+
+#sidebar > .card {
+  border: none; }
+
+.sidebar-container {
+  position: relative; }
+
 .u-mar-top-30 {
   margin-top: 30px; }
 
@@ -10056,7 +10073,7 @@ div.panel {
   border-radius: 0; }
 
 .transcript-panel {
-  padding: 20px;
+  padding: 10px;
   background-color: white; }
 
 .triangle-border {
