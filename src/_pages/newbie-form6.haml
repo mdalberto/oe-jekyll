@@ -13,32 +13,32 @@ prototype: 6
       .col-lg-12.text-center
         %h1.mt-3 New Psychic Source Customer
         %p.text-muted ANI: 267-210-6381
-        %controls
-          -# %a#toggleTranscript.btn.btn-default.btn-sm.float-right
-          -#   %i.fa.fa-comment.fa-lg
-          -#   Toggle
-          -#   %br
-          -#   Transcript
+        %a#toggleTranscriptClick.btn.btn-default.btn-sm.float-right
+          %i.fa.fa-comment.fa-lg.green
+          Toggle
+          %br
+          Transcript
+        %hr
 
     .row.justify-content-md-center
       .col-12.col-md-7.col-lg-6
         #accordion{"aria-multiselectable" => "true", :role => "tablist"}
           .card.transcriptOnlyCard
-            #headingOne.card-header{:role => "tab"}
-              %a{"aria-controls" => "collapseZero", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseZero"}
+            #headingColl1.card-header{:role => "tab"}
+              %a{"aria-controls" => "coll1", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll1"}
                 %h5.mb-0
                   Intro Transcript
-            #collapseZero.collapse.show{"aria-labelledby" => "headingZero", :role => "tabpanel"}
+            #coll1.collapse.show{"aria-labelledby" => "headingColl1", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p.mb-4
                     Hi! Thank you for calling (PS) my name is (your name).
                     Have you ever used our service before?
-                  %a.btn.btn-green{"aria-controls" => "collapseIsMember", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseIsMember"}
+                  %a.btn.btn-green{"aria-controls" => "collIsMember", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collIsMember"}
                     Yes
-                  %a.btn.btn-green{"aria-controls" => "collapseZeroInnerTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseZeroInnerTwo"}
+                  %a.btn.btn-green{"aria-controls" => "coll2", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll2"}
                     no
-                #collapseIsMember.collapse
+                #collIsMember.collapse
                   .row.justify-content-md-center
                     .col-md-7.text-center
 
@@ -51,11 +51,11 @@ prototype: 6
                         %a.btn.btn-defualt{:href => "{{ site.baseurl }}/"} Back to start
 
           .card.transcriptOnlyCard
-            #headingZeroInnerTwo.card-header{:role => "tab"}
-              %a.collapsed#headingZeroInnerTwoClick{"aria-controls" => "collapseZeroInnerTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseZeroInnerTwo"}
+            #headingColl2.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "coll2", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll2"}
                 %h5.mb-0
                   Over 18 & New Member Offer
-            #collapseZeroInnerTwo.collapse{"aria-labelledby" => "headingZeroInnerTwo", :role => "tabpanel"}
+            #coll2.collapse{"aria-labelledby" => "headingColl2", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p
@@ -68,14 +68,14 @@ prototype: 6
                     Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
                   %p
                     Our best package is 30 minutes for $30.00.
-                  .btn.btn-green#transcript-2-more{"aria-controls" => "collapseMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseMoreOnPrice"}
+                  .btn.btn-green{"aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
                     More on Price                         
-                  %a.btn.btn-green{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                  %a.btn.btn-green{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
                     Continue
-              #collapseMoreOnPrice.collapse.mt-3
+              #collMoreOnPrice.collapse.mt-3
                 .triangle-border.top
 
-                  %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collapseMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseMoreOnPrice"}
+                  %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
                     %span{ :aria-hidden =>"true"}
                       &times
                   %ul.pl-3
@@ -92,7 +92,7 @@ prototype: 6
                     The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account. 
 
                   %p
-                    %a.btn.btn-green{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                    %a.sendTop.btn.btn-green{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
                       Continue
 
 
@@ -101,11 +101,11 @@ prototype: 6
 
 
           .card
-            #headingOne.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+            #headingColl3.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
                 %h5.mb-0
                   Customer Information
-            #collapseOne.collapse{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+            #coll3.collapse{"aria-labelledby" => "headingColl3", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p
@@ -166,19 +166,19 @@ prototype: 6
                       %option Male
 
                 %p
-                  %a.btn.btn-green.btn-fixed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                  %a.btn.btn-green.btn-fixed{"aria-controls" => "coll4", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll4"}
                     Continue
 
 
 
               
           .card
-            #headingTwo.card-header{:role => "tab"}
+            #headingColl4.card-header{:role => "tab"}
               
-              %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+              %a.collapsed{"aria-controls" => "coll4", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll4"}
                 %h5.mb-0
                   Account Access Info
-            #collapseTwo.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+            #coll4.collapse{"aria-labelledby" => "headingColl4", :role => "tabpanel"}
               .card-block
 
                 .triangle-border.left
@@ -192,18 +192,18 @@ prototype: 6
                       %input#pin.form-control{:type => "search"}
                         %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "4 digits required"}
                 %p
-                  %a.btn.btn-green.btn-fixed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                  %a.btn.btn-green.btn-fixed{"aria-controls" => "coll5", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll5"}
                     Continue
 
 
           .card
-            #headingThree.card-header{:role => "tab"}
+            #headingColl5.card-header{:role => "tab"}
 
-              %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+              %a.collapsed{"aria-controls" => "coll5", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll5"}
                 %h5.mb-0
                   Address, How they Heard, Lang, Email
 
-            #collapseThree.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
+            #coll5.collapse{"aria-labelledby" => "headingColl5", :role => "tabpanel"}
               .card-block
 
                 .triangle-border.left
@@ -276,12 +276,12 @@ prototype: 6
                     %span.small.muted
                       (Fraud search for duplicates will happen on this field)
                 .triangle-border.left
-                  .btn.btn-green#transcript-2-more.mb-0.btn-sm{"aria-controls" => "collapseDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseDeclinesEmail"}
+                  %a.btn.btn-green.mb-0.btn-sm{"aria-controls" => "collDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collDeclinesEmail"}
                     Declines Email                         
 
-                #collapseDeclinesEmail.collapse.mt-3
+                #collDeclinesEmail.collapse.mt-3
                   .triangle-border.top
-                    %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collapseDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseDeclinesEmail"}
+                    %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collDeclinesEmail"}
                       %span{ :aria-hidden =>"true"}
                         &times
                     %p
@@ -299,16 +299,16 @@ prototype: 6
 
                 
                 %p.mt-3
-                  %a.btn.btn-green.btn-fixed{"aria-controls" => "collapseFour", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+                  %a.btn.btn-green.btn-fixed{"aria-controls" => "coll6", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll6"}
                     Continue
 
           .card
-            #headingFour.card-header{:role => "tab"}
+            #headingColl6.card-header{:role => "tab"}
 
-              %a.collapsed{"aria-controls" => "collapseFour", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+              %a.collapsed{"aria-controls" => "coll6", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll6"}
                 %h5.mb-0
                   Payment Information & Transaction
-            #collapseFour.collapse{"aria-labelledby" => "headingFour", :role => "tabpanel"}
+            #coll6.collapse{"aria-labelledby" => "headingColl6", :role => "tabpanel"}
               .card-block
 
                 .triangle-border.left
@@ -452,7 +452,6 @@ prototype: 6
 
 
         #confirmationScreen.text-center{:style => 'display:none'}
-          %hr
           %p
             Summary screen before final submitting could go here?
           %p
@@ -465,7 +464,6 @@ prototype: 6
 
 
         #processMessage.text-center{:style => 'display:none'}
-          %hr
           .green
             %h1
               Success!
@@ -474,11 +472,11 @@ prototype: 6
             
         #accordion2{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
           .card.transcriptOnlyCard
-            #headingOne2.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "collapseOne2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne2"}
+            #headingColl2-1.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "coll2-1", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-1"}
                 %h5.mb-0
                   Service Information
-            #collapseOne2.collapse{"aria-labelledby" => "headingOne2", :role => "tabpanel"}
+            #coll2-1.collapse{"aria-labelledby" => "headingColl2-1", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p
@@ -520,15 +518,15 @@ prototype: 6
                   %p
                     You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
                   %p
-                    %a.btn.btn-green.btn-fixed{"aria-controls" => "#collapseTwo2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo2"}
+                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
                       Continue              
 
           .card.transcriptOnlyCard
-            #headingTwo2.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "#collapseTwo2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo2"}
+            #headingColl2-2.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
                 %h5.mb-0
                   How to disconnect a reading with advisor
-            #collapseTwo2.collapse{"aria-labelledby" => "headingTwo2", :role => "tabpanel"}
+            #coll2-2.collapse{"aria-labelledby" => "headingColl2-2", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p
@@ -536,15 +534,15 @@ prototype: 6
                   %p
                     Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
                   %p
-                    %a.btn.btn-green.btn-fixed{"aria-controls" => "#collapseThree2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree2"}
+                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
                       Continue
 
           .card.transcriptOnlyCard
-            #headingThree2.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "collapseThree2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree2"}
+            #headingColl2-3.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
                 %h5.mb-0
                   Close the Call
-            #collapseThree2.collapse{"aria-labelledby" => "headingThree2", :role => "tabpanel"}
+            #coll2-3.collapse{"aria-labelledby" => "headingColl2-3", :role => "tabpanel"}
               .card-block
                 .triangle-border.left
                   %p
