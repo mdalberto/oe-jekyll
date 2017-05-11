@@ -128,36 +128,41 @@
 <div class='col-lg-12 text-center'>
 <h1 class='mt-3'>New Psychic Source Customer</h1>
 <p class='text-muted'>ANI: 267-210-6381</p>
-<controls>
-</controls>
+<a class='btn btn-default btn-sm float-right' id='toggleTranscriptClick'>
+<i class='fa fa-comment fa-lg green'></i>
+Toggle
+<br>
+Transcript
+</a>
+<hr>
 </div>
 </div>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-7 col-lg-6'>
 <div aria-multiselectable='true' id='accordion' role='tablist'>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingOne' role='tab'>
-<a aria-controls='collapseZero' aria-expanded='true' data-parent='#accordion' data-toggle='collapse' href='#collapseZero'>
+<div class='card-header' id='headingColl1' role='tab'>
+<a aria-controls='coll1' aria-expanded='true' data-parent='#accordion' data-toggle='collapse' href='#coll1'>
 <h5 class='mb-0'>
 Intro Transcript
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingZero' class='collapse show' id='collapseZero' role='tabpanel'>
+<div aria-labelledby='headingColl1' class='collapse show' id='coll1' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p class='mb-4'>
 Hi! Thank you for calling (PS) my name is (your name).
 Have you ever used our service before?
 </p>
-<a aria-controls='collapseIsMember' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collapseIsMember'>
+<a aria-controls='collIsMember' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collIsMember'>
 Yes
 </a>
-<a aria-controls='collapseZeroInnerTwo' aria-expanded='true' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#collapseZeroInnerTwo'>
+<a aria-controls='coll2' aria-expanded='true' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll2'>
 no
 </a>
 </div>
-<div class='collapse' id='collapseIsMember'>
+<div class='collapse' id='collIsMember'>
 <div class='row justify-content-md-center'>
 <div class='col-md-7 text-center'>
 <i aria-hidden='true' class='fa fa-reply fa-5x'></i>
@@ -176,14 +181,14 @@ At this point the simution is over
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingZeroInnerTwo' role='tab'>
-<a aria-controls='collapseZeroInnerTwo' aria-expanded='true' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseZeroInnerTwo' id='headingZeroInnerTwoClick'>
+<div class='card-header' id='headingColl2' role='tab'>
+<a aria-controls='coll2' aria-expanded='true' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#coll2'>
 <h5 class='mb-0'>
 Over 18 & New Member Offer
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingZeroInnerTwo' class='collapse' id='collapseZeroInnerTwo' role='tabpanel'>
+<div aria-labelledby='headingColl2' class='collapse' id='coll2' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -200,17 +205,17 @@ Our new member introductory offer is just a $1.00 per minute 1X only. We accept 
 <p>
 Our best package is 30 minutes for $30.00.
 </p>
-<div aria-controls='collapseMoreOnPrice' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collapseMoreOnPrice' id='transcript-2-more'>
+<div aria-controls='collMoreOnPrice' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collMoreOnPrice'>
 More on Price
 </div>
-<a aria-controls='collapseOne' aria-expanded='false' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
+<a aria-controls='coll3' aria-expanded='false' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
 Continue
 </a>
 </div>
 </div>
-<div class='collapse mt-3' id='collapseMoreOnPrice'>
+<div class='collapse mt-3' id='collMoreOnPrice'>
 <div class='triangle-border top'>
-<button aria-controls='collapseMoreOnPrice' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collapseMoreOnPrice' type='button'>
+<button aria-controls='collMoreOnPrice' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collMoreOnPrice' type='button'>
 <span aria='true'>
 &times
 </span>
@@ -233,7 +238,7 @@ There are no taxes, fees or other cost we charge to use our service. You can tal
 The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
 </p>
 <p>
-<a aria-controls='collapseOne' aria-expanded='false' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
+<a aria-controls='coll3' aria-expanded='false' class='sendTop btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
 Continue
 </a>
 </p>
@@ -242,14 +247,14 @@ Continue
 </div>
 </div>
 <div class='card'>
-<div class='card-header' id='headingOne' role='tab'>
-<a aria-controls='collapseOne' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>
+<div class='card-header' id='headingColl3' role='tab'>
+<a aria-controls='coll3' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
 <h5 class='mb-0'>
 Customer Information
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingOne' class='collapse' id='collapseOne' role='tabpanel'>
+<div aria-labelledby='headingColl3' class='collapse' id='coll3' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -334,7 +339,7 @@ Your date of birth please.  Thank you.
 </div>
 </div>
 <p>
-<a aria-controls='collapseTwo' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseTwo'>
+<a aria-controls='coll4' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll4'>
 Continue
 </a>
 </p>
@@ -342,14 +347,14 @@ Continue
 </div>
 </div>
 <div class='card'>
-<div class='card-header' id='headingTwo' role='tab'>
-<a aria-controls='collapseTwo' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseTwo'>
+<div class='card-header' id='headingColl4' role='tab'>
+<a aria-controls='coll4' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#coll4'>
 <h5 class='mb-0'>
 Account Access Info
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingTwo' class='collapse' id='collapseTwo' role='tabpanel'>
+<div aria-labelledby='headingColl4' class='collapse' id='coll4' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p class='mb-0'>
@@ -367,7 +372,7 @@ Please, select a 4-digit pin number to use access your account with our service.
 </div>
 </div>
 <p>
-<a aria-controls='collapseThree' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseThree'>
+<a aria-controls='coll5' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll5'>
 Continue
 </a>
 </p>
@@ -375,14 +380,14 @@ Continue
 </div>
 </div>
 <div class='card'>
-<div class='card-header' id='headingThree' role='tab'>
-<a aria-controls='collapseThree' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseThree'>
+<div class='card-header' id='headingColl5' role='tab'>
+<a aria-controls='coll5' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#coll5'>
 <h5 class='mb-0'>
 Address, How they Heard, Lang, Email
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingThree' class='collapse' id='collapseThree' role='tabpanel'>
+<div aria-labelledby='headingColl5' class='collapse' id='coll5' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p class='mb-0'>
@@ -470,13 +475,13 @@ And your email address please?
 </div>
 </div>
 <div class='triangle-border left'>
-<div aria-controls='collapseDeclinesEmail' aria-expanded='false' class='btn btn-green mb-0 btn-sm' data-toggle='collapse' href='#collapseDeclinesEmail' id='transcript-2-more'>
+<a aria-controls='collDeclinesEmail' aria-expanded='false' class='btn btn-green mb-0 btn-sm' data-toggle='collapse' href='#collDeclinesEmail'>
 Declines Email
+</a>
 </div>
-</div>
-<div class='collapse mt-3' id='collapseDeclinesEmail'>
+<div class='collapse mt-3' id='collDeclinesEmail'>
 <div class='triangle-border top'>
-<button aria-controls='collapseDeclinesEmail' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collapseDeclinesEmail' type='button'>
+<button aria-controls='collDeclinesEmail' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collDeclinesEmail' type='button'>
 <span aria='true'>
 &times
 </span>
@@ -501,7 +506,7 @@ Your information is private and we don’t sell or trade any of your private inf
 </div>
 </div>
 <p class='mt-3'>
-<a aria-controls='collapseFour' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
+<a aria-controls='coll6' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll6'>
 Continue
 </a>
 </p>
@@ -509,14 +514,14 @@ Continue
 </div>
 </div>
 <div class='card'>
-<div class='card-header' id='headingFour' role='tab'>
-<a aria-controls='collapseFour' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#collapseFour'>
+<div class='card-header' id='headingColl6' role='tab'>
+<a aria-controls='coll6' aria-expanded='false' class='collapsed' data-parent='#accordion' data-toggle='collapse' href='#coll6'>
 <h5 class='mb-0'>
 Payment Information & Transaction
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingFour' class='collapse' id='collapseFour' role='tabpanel'>
+<div aria-labelledby='headingColl6' class='collapse' id='coll6' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p class='mb-0'>
@@ -723,7 +728,6 @@ Submit
 </div>
 </div>
 <div class='text-center' id='confirmationScreen' style='display:none'>
-<hr>
 <p>
 Summary screen before final submitting could go here?
 </p>
@@ -737,7 +741,6 @@ Process
 </p>
 </div>
 <div class='text-center' id='processMessage' style='display:none'>
-<hr>
 <div class='green'>
 <h1>
 Success!
@@ -749,14 +752,14 @@ The account has been created!
 </div>
 <div aria-multiselectable='true' id='accordion2' role='tablist' style='display:none'>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingOne2' role='tab'>
-<a aria-controls='collapseOne2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseOne2'>
+<div class='card-header' id='headingColl2-1' role='tab'>
+<a aria-controls='coll2-1' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-1'>
 <h5 class='mb-0'>
 Service Information
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingOne2' class='collapse' id='collapseOne2' role='tabpanel'>
+<div aria-labelledby='headingColl2-1' class='collapse' id='coll2-1' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -817,7 +820,7 @@ From the Crossroads menu; Select option #1 again for the Advisor menu.
 You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
 </p>
 <p>
-<a aria-controls='#collapseTwo2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#collapseTwo2'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-2'>
 Continue
 </a>
 </p>
@@ -826,14 +829,14 @@ Continue
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingTwo2' role='tab'>
-<a aria-controls='#collapseTwo2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseTwo2'>
+<div class='card-header' id='headingColl2-2' role='tab'>
+<a aria-controls='coll2-2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-2'>
 <h5 class='mb-0'>
 How to disconnect a reading with advisor
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingTwo2' class='collapse' id='collapseTwo2' role='tabpanel'>
+<div aria-labelledby='headingColl2-2' class='collapse' id='coll2-2' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
@@ -843,7 +846,7 @@ If at any time during the reading you’re not satisfied, or don’t feel you’
 Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
 </p>
 <p>
-<a aria-controls='#collapseThree2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#collapseThree2'>
+<a aria-controls='coll2-3' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-3'>
 Continue
 </a>
 </p>
@@ -852,14 +855,14 @@ Continue
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingThree2' role='tab'>
-<a aria-controls='collapseThree2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#collapseThree2'>
+<div class='card-header' id='headingColl2-3' role='tab'>
+<a aria-controls='coll2-3' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-3'>
 <h5 class='mb-0'>
 Close the Call
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingThree2' class='collapse' id='collapseThree2' role='tabpanel'>
+<div aria-labelledby='headingColl2-3' class='collapse' id='coll2-3' role='tabpanel'>
 <div class='card-block'>
 <div class='triangle-border left'>
 <p>
