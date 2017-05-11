@@ -121,7 +121,9 @@
         border-width: 15px 30px 15px 0;
         border-color: transparent #1497bf;
     }
-
+    .triangle-border.top:before {
+                border-color: #1497bf transparent;
+    }
 
     .btn-green{
 
