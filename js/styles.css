@@ -9949,6 +9949,8 @@ a.btn-blue:focus, a.btn-blue:hover {
   left: -30px;
   border-width: 15px 30px 15px 0;
   border-color: transparent #1497bf; }
+.bluebubbles .triangle-border.top:before {
+  border-color: #1497bf transparent; }
 .bluebubbles .btn-green {
   background-color: #133d52; }
   .bluebubbles .btn-green:hover {
