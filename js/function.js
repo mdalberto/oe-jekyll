@@ -32,10 +32,10 @@ $( "#last-input" ).change(function() {
     if($(this).val() == 'Bee'){
         console.log('hellow');
         $('#users').show();
-        $('#last-input').addClass('text-warning')
+        $('#last-input').addClass('text-red')
     } else {
         $('#users').hide();
-        $('#last-input').removeClass('text-warning')
+        $('#last-input').removeClass('text-red')
     }
 });
 
