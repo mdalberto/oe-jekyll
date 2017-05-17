@@ -1,0 +1,27 @@
+--- 
+layout: default 
+title: Newbie Script 1 
+permalink: /login/ 
+prototype: 6
+---
+
+%section#services.newbieform5.bold-labels.card-noborder.btn-round.no-border-card-headers
+  .container-fluid
+    .row
+      .col-lg-12.text-center
+        %h1.mt-3.mb-4 Agent Login
+        %hr
+    .row.justify-content-md-center
+      .col-12.col-md-7.col-lg-6
+        .form-group.row
+          %label.col-lg-3.col-form-label{:for => "first-input"} Name
+          .col-lg-7
+            %input#last-input.form-control{:type => "text"}
+        .form-group.row
+          %label.col-lg-3.col-form-label{:for => "last-input"} Password
+          .col-lg-7
+            %input#last-input.form-control{:type => "text"}
+              %p.mt-4
+                %a.mt-2.btn.btn-green.btn-fixed{:href => "{{ site.baseurl }}/start-1" }
+                  Submit
+
