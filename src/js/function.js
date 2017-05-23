@@ -44,25 +44,8 @@ $( "#clickme" ).click(function() {
   $( "#book" ).slideUp( "slow", function() {
     // Animation complete.
   });
-});
+}); 
 
- 
-// $( ".btn-package" ).click(function() {
-//   $(".btn-package" ).removeClass('btn-yellow');
-//   $(this).addClass('btn-yellow');
-// });
-
-// $(document).ready(function() {
-//   $('#user-form input').change(function() {
-//     $('#user-form input').each(function() {
-//     if ($(this).val() === '') {
-//         }else{
-//             enableForm()
-//         }
-
-//     });
-//   });
-// });
 
 
 $('#capture1').on('click', function(){

@@ -42,3 +42,24 @@ p{
 .text-red{
     color:$oe-red !important;
 }
+
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    background-color:transparent;
+    border-bottom: 1px solid #cecece;
+    text-align:center;
+
+    a, span{
+        display:block;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;         
+        font-weight:bold;
+        font-weight: normal;
+        color: $green;
+    }
+
+    a.collapsed{
+        color: #cecece; 
+    }
+}

@@ -4,175 +4,34 @@
 }
 
 .newbieform5{
+
     #sidebar{
         position:relative;
         padding-right:60px;
     }
-        overflow:hidden;
-//            background-color:rgba(254, 255, 226, 0.64);
 
-    .card-header {
-        padding: 0;
-        margin-bottom: 0;
-        background-color:transparent;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-        text-align:center;
-        a{
-            display:block;
-          padding-top: 0.75rem;
-          padding-bottom: 0.75rem;
-          //color: gray;
-        //   h5{
-        //   font-size:15px;
-        //   }
-        }
-        a.collapsed{
-            color: gray; 
-        }
-    }
-    .card {
-        margin-left: -16px;
-        margin-right: -16px;
-        @include media-breakpoint-up("md") {
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-    }
-
-    label {
-        font-size:15px;
-        @include media-breakpoint-up("lg") {
-            text-align:right;
-        }
-        
-    }
-
-    #accordionTranscripts .card{
-        background-color:white;
-    }
-
-
-}    
-.no-border-card-headers{
-    .card-header{
-        border-bottom: 0px solid rgba(0, 0, 0, 0.125);
-                border-top: 1px solid rgba(0, 0, 0, 0.125);
-    }
-}
-
-.prototype7{
-
-       .card-header{
-        border-bottom: 0px solid rgba(0, 0, 0, 0.125);
-                border-top: 0px solid rgba(0, 0, 0, 0.125);
-    } 
-
-    .triangle-border {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        border: none;
-        color: #333;
-        background: transparent;
-
-    }
-
-    .triangle-border.left:before {
-        top: 0;
-        bottom: auto;
-        left: -30px;
-        border-width: 0;
-        border-color: none;
-    }
-
-    .card-header a {
-        display: block;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-
-    // .triangle-border.left {
-    //     margin-left: -300px;
-    //     width: 230px;
-    //     margin-right: 0px;
-    // }
+    overflow:hidden;
 
 
 }
-
-.bluebubbles{
-    .triangle-border {
-        position: relative;
-        padding: 15px;
-        margin: 1em;
-        border: 5px solid #1497bf;
-        color: #fdfdfd;
-        background: #1497bf;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-
-    .triangle-border.left:before {
-        top: 10px;
-        bottom: auto;
-        left: -30px;
-        border-width: 15px 30px 15px 0;
-        border-color: transparent #1497bf;
-    }
-    .triangle-border.top:before {
-                border-color: #1497bf transparent;
-    }
-
-    .btn-green{
-
-        background-color:#133d52;
-
-        &:hover{
-            background-color:#133d52;
-        }
-    }
-
-
-}
-
-.slim{
-
-    .card-header {
-
-            border:none;
-            a{
-                padding:0;
-            }
-
-        h5{
-            display:none;
-        }
-    }
-
-}
-
-#transcript{
-    border-bottom: 1px solid #0275d8;
-    height:500px;
-    overflow-y:scroll;
-        border:2px solid #0275d8;
-        position:relative;
-}
-
-.prototype5{
-    .col-12, .col-md-5, .col-lg-4{
-        padding-right: 25px;
-        padding-left: 25px;
+.card {
+    margin-left: -16px;
+    margin-right: -16px;
+    @include media-breakpoint-up("md") {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
-#sidebar > .card{
-    
-        border:none;
+
+label {
+    font-size:15px;
+    @include media-breakpoint-up("lg") {
+        text-align:right;
+        margin-left: 20px;
+    }
     
 }
 
-.sidebar-container{
-    position:relative;
+#accordionTranscripts .card{
+    background-color:white;
 }

@@ -1,7 +1,13 @@
+//a global mod
+.btn-round{
+    .btn{
+        border-radius: 6px;
+    }
+}
+
 .btn{
     padding: 0.75rem 1rem;
 }
-
 
 .btn-fixed{
   width:100%;
@@ -10,7 +16,6 @@
 
 @include media-breakpoint-up("lg") {
   .btn-fixed{
-
     width:220px;
     display:inline-block;
   }
@@ -21,26 +26,6 @@
 .btn-sm, .btn-group-sm > .btn {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
-}
-
-.btn-transcript{
-    
-   // margin-left:-80px;
-    
-}
-
-.btn-input-height{
-    padding: 0.5rem 1rem;
-}
-
-.btn-xl {
-  color: #fff;
-  background-color: $green;
-  border-color: $green;
-  border-radius: 0;
-  font-size: 16px;
-  padding: 5px 30px;
-  font-weight: bold;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -65,46 +50,10 @@ button.accordion {
     color: #ffffff !important;
 }
 
-.btn-round{
-    .btn{
-        //background-color: #5a8f00;
-        border-radius: 6px;
-    }
-}
-
 .btn-blue{
     background-color: $oe-blue;
     cursor:pointer;
 }
-
-.btn-white{
-    border-color: $oe-blue;
-    color: $gray;
-    cursor:pointer;
-}
-
-.btn-gray2{
-    border-color: $oe-blue;
-    color: $gray;
-    cursor:pointer;
-        margin-bottom: 5px;
-
-}
-
-.btn-yellow{
-    border-color: $yellow;
-       background-color: $oe-pale-yellow;
-    color: $gray;
-    cursor:pointer;
-        margin-bottom: 5px;
-
-}
-
-.btn-package:hover{
-     cursor:pointer !important;
-     background-color: $oe-pale-yellow !important;
-}
-
 
 a.btn-green:focus, a.btn-green:hover,
 a.btn-blue:focus, a.btn-blue:hover {
@@ -120,7 +69,6 @@ a.btn-blue:focus, a.btn-blue:hover {
     transition: 0.4s;
     background-color: darken($oe-blue,15%);
 }
-
 
 .btn-default{
     background-color: #ccc;
@@ -145,32 +93,6 @@ a.btn-blue:focus, a.btn-blue:hover {
     font-size: 16px;
 }
 
-.btn-transcript2{
-    position:absolute;
-    color:white !important;
-    padding:3px 10px;
-    cursor:pointer;
-    right: -67px;
-    top: 43px;
-
-
-    /* Safari */
-    -webkit-transform: rotate(90deg);
-
-    /* Firefox */
-    -moz-transform: rotate(90deg);
-
-    /* IE */
-    -ms-transform: rotate(90deg);
-
-    /* Opera */
-   /// -o-transform: rotate(90deg);
-
-    /* Internet Explorer */
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
-
-}
 
 #toggleTranscript{
     cursor:pointer;

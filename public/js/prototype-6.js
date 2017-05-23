@@ -48,23 +48,10 @@ $(function () {
       return false;
   });
 
-  $('#toggleColor').on('click', function(){
-      $('#services').toggleClass('bluebubbles');
-      return false;
-  });
-
-  $('#toggleSlim').on('click', function(){
-      $('#services').toggleClass('slim');
-      return false;
-  });
-
-
 
     // sends users back to top of screen
     $('#coll1, #coll2, #coll3, #coll4, #coll5, #coll6, #coll2-1, #coll2-2, #coll2-3' ).on('show.bs.collapse', function () {
         $("html, body").animate({ scrollTop: 0 }, 200);
     });
-
-
 
 });
