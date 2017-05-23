@@ -9743,6 +9743,9 @@ hr {
 li {
   margin-bottom: 10px; }
 
+.btn-round .btn {
+  border-radius: 6px; }
+
 .btn {
   padding: 0.75rem 1rem; }
 
@@ -9757,18 +9760,6 @@ li {
 .btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem; }
-
-.btn-input-height {
-  padding: 0.5rem 1rem; }
-
-.btn-xl {
-  color: #fff;
-  background-color: #82bb02;
-  border-color: #82bb02;
-  border-radius: 0;
-  font-size: 16px;
-  padding: 5px 30px;
-  font-weight: bold; }
 
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
@@ -9786,34 +9777,9 @@ button.accordion {
   cursor: pointer;
   color: #ffffff !important; }
 
-.btn-round .btn {
-  border-radius: 6px; }
-
 .btn-blue {
   background-color: #bacad7;
   cursor: pointer; }
-
-.btn-white {
-  border-color: #bacad7;
-  color: #464a4c;
-  cursor: pointer; }
-
-.btn-gray2 {
-  border-color: #bacad7;
-  color: #464a4c;
-  cursor: pointer;
-  margin-bottom: 5px; }
-
-.btn-yellow {
-  border-color: #fed136;
-  background-color: #fde699;
-  color: #464a4c;
-  cursor: pointer;
-  margin-bottom: 5px; }
-
-.btn-package:hover {
-  cursor: pointer !important;
-  background-color: #fde699 !important; }
 
 a.btn-green:focus, a.btn-green:hover,
 a.btn-blue:focus, a.btn-blue:hover {
@@ -9848,23 +9814,6 @@ a.btn-blue:focus, a.btn-blue:hover {
   color: #ff0000 !important;
   font-size: 16px; }
 
-.btn-transcript2 {
-  position: absolute;
-  color: white !important;
-  padding: 3px 10px;
-  cursor: pointer;
-  right: -67px;
-  top: 43px;
-  /* Safari */
-  -webkit-transform: rotate(90deg);
-  /* Firefox */
-  -moz-transform: rotate(90deg);
-  /* IE */
-  -ms-transform: rotate(90deg);
-  /* Opera */
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
-
 #toggleTranscript {
   cursor: pointer;
   margin-top: -30px;
@@ -9881,104 +9830,24 @@ a.btn-blue:focus, a.btn-blue:hover {
   .newbieform5 #sidebar {
     position: relative;
     padding-right: 60px; }
-  .newbieform5 .card-header {
-    padding: 0;
-    margin-bottom: 0;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-    text-align: center; }
-    .newbieform5 .card-header a {
-      display: block;
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem; }
-    .newbieform5 .card-header a.collapsed {
-      color: gray; }
-  .newbieform5 .card {
-    margin-left: -16px;
-    margin-right: -16px; }
-    @media (min-width: 768px) {
-      .newbieform5 .card {
-        margin-left: 0px;
-        margin-right: 0px; } }
-  .newbieform5 label {
-    font-size: 15px; }
-    @media (min-width: 992px) {
-      .newbieform5 label {
-        text-align: right; } }
-  .newbieform5 #accordionTranscripts .card {
-    background-color: white; }
 
-.no-border-card-headers .card-header {
-  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+.card {
+  margin-left: -16px;
+  margin-right: -16px; }
+  @media (min-width: 768px) {
+    .card {
+      margin-left: 0px;
+      margin-right: 0px; } }
 
-.prototype7 .card-header {
-  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
-  border-top: 0px solid rgba(0, 0, 0, 0.125); }
-.prototype7 .triangle-border {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  border: none;
-  color: #333;
-  background: transparent; }
-.prototype7 .triangle-border.left:before {
-  top: 0;
-  bottom: auto;
-  left: -30px;
-  border-width: 0;
-  border-color: none; }
-.prototype7 .card-header a {
-  display: block;
-  padding-top: 0;
-  padding-bottom: 0; }
+label {
+  font-size: 15px; }
+  @media (min-width: 992px) {
+    label {
+      text-align: right;
+      margin-left: 20px; } }
 
-.bluebubbles .triangle-border {
-  position: relative;
-  padding: 15px;
-  margin: 1em;
-  border: 5px solid #1497bf;
-  color: #fdfdfd;
-  background: #1497bf;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px; }
-.bluebubbles .triangle-border.left:before {
-  top: 10px;
-  bottom: auto;
-  left: -30px;
-  border-width: 15px 30px 15px 0;
-  border-color: transparent #1497bf; }
-.bluebubbles .triangle-border.top:before {
-  border-color: #1497bf transparent; }
-.bluebubbles .btn-green {
-  background-color: #133d52; }
-  .bluebubbles .btn-green:hover {
-    background-color: #133d52; }
-
-.slim .card-header {
-  border: none; }
-  .slim .card-header a {
-    padding: 0; }
-  .slim .card-header h5 {
-    display: none; }
-
-#transcript {
-  border-bottom: 1px solid #0275d8;
-  height: 500px;
-  overflow-y: scroll;
-  border: 2px solid #0275d8;
-  position: relative; }
-
-.prototype5 .col-12, .prototype5 .col-md-5, .prototype5 .col-lg-4 {
-  padding-right: 25px;
-  padding-left: 25px; }
-
-#sidebar > .card {
-  border: none; }
-
-.sidebar-container {
-  position: relative; }
+#accordionTranscripts .card {
+  background-color: white; }
 
 .u-mar-top-30 {
   margin-top: 30px; }
@@ -10037,6 +9906,25 @@ p {
 .text-red {
   color: #ff0000 !important; }
 
+.card-header {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #cecece;
+  text-align: center; }
+  .card-header a, .card-header span {
+    display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: bold;
+    font-weight: normal;
+    color: #82bb02; }
+  .card-header a.collapsed {
+    color: #cecece; }
+
+*:focus {
+  outline: none; }
+
 .tip {
   margin-top: 12px;
   margin-left: 5px; }
@@ -10053,6 +9941,12 @@ p {
 .bold-labels .form-group {
   margin-bottom: 1rem;
   margin-top: 1rem; }
+
+.review {
+  padding-top: 2px;
+  padding-bottom: calc(0.5rem - 1px * 2);
+  margin-bottom: 0;
+  line-height: 25px; }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion, button.accordion.active, button.accordion:hover {
