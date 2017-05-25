@@ -9665,11 +9665,12 @@ body {
 .nav-link {
   padding: 0; }
 
-.navbar-nav > li > a {
-  color: white; }
-  .navbar-nav > li > a .fa {
+.navbar-nav > li > a, .navbar-nav > li > .notlink {
+  color: white;
+  font-size: 14px; }
+  .navbar-nav > li > a .fa, .navbar-nav > li > .notlink .fa {
     color: #9d9d9d; }
-  .navbar-nav > li > a .caret {
+  .navbar-nav > li > a .caret, .navbar-nav > li > .notlink .caret {
     color: #9d9d9d; }
 
 .navbar-toggler {
@@ -9685,9 +9686,15 @@ body {
   background: black url(../img/bgd-black.jpg) repeat; }
 
 .notification {
+  font-size: 14px;
+  color: white;
   padding: 0px 10px;
   position: absolute;
   right: 0; }
+  @media (min-width: 768px) {
+    .notification {
+      position: relative;
+      display: none; } }
 
 .red-texture {
   color: #fff; }
@@ -9742,6 +9749,9 @@ hr {
 
 li {
   margin-bottom: 10px; }
+
+.navbar li {
+  margin-bottom: 0; }
 
 .btn-round .btn {
   border-radius: 6px; }
@@ -9814,12 +9824,15 @@ a.btn-blue:focus, a.btn-blue:hover {
   color: #ff0000 !important;
   font-size: 16px; }
 
-#toggleTranscript {
+#toggleTranscriptClick {
+  position: fixed;
+  right: 15px;
+  top: 58px;
   cursor: pointer;
-  margin-top: -30px;
   background-color: white;
-  border-radius: 5px; }
-  #toggleTranscript:hover {
+  border-radius: 5px;
+  padding: 5px 5px 7px 5px; }
+  #toggleTranscriptClick:hover {
     background-color: #82bb02; }
 
 .sections {
@@ -9921,6 +9934,13 @@ p {
     color: #82bb02; }
   .card-header a.collapsed {
     color: #cecece; }
+
+.ani-dnis-area {
+  font-size: 15px; }
+  .ani-dnis-area i.tip {
+    line-height: 0em;
+    margin-top: 0px;
+    margin-left: 0px; }
 
 *:focus {
   outline: none; }

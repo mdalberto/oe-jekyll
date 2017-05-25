@@ -48,7 +48,7 @@
                 <span class="navbar-toggler-icon"><i class="fa fa-bars white"></i></span>
             </button>
 
-            <a class="navbar-brand" href="/oe-jekyll/">OE Script</a>
+            <a class="navbar-brand" href="/oe-jekyll/">OE</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -62,10 +62,11 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                     </li>-->
                 </ul>
+
                 <ul class="navbar-nav ">
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle mr-sm-3 mr-md-3 mr-lg-3" data-toggle="dropdown" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="agent">Matthew Dalberto</span> <i class="fa fa-lg fa-cog "></i> <span class="caret"></span>
+                            Welcome Matthew Dalberto <i class="fa fa-lg fa-cog" aria-hidden="true"></i> <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Action</a>
@@ -73,9 +74,31 @@
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
                     </li>
+                    <!--<li class="nav-item active" data-toggle="tooltip" data-placement="bottom" title="Add A New Customer">
+                        <span class="nav-link notlink ">
+                            <i class="fa fa-lg fa-user-plus" aria-hidden="true" ></i> 
+                            <span class="hidden-sm-up">New Customer</span>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link notlink" data-toggle="tooltip" data-placement="bottom" title="Manage Customers">
+                            <i class="fa fa-lg fa-users" aria-hidden="true" ></i> 
+                            <span class="hidden-sm-up">Manage Customers</span>
+                        </span>
+                    </li>                    -->
+
+
+                    <li class="nav-item hidden-sm-down">
+                        <span class="notlink">
+                            Zipwire is Connected <i class="fa fa-circle green"></i>
+                        </span>
+                    </li>
+
                 </ul>
             </div>
-            <div class="notification">
+
+            <!-- for small view -->
+            <div class="notification ">
                 <i class="fa fa-circle green"></i>
             </div>
 
@@ -127,7 +150,25 @@
 <div class='row'>
 <div class='col-lg-12 text-center'>
 <h1 class='mt-3'>New Psychic Source Customer</h1>
-<p class='text-muted'>ANI: 267-210-6381 | DNIS: 1-800-965-3049</p>
+<ul class='ani-dnis-area text-muted list-inline mt-2'>
+<li aria-hidden='true' class='list-inline-item' data-placement='bottom' data-toggle='tooltip' title='The new customer&#39;s phone number, the number of the phone they using for this call.'>
+ANI:
+<strong>
+267-210-6381
+</strong>
+<i class='tip fa fa-question-circle'></i>
+</li>
+<li aria-hidden='true' class='list-inline-item' data-placement='bottom' data-toggle='tooltip' title='Psychic Source service line phone number, our number of which they have called.'>
+DNIS:
+<strong>
+1-800-965-3049
+</strong>
+<i class='tip fa fa-question-circle'></i>
+</li>
+</ul>
+<a aria-hidden='true' data-placement='left' data-toggle='tooltip' id='toggleTranscriptClick' title='Turn Transcript Off'>
+<i class='fa fa-comment fa-lg green'></i>
+</a>
 <hr class='mb-0'>
 </div>
 </div>
@@ -299,13 +340,13 @@ Your date of birth please.  Thank you.
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='birth'>Birth Date</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
 <input class='form-control' id='birth' name='date' type='date'>
 </div>
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='gender-select'>Gender</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
 <select class='form-control' id='gender-select'>
 <option>Female</option>
 <option>Male</option>
@@ -319,7 +360,7 @@ We would like to know your preferred reading language for getting a reading. Spa
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='language-select'>Language</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
 <select class='form-control' id='language-select'>
 <option>English</option>
 <option>Spanish</option>
@@ -399,7 +440,31 @@ Address
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p class='mb-0'>
-What is the address which verifies you with your credit card?
+Your name, just as it appears on your CC, is it (read field below)?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='cc-name'>CC Name</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text' value='Matthew Dalberto'>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
+What is your billing address's country?
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='City-input'>Country</label>
+<div class='col-lg-7'>
+<select class='form-control' id='gender-select'>
+<option>USA</option>
+</select>
+</div>
+</div>
+<div class='triangle-border left'>
+<p class='mb-0'>
+and billing address?
 </p>
 </div>
 <div class='form-group row'>
@@ -415,9 +480,17 @@ What is the address which verifies you with your credit card?
 </div>
 </div>
 <div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='zip23'>Zip</label>
+<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
+<input class='form-control' name='zip' type='text'>
+</div>
+</div>
+<div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='City-input'>City/Town</label>
 <div class='col-lg-7'>
-<input class='form-control' type='text'>
+<select class='form-control'>
+<option>- choose one -</option>
+</select>
 </div>
 </div>
 <div class='form-group row'>
@@ -428,21 +501,7 @@ What is the address which verifies you with your credit card?
 </select>
 </div>
 </div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='zip23'>Zip</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
-<input class='form-control' name='zip' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='City-input'>Country</label>
-<div class='col-lg-7'>
-<select class='form-control' id='gender-select'>
-<option>USA</option>
-</select>
-</div>
-</div>
-<p class='mt-3'>
+<p class='mt-4'>
 <a aria-controls='coll6' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll6'>
 Continue
 </a>
@@ -583,7 +642,7 @@ Please press 'Capture Via IVR' first below so the Credit Card Automated IVR Syst
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-4'>
+<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
 <div class='input-group'>
 <input class='form-control' id='promo-input' type='text'>
 <i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
@@ -724,18 +783,18 @@ $30.00 for 30 minutes
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>First Name</label>
+<label class='col-lg-3 col-form-label' for='first-input'>Name</label>
 <div class='col-lg-5'>
 <div class='review'>
-Matt
+Matt Dalberto
 </div>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Last Name</label>
+<label class='col-lg-3 col-form-label' for='last-input'>Email</label>
 <div class='col-lg-5'>
 <div class='review'>
-Dalberto
+mdalberto@vseinc.com
 </div>
 </div>
 </div>
@@ -748,26 +807,18 @@ Dalberto
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Gender</label>
-<div class='col-lg-5'>
-<div class='review'>
-Male
-</div>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>Language</label>
+<label class='col-lg-3 col-form-label' for='first-input'>Credit Card</label>
 <div class='col-lg-7'>
 <div class='review'>
-English
+****************0808
 </div>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Email</label>
-<div class='col-lg-5'>
+<label class='col-lg-3 col-form-label' for='first-input'>Experation</label>
+<div class='col-lg-7'>
 <div class='review'>
-mdalberto@vseinc.com
+12/12/2019
 </div>
 </div>
 </div>
@@ -790,7 +841,7 @@ Langhorne, PA 19000, USA
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Total Charges</label>
+<label class='col-lg-3 col-form-label' for='last-input'>Total charges to card</label>
 <div class='col-lg-5'>
 <div class='review'>
 $30.00
@@ -812,15 +863,21 @@ Process Order
 </div>
 </div>
 </div>
-<div class='text-center' id='processMessage' style='display:none'>
+<div class='text-center' id='processMessage'>
 <div class='card-header green'>
 <h1>
+<span>
 Success!
+</span>
 </h1>
-</div>
-<p>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-5 col-lg-5'>
+<p class='mt-4'>
 The account has been created!
 </p>
+</div>
+</div>
+</div>
 </div>
 <div aria-multiselectable='true' id='accordion2' role='tablist' style='display:none'>
 <div class='card transcriptOnlyCard'>
@@ -833,6 +890,8 @@ Service Information
 </div>
 <div aria-labelledby='headingColl2-1' class='collapse' id='coll2-1' role='tabpanel'>
 <div class='card-block'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p>
 For your privacy, your credit card charges will show as (insert Service Name).
@@ -900,16 +959,24 @@ Continue
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class='card transcriptOnlyCard'>
 <div class='card-header' id='headingColl2-2' role='tab'>
 <a aria-controls='coll2-2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-2'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
 How to disconnect a reading with advisor
 </h5>
+</div>
+</div>
 </a>
 </div>
 <div aria-labelledby='headingColl2-2' class='collapse' id='coll2-2' role='tabpanel'>
 <div class='card-block'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p>
 If at any time during the reading you’re not satisfied, or don’t feel you’re connecting with the Advisors.
@@ -926,20 +993,16 @@ Continue
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class='card transcriptOnlyCard'>
 <div class='card-header' id='headingColl2-3' role='tab'>
 <a aria-controls='coll2-3' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-3'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
-Close the Call
-</h5>
-</a>
-</div>
-<div aria-labelledby='headingColl2-3' class='collapse' id='coll2-3' role='tabpanel'>
-<div class='card-block'>
-<div class='triangle-border left'>
-<p>
 You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
-</p>
+</h5>
 <p>
 When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!
 </p>
@@ -958,6 +1021,7 @@ The End
 <a href='/oe-jekyll/'>Back to start</a>
 </div>
 </div>
+</a>
 </div>
 </div>
 </div>
