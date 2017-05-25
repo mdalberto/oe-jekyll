@@ -47,8 +47,9 @@ body {
   padding:0;
 }
 
-.navbar-nav>li>a {
-    color: white;    
+.navbar-nav>li>a, .navbar-nav>li>.notlink{
+    color: white;
+    font-size:14px;   
     .fa{
       color: #9d9d9d;
     }
@@ -56,6 +57,7 @@ body {
       color: #9d9d9d;
     }
 }
+
 
 .navbar-toggler{
       padding: .1rem .75rem;
@@ -75,35 +77,20 @@ body {
   background: black url(../img/bgd-black.jpg) repeat;
 }
 
-// .sb-card{
-//   background: whitesmoke;
-//   border: 1px solid #ededed;
-//   //border-bottom: 3px solid #ededed;
-//   margin-bottom: 30px;
-// }
-// .card-block {
-//     flex: 1 1 auto;
-//     padding: 1.25rem;
-// }
-// .card{
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   background-color: #fff;
-//   border: 4px solid $yellow;
-//   border-radius: 0.25rem;
-// }
 
 .notification{
-    //color: #9d9d9d;
-    //line-height: 20px;
-    //position: relative;
-    //display: block;
+    font-size:14px;
+    color: white;
     padding: 0px 10px;
     position: absolute;
     right: 0;
 
+    @include media-breakpoint-up("md") {
+      position:relative;
+      display:none;
+    }
 }
+
 .red-texture{
  // background: #e97770 url(assets/css/images/overlay.png);
   color: #fff;
@@ -184,3 +171,6 @@ li{
   margin-bottom:10px;
 }
 
+.navbar li{
+  margin-bottom:0;
+}

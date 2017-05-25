@@ -12,12 +12,20 @@ prototype: 6
     .row
       .col-lg-12.text-center
         %h1.mt-3 New Psychic Source Customer
-        %p.text-muted ANI: 267-210-6381 | DNIS: 1-800-965-3049
-        -# %a#toggleTranscriptClick.btn.btn-default.btn-sm.float-right
-        -#   %i.fa.fa-comment.fa-lg.green
-        -#   Toggle
-        -#   %br
-        -#   Transcript
+        %ul.ani-dnis-area.text-muted.list-inline.mt-2
+          %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "The new customer's phone number, the number of the phone they using for this call."}
+            ANI: 
+            %strong
+              267-210-6381 
+            %i.tip.fa.fa-question-circle
+          %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "Psychic Source service line phone number, our number of which they have called."}
+
+            DNIS: 
+            %strong
+              1-800-965-3049
+            %i.tip.fa.fa-question-circle
+        %a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"}
+          %i.fa.fa-comment.fa-lg.green
         %hr.mb-0
 
     .row.justify-content-md-center
@@ -139,12 +147,12 @@ prototype: 6
 
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "birth"} Birth Date
-                      .col-8.col-sm-5.col-md-6.col-lg-4
+                      .col-8.col-sm-5.col-md-6.col-lg-5
                         %input#birth.form-control{:name => "date", :type => "date"}
 
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "gender-select"} Gender
-                      .col-8.col-sm-5.col-md-6.col-lg-4
+                      .col-8.col-sm-5.col-md-6.col-lg-5
                         %select#gender-select.form-control
                           %option Female
                           %option Male
@@ -155,7 +163,7 @@ prototype: 6
 
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "language-select"} Language
-                      .col-8.col-sm-5.col-md-6.col-lg-4
+                      .col-8.col-sm-5.col-md-6.col-lg-5
                         %select#language-select.form-control
                           %option English
                           %option Spanish
@@ -209,8 +217,24 @@ prototype: 6
                   .col-12.col-md-6.col-lg-6
                     .triangle-border.left
                       %p.mb-0
-                        What is the address which verifies you with your credit card?
+                        Your name, just as it appears on your CC, is it (read field below)?
 
+                    .form-group.row
+                      %label.col-lg-3.col-form-label{:for => "cc-name"} CC Name
+                      .col-lg-7
+                        %input.form-control{:type => "text", :value => "Matthew Dalberto"}
+
+                    .triangle-border.left
+                      %p.mb-0
+                        What is your billing address's country?
+                    .form-group.row
+                      %label.col-lg-3.col-form-label{:for => "City-input"} Country
+                      .col-lg-7
+                        %select#gender-select.form-control
+                          %option USA
+                    .triangle-border.left
+                      %p.mb-0
+                        and billing address?
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "address1-input"} Address 1
                       .col-lg-7
@@ -221,27 +245,23 @@ prototype: 6
                         %input.form-control{:type => "text"}
 
                     .form-group.row
+                      %label.col-lg-3.col-form-label{:for => "zip23"} Zip
+                      .col-8.col-sm-5.col-md-6.col-lg-5
+                        %input.form-control{:name => "zip", :type => "text"}
+
+                    .form-group.row
                       %label.col-lg-3.col-form-label{:for => "City-input"} City/Town
                       .col-lg-7
-                        %input.form-control{:type => "text"}
+                        %select.form-control
+                          %option - choose one -
+
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "state-select"} State/Province
                       .col-lg-7
                         %select.form-control
                           %option PA
 
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "zip23"} Zip
-                      .col-8.col-sm-5.col-md-6.col-lg-4
-                        %input.form-control{:name => "zip", :type => "text"}
-
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "City-input"} Country
-                      .col-lg-7
-                        %select#gender-select.form-control
-                          %option USA
-
-                    %p.mt-3
+                    %p.mt-4
                       %a.btn.btn-green.btn-fixed{"aria-controls" => "coll6", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll6"}
                         Continue
 
@@ -339,7 +359,7 @@ prototype: 6
                         %input.form-control{:placeholder => "1-800-956-3049", :type => "text"}
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "promo-input"} Promo Code
-                      .col-8.col-sm-5.col-md-6.col-lg-4
+                      .col-8.col-sm-5.col-md-6.col-lg-5
                         .input-group
                           %input#promo-input.form-control{:type => "text"}
                             %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
@@ -433,39 +453,35 @@ prototype: 6
                   .review
                     $30.00 for 30 minutes
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} First Name
+                %label.col-lg-3.col-form-label{:for => "first-input"} Name
                 .col-lg-5
                   .review
-                    Matt
-              .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Last Name
-                .col-lg-5
-                  .review
-                    Dalberto
-
-              .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Birth Date
-                .col-lg-5
-                  .review
-                    03/25/1980
-
-              .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Gender
-                .col-lg-5
-                  .review
-                    Male
-
-              .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Language
-                .col-lg-7
-                  .review
-                    English
+                    Matt Dalberto
                     
               .form-group.row
                 %label.col-lg-3.col-form-label{:for => "last-input"} Email
                 .col-lg-5
                   .review
                     mdalberto@vseinc.com
+
+
+              .form-group.row
+                %label.col-lg-3.col-form-label{:for => "first-input"} Birth Date
+                .col-lg-5
+                  .review
+                    03/25/1980
+                    
+              .form-group.row
+                %label.col-lg-3.col-form-label{:for => "first-input"} Credit Card
+                .col-lg-7
+                  .review
+                    ****************0808
+
+              .form-group.row
+                %label.col-lg-3.col-form-label{:for => "first-input"} Experation
+                .col-lg-7
+                  .review
+                    12/12/2019
 
               .form-group.row
                 %label.col-lg-3.col-form-label{:for => "first-input"} CC Address
@@ -482,7 +498,7 @@ prototype: 6
                     555-555-5555
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Total Charges
+                %label.col-lg-3.col-form-label{:for => "last-input"} Total charges to card
                 .col-lg-5
                   .review
                     $30.00
@@ -495,12 +511,16 @@ prototype: 6
                 %a.mt-2.btn.btn-green.btn-fixed#submitAccordian
                   Process Order         
 
-        #processMessage.text-center{:style => 'display:none'}
+        #processMessage.text-center
           .card-header.green
             %h1
-              Success!
-          %p
-            The account has been created!
+              %span
+                Success!
+
+            .row.justify-content-md-center
+              .col-12.col-md-5.col-lg-5  
+                %p.mt-4
+                  The account has been created!
             
         #accordion2{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
           .card.transcriptOnlyCard
@@ -510,86 +530,90 @@ prototype: 6
                   Service Information
             #coll2-1.collapse{"aria-labelledby" => "headingColl2-1", :role => "tabpanel"}
               .card-block
-                .triangle-border.left
-                  %p
-                    For your privacy, your credit card charges will show as (insert Service Name).
-                  %ul
-                    %li
-                      Hollywood Psychics appear as HPS and our 800#
-                    %li
-                      Love Coach appears as Expert Link and our 800# 
-                    %li
-                      Psychics Source appear as Expert Link and our 800# 
-                    %li
-                      Gay Live appears as Live Link and our 800#
-                .triangle-border.left
-                  %p              
-                    Now we have your account all setup, I’ll give you all the information you need to connect with an advisor. 
-                  %p                    
-                    Please get a pen & paper so you can take down the phone number for accessing our service.  
-                  %p
-                    I would like to recommend some of our top advisor on the service right now?  
-                  %p
-                    What type of reading are you looking for? <Love & relationships, career, finance, etc.>. 
-                    Recommend 2–3 advisors who are available on the service currently.
-                    %br/
-                    %a.btn.btn-green.btn-sm
-                      Link to Expert View
-                  %p
-                    This will be the only number you’ll need in the future to contact the service. (HP, PS)
-                    %span.small
-                      (Service Overview for instructions: Hollywood Psychics, Psychic Source)
-                  %p
-                    The phone number you’ll need to use is: 1-XXX-XXX-XXXX.
-                  %p 
-                    Once the service picks up- Select option #1 for existing members and enter your 4-digit pin# or your 10-digit phone number followed by your 4-digit PIN #, followed by the # pound key.  
-                    %span.small
-                      (The system will confirm the available amount of time and money in your account)
-                  %p
-                    From the Crossroads menu; Select option #1 again for the Advisor menu.  
-                  %p
-                    You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
-                  %p
-                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
-                      Continue              
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6  
+                    .triangle-border.left
+                      %p
+                        For your privacy, your credit card charges will show as (insert Service Name).
+                      %ul
+                        %li
+                          Hollywood Psychics appear as HPS and our 800#
+                        %li
+                          Love Coach appears as Expert Link and our 800# 
+                        %li
+                          Psychics Source appear as Expert Link and our 800# 
+                        %li
+                          Gay Live appears as Live Link and our 800#
+                    .triangle-border.left
+                      %p              
+                        Now we have your account all setup, I’ll give you all the information you need to connect with an advisor. 
+                      %p                    
+                        Please get a pen & paper so you can take down the phone number for accessing our service.  
+                      %p
+                        I would like to recommend some of our top advisor on the service right now?  
+                      %p
+                        What type of reading are you looking for? <Love & relationships, career, finance, etc.>. 
+                        Recommend 2–3 advisors who are available on the service currently.
+                        %br/
+                        %a.btn.btn-green.btn-sm
+                          Link to Expert View
+                      %p
+                        This will be the only number you’ll need in the future to contact the service. (HP, PS)
+                        %span.small
+                          (Service Overview for instructions: Hollywood Psychics, Psychic Source)
+                      %p
+                        The phone number you’ll need to use is: 1-XXX-XXX-XXXX.
+                      %p 
+                        Once the service picks up- Select option #1 for existing members and enter your 4-digit pin# or your 10-digit phone number followed by your 4-digit PIN #, followed by the # pound key.  
+                        %span.small
+                          (The system will confirm the available amount of time and money in your account)
+                      %p
+                        From the Crossroads menu; Select option #1 again for the Advisor menu.  
+                      %p
+                        You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
+                      %p
+                        %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
+                          Continue              
 
           .card.transcriptOnlyCard
             #headingColl2-2.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
-                %h5.mb-0
-                  How to disconnect a reading with advisor
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6  
+                    %h5.mb-0
+                      How to disconnect a reading with advisor
+
             #coll2-2.collapse{"aria-labelledby" => "headingColl2-2", :role => "tabpanel"}
               .card-block
-                .triangle-border.left
-                  %p
-                    If at any time during the reading you’re not satisfied, or don’t feel you’re connecting with the Advisors. 
-                  %p
-                    Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
-                  %p
-                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
-                      Continue
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6  
+                    .triangle-border.left
+                      %p
+                        If at any time during the reading you’re not satisfied, or don’t feel you’re connecting with the Advisors. 
+                      %p
+                        Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
+                      %p
+                        %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
+                          Continue
 
           .card.transcriptOnlyCard
             #headingColl2-3.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
-                %h5.mb-0
-                  Close the Call
-            #coll2-3.collapse{"aria-labelledby" => "headingColl2-3", :role => "tabpanel"}
-              .card-block
-                .triangle-border.left
-                  %p
-                    You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
-                  %p
-                    When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!  
-                  %p
-                    Is there anything else I can help you with?
-                  %p
-                    Thanks for calling (PS / HP / LC) Enjoy your reading! 
-                .text-center
-                  %p.mb-0.bold
-                    The End
-                  %p At this point the simution is over
-                  %a{:href => "{{ site.baseurl }}/"} Back to start
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6
+                    %h5.mb-0
+                      You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
+                    %p
+                      When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!  
+                    %p
+                      Is there anything else I can help you with?
+                    %p
+                      Thanks for calling (PS / HP / LC) Enjoy your reading! 
+                  .text-center
+                    %p.mb-0.bold
+                      The End
+                    %p At this point the simution is over
+                    %a{:href => "{{ site.baseurl }}/"} Back to start
 
 
 %footer.footer2.clearfix
