@@ -112,7 +112,7 @@ prototype: 6
                         .input-group
                           %input#phone-input.form-control{:type => "text"}
                             %span.input-group-btn
-                              %button.btn.btn-primary{:type => "button"} Apply
+                              %button.btn.btn-green{:type => "button"} Apply
                          
                           %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
 
@@ -327,21 +327,42 @@ prototype: 6
 
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "phone-input"}
-                        Credit Card
+                        Capture CC
 
                       .col-lg-8
+                        %p
+                          %i.fa.fa-exclamation-triangle.green{"aria-hidden" => "true"} 
+                          %strong
+                            Press the 'Capture Via IVR' button 
+                          below first so the Credit Card Automated IVR System can handle the entry.           
+                          %i.tip.fa.fa-question-circle{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "'Capture Via IVR' will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use 'Manually Enter'"}
+                            
                         .input-group
-                          %a#capture3.btn.btn-green.mr-1{:href => "/"} Capture Via IVR
-                          %a#capture4.btn.btn-default{:href => "/"} Manually Enter
-                        %span.small.muted
-                          Please press 'Capture Via IVR' first below so the Credit Card Automated IVR System can handle the entry. IVR will walk user through entering info.
+                          %a#capture3.btn.btn-green.mr-4{:href => "/"} Capture Via IVR
+                          %a#capture4.btn.btn-green{:href => "/"} Manually Enter
                     
                       / credit card
                     #capturedCC{:style => "display:none"}
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb"} Credit Card
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb"} CC Number
                         .col-lg-7
-                          %input#cc-numb.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}/
+                          %input#cc-numb.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
+                          %ul.list-unstyled.mb-0
+                            %li.creditcard-visa.mb-0
+                              %span.sr-only
+                              Visa
+                            %li.creditcard-mastercard.mb-0
+                              %span.sr-only
+                              MasterCard
+                            %li.creditcard-discover.mb-0
+                              %span.sr-only
+                              Discover
+                            %li.creditcard-amex.mb-0
+                              %span.sr-only
+                              American Express
+                            %li.creditcard-dinersclub.mb-0
+                              %span.sr-only
+                              Diner's Club
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "experation"} Experation
                         .col-lg-7
@@ -362,23 +383,23 @@ prototype: 6
                     / credit card
                     #captureCC{:style => 'display:none' }
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} CC Number
                         .col-lg-7
                           %input#cc-numb2.form-control{:type => "text"}
-                          %ul.list-unstyled.u-margin-top.u-no-margin-bottom
-                            %li.creditcard-visa
+                          %ul.list-unstyled.mb-0
+                            %li.creditcard-visa.mb-0
                               %span.sr-only
                               Visa
-                            %li.creditcard-mastercard
+                            %li.creditcard-mastercard.mb-0
                               %span.sr-only
                               MasterCard
-                            %li.creditcard-discover
+                            %li.creditcard-discover.mb-0
                               %span.sr-only
                               Discover
-                            %li.creditcard-amex
+                            %li.creditcard-amex.mb-0
                               %span.sr-only
                               American Express
-                            %li.creditcard-dinersclub
+                            %li.creditcard-dinersclub.mb-0
                               %span.sr-only
                               Diner's Club
 
@@ -425,23 +446,6 @@ prototype: 6
 
                     .triangle-border.left
                       %p.mb-0
-                        How did you hear about the service?
-
-                    .form-group.row
-                      %label.col-lg-3.col-form-label Heard about us
-                      .col-lg-7
-                        %select#gender-select.form-control
-                          %option From a Friend
-                          %option Newspaper
-                          %option Magazine
-                          %option Internet
-                          %option TV
-                          %option Radio
-                          %option From a Friend
-                          %option Unspecified
-
-                    .triangle-border.left
-                      %p.mb-0
                         Now I will process your transaction for 30-minutes for $30.00. 
                       %ul
                         %li
@@ -462,7 +466,7 @@ prototype: 6
             .col-12.col-md-12.col-lg-12
               %h5.card-header.text-center
                 %span
-                  Rewiew Information
+                  Review Information
 
           .row.justify-content-md-center
             .col-12.col-md-5.col-lg-6                
@@ -529,29 +533,85 @@ prototype: 6
                   Back  
                 %a.mt-2.btn.btn-green.btn-fixed#submitAccordian
                   Process Order         
+                %a#ccFailure{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                  simulate cc failure due to bad input         
 
-        #processMessage.text-center{:style => 'display:none'}
-          .card-header.green
-            %h1
-              %span
-                Success!
 
-            .row.justify-content-md-center
-              .col-12.col-md-5.col-lg-5  
-                %p.mt-4
-                  The account has been created!
-            
-        #accordion2{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
-          .card.transcriptOnlyCard
-            #headingColl2-1.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "coll2-1", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-1"}
+        #accordionFailure{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
+          .card
+            #headingCollFailure-1.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "collFailure-1", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-1"}
                 %h5.mb-0
-                  Service Information
-            #coll2-1.collapse{"aria-labelledby" => "headingColl2-1", :role => "tabpanel"}
+                  Failure
+            #collFailure-1.collapse{"aria-labelledby" => "headingCollFailure-1", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6  
                     .triangle-border.left
+                      %p.mb-0
+                        The account Credit card had an issue. Please try again.
+
+
+
+
+                    .form-group.row
+                      %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
+                      .col-lg-7
+                        %input#cc-numb2.form-control{:type => "text"}
+                        %ul.list-unstyled.mb-0
+                          %li.creditcard-visa.mb-0
+                            %span.sr-only
+                            Visa
+                          %li.creditcard-mastercard.mb-0
+                            %span.sr-only
+                            MasterCard
+                          %li.creditcard-discover.mb-0
+                            %span.sr-only
+                            Discover
+                          %li.creditcard-amex.mb-0
+                            %span.sr-only
+                            American Express
+                          %li.creditcard-dinersclub.mb-0
+                            %span.sr-only
+                            Diner's Club
+
+                    .form-group.row
+                      %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation
+                      .col-lg-7
+                        .row
+                          .col.pr-0
+                            %select#gender-select.form-control
+                              %option Jan
+                          .col
+                            %select#gender-select2.form-control
+                              %option 2017
+                    .form-group.row
+                      %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+                      .col-6.col-sm-3.col-md-3.col-lg-2
+                        %input#security2.form-control{:type => "text"}
+
+
+                    %p.mt-4
+                      %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                        Try Again     
+
+
+            
+        #accordionSuccess{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
+          .card
+            #headingCollSuccess-1.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "collSuccess-1", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-1"}
+                %h5.mb-0
+                  Success!
+            #collSuccess-1.collapse{"aria-labelledby" => "headingCollSuccess-1", :role => "tabpanel"}
+              .card-block
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6  
+                    .triangle-border.left
+                      %p
+                        The account has been created!
+                      %p
+                        Your 4 digit pin is XXXX.
                       %p
                         For your privacy, your credit card charges will show as (insert Service Name).
                       %ul
@@ -563,7 +623,6 @@ prototype: 6
                           Psychics Source appear as Expert Link and our 800# 
                         %li
                           Gay Live appears as Live Link and our 800#
-                    .triangle-border.left
                       %p              
                         Now we have your account all setup, I’ll give you all the information you need to connect with an advisor. 
                       %p                    
@@ -591,18 +650,18 @@ prototype: 6
                       %p
                         You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
                       %p
-                        %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
+                        %a.btn.btn-green.btn-fixed{"aria-controls" => "collSuccess-2", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-2"}
                           Continue              
 
           .card.transcriptOnlyCard
-            #headingColl2-2.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-2"}
+            #headingCollSuccess-2.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "collSuccess-2", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-2"}
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6  
                     %h5.mb-0
                       How to disconnect a reading with advisor
 
-            #coll2-2.collapse{"aria-labelledby" => "headingColl2-2", :role => "tabpanel"}
+            #collSuccess-2.collapse{"aria-labelledby" => "headingCollSuccess-2", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6  
@@ -612,33 +671,32 @@ prototype: 6
                       %p
                         Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
                       %p
-                        %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
+                        %a.btn.btn-green.btn-fixed{"aria-controls" => "collSuccess-3", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-3"}
                           Continue
 
           .card.transcriptOnlyCard
-            #headingColl2-3.card-header{:role => "tab"}
-              %a.collapsed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
+            #headingCollSuccess-3.card-header{:role => "tab"}
+              %a.collapsed{"aria-controls" => "collSuccess-3", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-3"}
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6
                     %h5.mb-0
                       Payment Information & Transaction
-            #coll2-3.collapse{"aria-labelledby" => "headingColl2-3", :role => "tabpanel"}
+            #collSuccess-3.collapse{"aria-labelledby" => "headingCollSuccess-3", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
-                  .col-12.col-md-6.col-lg-6
-                    %h5.mb-0
-                      You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
-                    %p
-                      When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!  
-                    %p
-                      Is there anything else I can help you with?
-                    %p
-                      Thanks for calling (PS / HP / LC) Enjoy your reading! 
-                  .text-center
-                    %p.mb-0.bold
-                      The End
-                    %p At this point the simution is over
-                    %a{:href => "{{ site.baseurl }}/"} Back to start
+                  .col-12.col-md-6.col-lg-6  
+                    .triangle-border.left
+                      %h5.mb-0
+                        You’re ready to have a reading now! Simply call the toll-free # and follow the prompts that we went over.
+                      %p
+                        When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!  
+                      %p
+                        Is there anything else I can help you with?
+                      %p
+                        Thanks for calling (PS / HP / LC) Enjoy your reading! 
+                    .text-center
+                      %p.mb-0.bold
+                        Call end. Return to Zipwire, end the call and enter your notation.
 
 
 %footer.footer2.clearfix

@@ -39,11 +39,20 @@ $(function () {
   });
 
 // confirmation screens toggle
+  $('#ccFailure').on('click', function(){
+      $('#confirmationScreen').hide();
+       $('#accordionFailure').show();  
+       $('#headingCollFailure-1 .collapsed').click(); 
+
+      return false;
+  });
+
+
+  // confirmation screens toggle
   $('#submitAccordian').on('click', function(){
       $('#confirmationScreen').hide();
-       $('#processMessage').show();
-       $('#accordion2').show();    
-       $('#headingColl2-1 .collapsed').click(); 
+       $('#accordionSuccess').show();    
+       $('#headingCollSuccess-1 .collapsed').click(); 
 
       return false;
   });

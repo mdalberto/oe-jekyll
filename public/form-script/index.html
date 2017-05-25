@@ -290,7 +290,7 @@ The introductory price is a fantastic special first-time offer.  After your firs
 <div class='input-group'>
 <input class='form-control' id='phone-input' type='text'>
 <span class='input-group-btn'>
-<button class='btn btn-primary' type='button'>Apply</button>
+<button class='btn btn-green' type='button'>Apply</button>
 </span>
 </input>
 <i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
@@ -589,24 +589,51 @@ I will transfer you over to our automated system to enter the credit card inform
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='phone-input'>
-Credit Card
+Capture CC
 </label>
 <div class='col-lg-8'>
+<p>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+<strong>
+Press the 'Capture Via IVR' button
+</strong>
+below first so the Credit Card Automated IVR System can handle the entry.
+<i aria-hidden='true' class='tip fa fa-question-circle' data-placement='bottom' data-toggle='tooltip' title='&#39;Capture Via IVR&#39; will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use &#39;Manually Enter&#39;'></i>
+</p>
 <div class='input-group'>
-<a class='btn btn-green mr-1' href='/' id='capture3'>Capture Via IVR</a>
-<a class='btn btn-default' href='/' id='capture4'>Manually Enter</a>
+<a class='btn btn-green mr-4' href='/' id='capture3'>Capture Via IVR</a>
+<a class='btn btn-green' href='/' id='capture4'>Manually Enter</a>
 </div>
-<span class='small muted'>
-Please press 'Capture Via IVR' first below so the Credit Card Automated IVR System can handle the entry. IVR will walk user through entering info.
-</span>
 </div>
 <!-- credit card -->
 </div>
 <div id='capturedCC' style='display:none'>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb'>Credit Card</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb'>CC Number</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb' placeholder='*******************' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0'>
+<li class='creditcard-visa mb-0'>
+<span class='sr-only'></span>
+Visa
+</li>
+<li class='creditcard-mastercard mb-0'>
+<span class='sr-only'></span>
+MasterCard
+</li>
+<li class='creditcard-discover mb-0'>
+<span class='sr-only'></span>
+Discover
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'></span>
+American Express
+</li>
+<li class='creditcard-dinersclub mb-0'>
+<span class='sr-only'></span>
+Diner's Club
+</li>
+</ul>
 </div>
 </div>
 <div class='form-group row'>
@@ -637,27 +664,27 @@ Please press 'Capture Via IVR' first below so the Credit Card Automated IVR Syst
 <!-- credit card -->
 <div id='captureCC' style='display:none'>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb2' type='text'>
-<ul class='list-unstyled u-margin-top u-no-margin-bottom'>
-<li class='creditcard-visa'>
+<ul class='list-unstyled mb-0'>
+<li class='creditcard-visa mb-0'>
 <span class='sr-only'></span>
 Visa
 </li>
-<li class='creditcard-mastercard'>
+<li class='creditcard-mastercard mb-0'>
 <span class='sr-only'></span>
 MasterCard
 </li>
-<li class='creditcard-discover'>
+<li class='creditcard-discover mb-0'>
 <span class='sr-only'></span>
 Discover
 </li>
-<li class='creditcard-amex'>
+<li class='creditcard-amex mb-0'>
 <span class='sr-only'></span>
 American Express
 </li>
-<li class='creditcard-dinersclub'>
+<li class='creditcard-dinersclub mb-0'>
 <span class='sr-only'></span>
 Diner's Club
 </li>
@@ -728,26 +755,6 @@ No thanks
 </div>
 <div class='triangle-border left'>
 <p class='mb-0'>
-How did you hear about the service?
-</p>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label'>Heard about us</label>
-<div class='col-lg-7'>
-<select class='form-control' id='gender-select'>
-<option>From a Friend</option>
-<option>Newspaper</option>
-<option>Magazine</option>
-<option>Internet</option>
-<option>TV</option>
-<option>Radio</option>
-<option>From a Friend</option>
-<option>Unspecified</option>
-</select>
-</div>
-</div>
-<div class='triangle-border left'>
-<p class='mb-0'>
 Now I will process your transaction for 30-minutes for $30.00.
 </p>
 <ul>
@@ -778,7 +785,7 @@ Review Order
 <div class='col-12 col-md-12 col-lg-12'>
 <h5 class='card-header text-center'>
 <span>
-Rewiew Information
+Review Information
 </span>
 </h5>
 </div>
@@ -870,40 +877,113 @@ Back
 <a class='mt-2 btn btn-green btn-fixed' id='submitAccordian'>
 Process Order
 </a>
+<a aria-controls='coll2-2' aria-expanded='false' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2' id='ccFailure'>
+simulate cc failure due to bad input
+</a>
 </p>
 </div>
 </div>
 </div>
-<div class='text-center' id='processMessage' style='display:none'>
-<div class='card-header green'>
-<h1>
-<span>
-Success!
-</span>
-</h1>
-<div class='row justify-content-md-center'>
-<div class='col-12 col-md-5 col-lg-5'>
-<p class='mt-4'>
-The account has been created!
-</p>
-</div>
-</div>
-</div>
-</div>
-<div aria-multiselectable='true' id='accordion2' role='tablist' style='display:none'>
-<div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingColl2-1' role='tab'>
-<a aria-controls='coll2-1' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-1'>
+<div aria-multiselectable='true' id='accordionFailure' role='tablist' style='display:none'>
+<div class='card'>
+<div class='card-header' id='headingCollFailure-1' role='tab'>
+<a aria-controls='collFailure-1' aria-expanded='false' class='collapsed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-1'>
 <h5 class='mb-0'>
-Service Information
+Failure
 </h5>
 </a>
 </div>
-<div aria-labelledby='headingColl2-1' class='collapse' id='coll2-1' role='tabpanel'>
+<div aria-labelledby='headingCollFailure-1' class='collapse' id='collFailure-1' role='tabpanel'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
+<p class='mb-0'>
+The account Credit card had an issue. Please try again.
+</p>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
+<div class='col-lg-7'>
+<input class='form-control' id='cc-numb2' type='text'>
+<ul class='list-unstyled mb-0'>
+<li class='creditcard-visa mb-0'>
+<span class='sr-only'></span>
+Visa
+</li>
+<li class='creditcard-mastercard mb-0'>
+<span class='sr-only'></span>
+MasterCard
+</li>
+<li class='creditcard-discover mb-0'>
+<span class='sr-only'></span>
+Discover
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'></span>
+American Express
+</li>
+<li class='creditcard-dinersclub mb-0'>
+<span class='sr-only'></span>
+Diner's Club
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='experation2'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control' id='gender-select'>
+<option>Jan</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control' id='gender-select2'>
+<option>2017</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
+<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<input class='form-control' id='security2' type='text'>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Try Again
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-multiselectable='true' id='accordionSuccess' role='tablist' style='display:none'>
+<div class='card'>
+<div class='card-header' id='headingCollSuccess-1' role='tab'>
+<a aria-controls='collSuccess-1' aria-expanded='false' class='collapsed' data-parent='#accordionSuccess' data-toggle='collapse' href='#collSuccess-1'>
+<h5 class='mb-0'>
+Success!
+</h5>
+</a>
+</div>
+<div aria-labelledby='headingCollSuccess-1' class='collapse' id='collSuccess-1' role='tabpanel'>
+<div class='card-block'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
+<div class='triangle-border left'>
+<p>
+The account has been created!
+</p>
+<p>
+Your 4 digit pin is XXXX.
+</p>
 <p>
 For your privacy, your credit card charges will show as (insert Service Name).
 </p>
@@ -921,8 +1001,6 @@ Psychics Source appear as Expert Link and our 800#
 Gay Live appears as Live Link and our 800#
 </li>
 </ul>
-</div>
-<div class='triangle-border left'>
 <p>
 Now we have your account all setup, I’ll give you all the information you need to connect with an advisor.
 </p>
@@ -962,7 +1040,7 @@ From the Crossroads menu; Select option #1 again for the Advisor menu.
 You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
 </p>
 <p>
-<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-2'>
+<a aria-controls='collSuccess-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionSuccess' data-toggle='collapse' href='#collSuccess-2'>
 Continue
 </a>
 </p>
@@ -973,8 +1051,8 @@ Continue
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingColl2-2' role='tab'>
-<a aria-controls='coll2-2' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-2'>
+<div class='card-header' id='headingCollSuccess-2' role='tab'>
+<a aria-controls='collSuccess-2' aria-expanded='false' class='collapsed' data-parent='#accordionSuccess' data-toggle='collapse' href='#collSuccess-2'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
@@ -984,7 +1062,7 @@ How to disconnect a reading with advisor
 </div>
 </a>
 </div>
-<div aria-labelledby='headingColl2-2' class='collapse' id='coll2-2' role='tabpanel'>
+<div aria-labelledby='headingCollSuccess-2' class='collapse' id='collSuccess-2' role='tabpanel'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
@@ -996,7 +1074,7 @@ If at any time during the reading you’re not satisfied, or don’t feel you’
 Press the star (*) key to end your reading right away. Don’t be afraid to use this option, if you’re not satisfied with your reading. The Advisor will not know the call was disconnected.
 </p>
 <p>
-<a aria-controls='coll2-3' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-3'>
+<a aria-controls='collSuccess-3' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionSuccess' data-toggle='collapse' href='#collSuccess-3'>
 Continue
 </a>
 </p>
@@ -1007,8 +1085,8 @@ Continue
 </div>
 </div>
 <div class='card transcriptOnlyCard'>
-<div class='card-header' id='headingColl2-3' role='tab'>
-<a aria-controls='coll2-3' aria-expanded='false' class='collapsed' data-parent='#accordion2' data-toggle='collapse' href='#coll2-3'>
+<div class='card-header' id='headingCollSuccess-3' role='tab'>
+<a aria-controls='collSuccess-3' aria-expanded='false' class='collapsed' data-parent='#accordionSuccess' data-toggle='collapse' href='#collSuccess-3'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
@@ -1018,12 +1096,13 @@ Payment Information & Transaction
 </div>
 </a>
 </div>
-<div aria-labelledby='headingColl2-3' class='collapse' id='coll2-3' role='tabpanel'>
+<div aria-labelledby='headingCollSuccess-3' class='collapse' id='collSuccess-3' role='tabpanel'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
+<div class='triangle-border left'>
 <h5 class='mb-0'>
-You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
+You’re ready to have a reading now! Simply call the toll-free # and follow the prompts that we went over.
 </h5>
 <p>
 When you call into the service, if you ever have a question, just press “0”.  We’re always available in Customer Service to help you!
@@ -1037,10 +1116,9 @@ Thanks for calling (PS / HP / LC) Enjoy your reading!
 </div>
 <div class='text-center'>
 <p class='mb-0 bold'>
-The End
+Call end. Return to Zipwire, end the call and enter your notation.
 </p>
-<p>At this point the simution is over</p>
-<a href='/oe-jekyll/'>Back to start</a>
+</div>
 </div>
 </div>
 </div>
