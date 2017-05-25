@@ -19,7 +19,8 @@ div.panel {
     border-radius: 0;
 }
 
-$bright-green: #9dd02a;
+$script-color: #e7f6fb;
+$script-color-border: #e7f6fb;
 
 .transcript-panel{
 
@@ -31,12 +32,17 @@ $bright-green: #9dd02a;
     position: relative;
     padding: 15px;
     margin: 1em;
-    border: 5px solid $bright-green;
+    border: 5px solid $script-color-border;
     color: #333;
-    background: #fff;
+    //background: #fff;
+    background: $script-color; 
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+}
+.triangle-border.left{
+
+    max-width: 330px;
 }
 
 .triangle-border.left {
@@ -51,7 +57,7 @@ $bright-green: #9dd02a;
     left: 40px;
     border-width: 20px 20px 0;
     border-style: solid;
-    border-color: $bright-green transparent;
+    border-color: $script-color transparent;
     display: block;
     width: 0;
 }
@@ -68,7 +74,7 @@ $bright-green: #9dd02a;
     bottom: auto;
     left: -30px;
     border-width: 15px 30px 15px 0;
-    border-color: transparent $bright-green;
+    border-color: transparent $script-color;
 }
 
 .triangle-border.left:before {
@@ -76,7 +82,7 @@ $bright-green: #9dd02a;
     bottom: auto;
     left: -30px;
     border-width: 15px 30px 15px 0;
-    border-color: transparent $bright-green;
+    border-color: transparent $script-color;
 }
 
 
@@ -91,9 +97,33 @@ $bright-green: #9dd02a;
 }
 
 
+.knows-card .creditcard-amex, 
+.knows-card .creditcard-cvv, 
+.knows-card .creditcard-dinersclub, 
+.knows-card .creditcard-discover, 
+.knows-card .creditcard-mastercard, 
+.knows-card .creditcard-visa {
+    opacity: .25;
+}
 
+.creditcard-amex, .creditcard-cvv, 
+.creditcard-dinersclub, .creditcard-discover, 
+.creditcard-mastercard, .creditcard-visa {
+    border: 1px solid #bbb;
+    box-sizing: content-box;
+    display: inline-block;
+}
 
-
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
 
 .users{
   font-size:14px;

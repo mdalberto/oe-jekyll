@@ -257,9 +257,6 @@ Our best package is 30 minutes for $30.00.
 <div aria-controls='collMoreOnPrice' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collMoreOnPrice'>
 More on Price
 </div>
-<a aria-controls='coll3' aria-expanded='false' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
-Continue
-</a>
 </div>
 <div class='collapse mt-3' id='collMoreOnPrice'>
 <div class='triangle-border top'>
@@ -285,13 +282,51 @@ There are no taxes, fees or other cost we charge to use our service. You can tal
 <p>
 The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
 </p>
-<p>
-<a aria-controls='coll3' aria-expanded='false' class='sendTop btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
+<div class='col-lg-7'>
+<div class='input-group'>
+<input class='form-control' id='phone-input' type='text'>
+<span class='input-group-btn'>
+<button class='btn btn-primary' type='button'>Apply</button>
+</span>
+</input>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
+</div>
+</div>
+</div>
+<!-- packages -->
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label'>Packages</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
+$30.00 for 30 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios2' name='gridRadios' type='radio' value='option2'>
+$20.00 for 20 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='gridRadios3' name='gridRadios' type='radio' value='option3'>
+$10.00 for 10 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+<a aria-controls='coll3' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
 Continue
 </a>
-</p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -428,7 +463,7 @@ Continue
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
-Address
+Billing Address
 </h5>
 </div>
 </div>
@@ -438,17 +473,6 @@ Address
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
-<div class='triangle-border left'>
-<p class='mb-0'>
-Your name, just as it appears on your CC, is it (read field below)?
-</p>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='cc-name'>CC Name</label>
-<div class='col-lg-7'>
-<input class='form-control' type='text' value='Matthew Dalberto'>
-</div>
-</div>
 <div class='triangle-border left'>
 <p class='mb-0'>
 What is your billing address's country?
@@ -528,9 +552,17 @@ Payment Information & Transaction
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
-<p>
-The information I need, is what verifies you to your credit card.
+<p class='mb-0'>
+Your name, just as it appears on your CC, is it (read field below)?
 </p>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='cc-name'>CC Name</label>
+<div class='col-lg-7'>
+<input class='form-control' type='text' value='Matthew Dalberto'>
+</div>
+</div>
+<div class='triangle-border left'>
 <p class='mb-0'>
 Please may I have your phone exactly as it’s listed with your credit card company?
 </p>
@@ -608,6 +640,28 @@ Please press 'Capture Via IVR' first below so the Credit Card Automated IVR Syst
 <label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb2' type='text'>
+<ul class='list-unstyled u-margin-top u-no-margin-bottom'>
+<li class='creditcard-visa'>
+<span class='sr-only'></span>
+Visa
+</li>
+<li class='creditcard-mastercard'>
+<span class='sr-only'></span>
+MasterCard
+</li>
+<li class='creditcard-discover'>
+<span class='sr-only'></span>
+Discover
+</li>
+<li class='creditcard-amex'>
+<span class='sr-only'></span>
+American Express
+</li>
+<li class='creditcard-dinersclub'>
+<span class='sr-only'></span>
+Diner's Club
+</li>
+</ul>
 </div>
 </div>
 <div class='form-group row'>
@@ -631,49 +685,6 @@ Please press 'Capture Via IVR' first below so the Credit Card Automated IVR Syst
 <label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
 <div class='col-6 col-sm-3 col-md-3 col-lg-2'>
 <input class='form-control' id='security2' type='text'>
-</div>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input2'>DNIS</label>
-<div class='col-lg-7'>
-<input class='form-control' placeholder='1-800-956-3049' type='text'>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
-<div class='col-8 col-sm-5 col-md-6 col-lg-5'>
-<div class='input-group'>
-<input class='form-control' id='promo-input' type='text'>
-<i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
-</input>
-</div>
-</div>
-</div>
-<!-- packages -->
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label'>Packages</label>
-<div class='col-lg-7'>
-<div class='form-check'>
-<label class='form-check-label'>
-<input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
-$30.00 for 30 minutes
-</input>
-</label>
-</div>
-<div class='form-check'>
-<label class='form-check-label'>
-<input class='form-check-input' id='gridRadios2' name='gridRadios' type='radio' value='option2'>
-$20.00 for 20 minutes
-</input>
-</label>
-</div>
-<div class='form-check'>
-<label class='form-check-label'>
-<input class='form-check-input' id='gridRadios3' name='gridRadios' type='radio' value='option3'>
-$10.00 for 10 minutes
-</input>
-</label>
 </div>
 </div>
 </div>
@@ -773,9 +784,9 @@ Rewiew Information
 </div>
 </div>
 <div class='row justify-content-md-center'>
-<div class='col-12 col-md-5 col-lg-5'>
+<div class='col-12 col-md-5 col-lg-6'>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Intro Offer</label>
+<label class='col-lg-4 col-form-label' for='last-input'>Intro Offer</label>
 <div class='col-lg-5'>
 <div class='review'>
 $30.00 for 30 minutes
@@ -783,7 +794,7 @@ $30.00 for 30 minutes
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>Name</label>
+<label class='col-lg-4 col-form-label' for='first-input'>Name</label>
 <div class='col-lg-5'>
 <div class='review'>
 Matt Dalberto
@@ -791,7 +802,7 @@ Matt Dalberto
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Email</label>
+<label class='col-lg-4 col-form-label' for='last-input'>Email</label>
 <div class='col-lg-5'>
 <div class='review'>
 mdalberto@vseinc.com
@@ -799,7 +810,7 @@ mdalberto@vseinc.com
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>Birth Date</label>
+<label class='col-lg-4 col-form-label' for='first-input'>Birth Date</label>
 <div class='col-lg-5'>
 <div class='review'>
 03/25/1980
@@ -807,7 +818,7 @@ mdalberto@vseinc.com
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>Credit Card</label>
+<label class='col-lg-4 col-form-label' for='first-input'>Credit Card</label>
 <div class='col-lg-7'>
 <div class='review'>
 ****************0808
@@ -815,7 +826,7 @@ mdalberto@vseinc.com
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>Experation</label>
+<label class='col-lg-4 col-form-label' for='first-input'>Experation</label>
 <div class='col-lg-7'>
 <div class='review'>
 12/12/2019
@@ -823,7 +834,7 @@ mdalberto@vseinc.com
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>CC Address</label>
+<label class='col-lg-4 col-form-label' for='first-input'>CC Address</label>
 <div class='col-lg-7'>
 <div class='review'>
 900 Wheeler Way, Suit 2
@@ -833,7 +844,7 @@ Langhorne, PA 19000, USA
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>CC Phone</label>
+<label class='col-lg-4 col-form-label' for='last-input'>CC Phone</label>
 <div class='col-lg-5'>
 <div class='review'>
 555-555-5555
@@ -841,7 +852,7 @@ Langhorne, PA 19000, USA
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Total charges to card</label>
+<label class='col-lg-4 col-form-label' for='last-input'>Total charges to card</label>
 <div class='col-lg-5'>
 <div class='review'>
 $30.00
@@ -863,7 +874,7 @@ Process Order
 </div>
 </div>
 </div>
-<div class='text-center' id='processMessage'>
+<div class='text-center' id='processMessage' style='display:none'>
 <div class='card-header green'>
 <h1>
 <span>
@@ -1001,6 +1012,17 @@ Continue
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <h5 class='mb-0'>
+Payment Information & Transaction
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div aria-labelledby='headingColl2-3' class='collapse' id='coll2-3' role='tabpanel'>
+<div class='card-block'>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-6 col-lg-6'>
+<h5 class='mb-0'>
 You’re ready to have a reading now!  Simply call the toll-free # and follow the prompts that we went over.
 </h5>
 <p>
@@ -1021,7 +1043,7 @@ The End
 <a href='/oe-jekyll/'>Back to start</a>
 </div>
 </div>
-</a>
+</div>
 </div>
 </div>
 </div>

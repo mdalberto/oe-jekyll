@@ -84,9 +84,8 @@ prototype: 6
                       %p
                         Our best package is 30 minutes for $30.00.
                       .btn.btn-green{"aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
-                        More on Price                         
-                      %a.btn.btn-green{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
-                        Continue
+                        More on Price
+
                     #collMoreOnPrice.collapse.mt-3
                       .triangle-border.top
 
@@ -105,10 +104,39 @@ prototype: 6
 
                         %p
                           The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account. 
+                    
+                    .form-group.row
+                      %label.col-lg-3.col-form-label{:for => "promo-input"} Promo Code
 
-                        %p
-                          %a.sendTop.btn.btn-green{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
-                            Continue
+                      .col-lg-7
+                        .input-group
+                          %input#phone-input.form-control{:type => "text"}
+                            %span.input-group-btn
+                              %button.btn.btn-primary{:type => "button"} Apply
+                         
+                          %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
+
+                    / packages
+                    .form-group.row
+                      %label.col-lg-3.col-form-label Packages
+                      .col-lg-7
+                        .form-check
+                          %label.form-check-label
+                            %input#gridRadios1.form-check-input{:name => "gridRadios", :type => "radio", :value => "option1", :checked => "checked" }
+                              $30.00 for 30 minutes
+                        .form-check
+                          %label.form-check-label
+                            %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}
+                              $20.00 for 20 minutes
+                        .form-check
+                          %label.form-check-label
+                            %input#gridRadios3.form-check-input{:name => "gridRadios", :type => "radio", :value => "option3"}
+                              $10.00 for 10 minutes
+                      
+                      
+                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
+                      Continue
+
 
 
 
@@ -209,20 +237,12 @@ prototype: 6
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6
                     %h5.mb-0
-                      Address
+                      Billing Address
 
             #coll5.collapse{"aria-labelledby" => "headingColl5", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6
-                    .triangle-border.left
-                      %p.mb-0
-                        Your name, just as it appears on your CC, is it (read field below)?
-
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "cc-name"} CC Name
-                      .col-lg-7
-                        %input.form-control{:type => "text", :value => "Matthew Dalberto"}
 
                     .triangle-border.left
                       %p.mb-0
@@ -279,8 +299,15 @@ prototype: 6
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6
                     .triangle-border.left
-                      %p
-                        The information I need, is what verifies you to your credit card.
+                      %p.mb-0
+                        Your name, just as it appears on your CC, is it (read field below)?
+
+                    .form-group.row
+                      %label.col-lg-3.col-form-label{:for => "cc-name"} CC Name
+                      .col-lg-7
+                        %input.form-control{:type => "text", :value => "Matthew Dalberto"}
+
+                    .triangle-border.left
                       %p.mb-0
                         Please may I have your phone exactly as it’s listed with your credit card company? 
 
@@ -337,7 +364,24 @@ prototype: 6
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
                         .col-lg-7
-                          %input#cc-numb2.form-control{:type => "text"}/
+                          %input#cc-numb2.form-control{:type => "text"}
+                          %ul.list-unstyled.u-margin-top.u-no-margin-bottom
+                            %li.creditcard-visa
+                              %span.sr-only
+                              Visa
+                            %li.creditcard-mastercard
+                              %span.sr-only
+                              MasterCard
+                            %li.creditcard-discover
+                              %span.sr-only
+                              Discover
+                            %li.creditcard-amex
+                              %span.sr-only
+                              American Express
+                            %li.creditcard-dinersclub
+                              %span.sr-only
+                              Diner's Club
+
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation
                         .col-lg-7
@@ -353,33 +397,8 @@ prototype: 6
                         .col-6.col-sm-3.col-md-3.col-lg-2
                           %input#security2.form-control{:type => "text"}
 
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "first-input2"} DNIS
-                      .col-lg-7
-                        %input.form-control{:placeholder => "1-800-956-3049", :type => "text"}
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "promo-input"} Promo Code
-                      .col-8.col-sm-5.col-md-6.col-lg-5
-                        .input-group
-                          %input#promo-input.form-control{:type => "text"}
-                            %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
 
-                    / packages
-                    .form-group.row
-                      %label.col-lg-3.col-form-label Packages
-                      .col-lg-7
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios1.form-check-input{:name => "gridRadios", :type => "radio", :value => "option1", :checked => "checked" }
-                              $30.00 for 30 minutes
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}
-                              $20.00 for 20 minutes
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios3.form-check-input{:name => "gridRadios", :type => "radio", :value => "option3"}
-                              $10.00 for 10 minutes
+
                     .triangle-border.left
                       %p.mb-0              
                         Something about the Kindness program goes here
@@ -446,45 +465,45 @@ prototype: 6
                   Rewiew Information
 
           .row.justify-content-md-center
-            .col-12.col-md-5.col-lg-5                
+            .col-12.col-md-5.col-lg-6                
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Intro Offer
+                %label.col-lg-4.col-form-label{:for => "last-input"} Intro Offer
                 .col-lg-5
                   .review
                     $30.00 for 30 minutes
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Name
+                %label.col-lg-4.col-form-label{:for => "first-input"} Name
                 .col-lg-5
                   .review
                     Matt Dalberto
                     
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Email
+                %label.col-lg-4.col-form-label{:for => "last-input"} Email
                 .col-lg-5
                   .review
                     mdalberto@vseinc.com
 
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Birth Date
+                %label.col-lg-4.col-form-label{:for => "first-input"} Birth Date
                 .col-lg-5
                   .review
                     03/25/1980
                     
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Credit Card
+                %label.col-lg-4.col-form-label{:for => "first-input"} Credit Card
                 .col-lg-7
                   .review
                     ****************0808
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} Experation
+                %label.col-lg-4.col-form-label{:for => "first-input"} Experation
                 .col-lg-7
                   .review
                     12/12/2019
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "first-input"} CC Address
+                %label.col-lg-4.col-form-label{:for => "first-input"} CC Address
                 .col-lg-7
                   .review
                     900 Wheeler Way, Suit 2
@@ -492,13 +511,13 @@ prototype: 6
                     Langhorne, PA 19000, USA
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} CC Phone
+                %label.col-lg-4.col-form-label{:for => "last-input"} CC Phone
                 .col-lg-5
                   .review
                     555-555-5555
 
               .form-group.row
-                %label.col-lg-3.col-form-label{:for => "last-input"} Total charges to card
+                %label.col-lg-4.col-form-label{:for => "last-input"} Total charges to card
                 .col-lg-5
                   .review
                     $30.00
@@ -511,7 +530,7 @@ prototype: 6
                 %a.mt-2.btn.btn-green.btn-fixed#submitAccordian
                   Process Order         
 
-        #processMessage.text-center
+        #processMessage.text-center{:style => 'display:none'}
           .card-header.green
             %h1
               %span
@@ -599,6 +618,12 @@ prototype: 6
           .card.transcriptOnlyCard
             #headingColl2-3.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "coll2-3", "aria-expanded" => "false", "data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#coll2-3"}
+                .row.justify-content-md-center
+                  .col-12.col-md-6.col-lg-6
+                    %h5.mb-0
+                      Payment Information & Transaction
+            #coll2-3.collapse{"aria-labelledby" => "headingColl2-3", :role => "tabpanel"}
+              .card-block
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6
                     %h5.mb-0
