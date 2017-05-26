@@ -27,8 +27,15 @@ h5, .h5 {
 a {
   color:$blue;
   font-weight: normal;
+  line-height: 25px;
 }
 
+a.transcript-directions{
+    color:black;
+    u{
+        color:$blue;
+    }
+}
 
 .text-small{
     font-size:13px;

@@ -49,6 +49,10 @@ $script-color-border: $green-bright;
     margin-right:0px;
 }
 
+.triangle-border.top{
+    margin: 0 0 1em 0;
+}
+
 .triangle-border:before {
     content: "";
     position: absolute;
@@ -111,20 +115,38 @@ $script-color-border: $green-bright;
     border: 1px solid #bbb;
     box-sizing: content-box;
     display: inline-block;
-        width: 32px;
+    width: 32px;
     height: 20px;
     overflow: hidden;
+    background-image: url(../../oe-jekyll/images/sprite.svg);
+    background-repeat: no-repeat;
+    position:relative;
+}
+.creditcard-visa {
+    background-position: 89.53488% 40%;
 }
 
-.sr-only {
+.creditcard-amex {
+    background-position: 89.53488% 56%;
+}
+
+.creditcard-discover {
+    background-position: 68.02326% 25.6032%;
+}
+
+.creditcard-dinersclub {
+    background-position: 89.53488% 72%;
+}
+
+.with-inset-creditcard .creditcard-amex, .with-inset-creditcard .creditcard-cvv, .with-inset-creditcard .creditcard-dinersclub, .with-inset-creditcard .creditcard-discover, .with-inset-creditcard .creditcard-mastercard, .with-inset-creditcard .creditcard-visa {
+    top: 4.5px;
+    left: 6px;
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+    pointer-events: none;
+}
+
+.creditcard-cvv {
+    background-position: 89.53488% 88%;
 }
 
 .users{

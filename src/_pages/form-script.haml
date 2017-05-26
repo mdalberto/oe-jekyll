@@ -68,6 +68,7 @@ prototype: 6
                   .col-12.col-md-6.col-lg-6
                     %h5.mb-0
                       Over 18 & New Member Offer
+
             #coll2.collapse{"aria-labelledby" => "headingColl2", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
@@ -83,9 +84,13 @@ prototype: 6
                         Our new member introductory offer is just a $1.00 per minute 1X only. We accept all major credit cards.
                       %p
                         Our best package is 30 minutes for $30.00.
-                      .btn.btn-green{"aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
-                        More on Price
 
+                    %a.transcript-directions{"aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
+                      .media
+                        %i.fa.fa-exclamation-triangle.green.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
+                        .media-body
+                          If they have questions about price <u>click here</u> to read them more about our price details.
+                     
                     #collMoreOnPrice.collapse.mt-3
                       .triangle-border.top
 
@@ -205,9 +210,14 @@ prototype: 6
                         %input#email.form-control{:type => "email"}
                         %span.small.muted
                           (Fraud search for duplicates will happen on this field)
-                    .triangle-border.left
-                      %a.btn.btn-green.mb-0.btn-sm{"aria-controls" => "collDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collDeclinesEmail"}
-                        Declines Email                         
+                    
+                    %a.transcript-directions{"aria-controls" => "collDeclinesEmail", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collDeclinesEmail"}
+                      .media
+                        %i.fa.fa-exclamation-triangle.green.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
+                        .media-body
+                          If they do not wish to give you their email address <u>click here</u> to read them more about our email benefits.
+                     
+
 
                     #collDeclinesEmail.collapse.mt-3
                       .triangle-border.top
@@ -215,7 +225,7 @@ prototype: 6
                           %span{ :aria-hidden =>"true"}
                             &times
                         %p
-                          (Entice them) By sharing your email address, you are given added security;
+                          By sharing your email address, you are given added security;
                         %p
                           Benefits  
                         %ul
@@ -226,7 +236,7 @@ prototype: 6
                           %li
                             Your information is private and we don’t sell or trade any of your private information.
                     
-                    %p
+                    %p.mt-4
                       %a.btn.btn-green.btn-fixed{"aria-controls" => "coll5", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll5"}
                         Continue
 
@@ -415,8 +425,10 @@ prototype: 6
                                 %option 2017
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
-                        .col-6.col-sm-3.col-md-3.col-lg-2
-                          %input#security2.form-control{:type => "text"}
+                        .col-lg-7
+                          .with-inset-creditcard
+                            %input#security2.form-control{:type => "text"}
+                            %span.creditcard-cvv{"aria-hidden" => "true"}
 
 
 
@@ -585,7 +597,9 @@ prototype: 6
                     .form-group.row
                       %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
                       .col-6.col-sm-3.col-md-3.col-lg-2
-                        %input#security2.form-control{:type => "text"}
+                        .with-inset-creditcard
+                          %input#security2.form-control{:type => "text"}
+                          %span.creditcard-cvv{"aria-hidden" => "true"}
 
 
                     %p.mt-4
@@ -608,18 +622,18 @@ prototype: 6
                       %p
                         The account has been created!
                       %p
-                        Your 4 digit pin is XXXX.
+                        Your 4 digit pin is <strong>XXXX</strong>.
                       %p
-                        For your privacy, your credit card charges will show as (insert Service Name).
+                        For your privacy, your credit card charges will show as <strong>(insert Service Name)</strong>.
                       %ul
                         %li
-                          Hollywood Psychics appear as HPS and our 800#
+                          Hollywood Psychics appear as <strong>HPS</strong> and our 800#
                         %li
-                          Love Coach appears as Expert Link and our 800# 
+                          Love Coach appears as <strong>Expert Link</strong> and our 800# 
                         %li
-                          Psychics Source appear as Expert Link and our 800# 
+                          Psychics Source appear as <strong>Expert Link</strong> and our 800# 
                         %li
-                          Gay Live appears as Live Link and our 800#
+                          Gay Live appears as <strong>Live Link</strong> and our 800#
                       %p              
                         Now we have your account all setup, I’ll give you all the information you need to connect with an advisor. 
                       %p                    
@@ -627,25 +641,34 @@ prototype: 6
                       %p
                         I would like to recommend some of our top advisor on the service right now?  
                       %p
-                        What type of reading are you looking for? <Love & relationships, career, finance, etc.>. 
-                        Recommend 2–3 advisors who are available on the service currently.
-                        %br/
-                        %a.btn.btn-green.btn-sm
-                          Link to Expert View
+                        What type of reading are you looking for? Love & relationships, career, finance, etc. 
+
+                    
+                    %a.transcript-directions{'href' => '#'}
+                      .media
+                        %i.fa.fa-exclamation-triangle.green.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
+                        .media-body
+                          Recommend 2–3 advisors who are available on the service currently. <u>Click here</u> to show 'Expert View', a listing of all available psychics and there specialties.
+
+ 
+                    .triangle-border.left
                       %p
                         This will be the only number you’ll need in the future to contact the service. (HP, PS)
                         %span.small
                           (Service Overview for instructions: Hollywood Psychics, Psychic Source)
                       %p
-                        The phone number you’ll need to use is: 1-XXX-XXX-XXXX.
+                        The phone number you’ll need to use is: <strong>1-XXX-XXX-XXXX</strong>.
                       %p 
-                        Once the service picks up- Select option #1 for existing members and enter your 4-digit pin# or your 10-digit phone number followed by your 4-digit PIN #, followed by the # pound key.  
-                        %span.small
-                          (The system will confirm the available amount of time and money in your account)
-                      %p
-                        From the Crossroads menu; Select option #1 again for the Advisor menu.  
-                      %p
-                        You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
+                        Once the service picks up
+                      %ol
+                        %li
+                          Select option #1 for existing members and enter your 4-digit pin# or your 10-digit phone number followed by your 4-digit PIN #, followed by the # pound key.  
+                          %span.small
+                            (The system will confirm the available amount of time and money in your account)
+                        %li
+                          From the Crossroads menu; Select option #1 again for the Advisor menu.  
+                        %p
+                          You can listen to all the available advisor’s messages.  Take your time – you’re not charged until your talking with an Advisor.
                       %p
                         %a.btn.btn-green.btn-fixed{"aria-controls" => "collSuccess-2", "aria-expanded" => "false", "data-parent" => "#accordionSuccess", "data-toggle" => "collapse", :href => "#collSuccess-2"}
                           Continue              

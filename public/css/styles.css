@@ -9748,7 +9748,8 @@ hr {
   margin-top: -40px; }
 
 li {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  line-height: 28px; }
 
 .navbar li {
   margin-bottom: 0; }
@@ -9914,7 +9915,13 @@ h5, .h5 {
 
 a {
   color: #0275d8;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 25px; }
+
+a.transcript-directions {
+  color: black; }
+  a.transcript-directions u {
+    color: #0275d8; }
 
 .text-small {
   font-size: 13px;
@@ -10016,6 +10023,9 @@ div.panel {
   margin-left: 0px;
   margin-right: 0px; }
 
+.triangle-border.top {
+  margin: 0 0 1em 0; }
+
 .triangle-border:before {
   content: "";
   position: absolute;
@@ -10068,17 +10078,31 @@ div.panel {
   display: inline-block;
   width: 32px;
   height: 20px;
-  overflow: hidden; }
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
+  background-image: url(../../oe-jekyll/images/sprite.svg);
+  background-repeat: no-repeat;
+  position: relative; }
+
+.creditcard-visa {
+  background-position: 89.53488% 40%; }
+
+.creditcard-amex {
+  background-position: 89.53488% 56%; }
+
+.creditcard-discover {
+  background-position: 68.02326% 25.6032%; }
+
+.creditcard-dinersclub {
+  background-position: 89.53488% 72%; }
+
+.with-inset-creditcard .creditcard-amex, .with-inset-creditcard .creditcard-cvv, .with-inset-creditcard .creditcard-dinersclub, .with-inset-creditcard .creditcard-discover, .with-inset-creditcard .creditcard-mastercard, .with-inset-creditcard .creditcard-visa {
+  top: 4.5px;
+  left: 6px;
+  position: absolute;
+  pointer-events: none; }
+
+.creditcard-cvv {
+  background-position: 89.53488% 88%; }
 
 .users {
   font-size: 14px;
