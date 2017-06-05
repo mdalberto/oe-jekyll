@@ -1,19 +1,4 @@
 
-.sections{
-    color:red;
-}
-
-.newbieform5{
-
-    #sidebar{
-        position:relative;
-        padding-right:60px;
-    }
-
-    overflow:hidden;
-
-
-}
 .card {
     margin-left: -16px;
     margin-right: -16px;
@@ -21,16 +6,15 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+
+    // no margin cards within cards
+    .card {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
-label {
-    font-size:15px;
-    @include media-breakpoint-up("lg") {
-        text-align:right;
-        margin-left: 20px;
-    }
-    
-}
+
 
 #accordionTranscripts .card{
     background-color:white;

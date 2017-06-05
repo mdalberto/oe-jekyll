@@ -4,7 +4,31 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+// For the 'promo code select' accordion like behavior: show and hide potential options
+$("#packageOptions").bind("change", function () {
+    $(".packageOption").slideUp();
+    if ($(this).val() == "packageDefault") {
+        $("#packageDefault").slideDown();
+    }
+    if ($(this).val() == "packageOption1") {
+        $("#packageOption1").slideDown();
+    }
+    else if($(this).val() =="packageOption2") {
+        $("#packageOption2").slideDown();
+    }
+    else if($(this).val() =="packageOption3") {
+        $("#packageOption3").slideDown();
+    }
+});
 
+// simulate a acceptable promo code being entered
+$('#packageOptionPromoCodeBtn').on('click', function(){
+    $("#packageOptionPromoCode").slideDown();
+    return false;
+});
+
+
+/// ------------- above are ok to include --------------------- //
 
 $(document).ready(function(){
     $('#transcript1').show();
@@ -12,7 +36,6 @@ $(document).ready(function(){
 
 $('.transcriptchanger').on('click', function(){
 
-    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
     $(this).closest('.transcript').hide();
     var thelink = $(this).attr("data-link");
     $('#' + thelink).show();
@@ -49,14 +72,12 @@ $( "#clickme" ).click(function() {
 
 
 $('#capture1').on('click', function(){
-    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
     $(this).hide();
     $('#capturedCC').show();
     return false;
 });
 
 $('#capture2').on('click', function(){
-    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
 
     $('#capturedCC').hide();
     $('#capturedCC').show('slow');
@@ -64,14 +85,12 @@ $('#capture2').on('click', function(){
 });
 
 $('#capture3').on('click', function(){
-    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
     $('#captureCC').hide();
     $('#capturedCC').show('slow');
     return false;
 });
 
 $('#capture4').on('click', function(){
-    //$(this).closest('.transcript').toggleClass('flipped').animate({ marginLeft: '-3000'}, 100);
 
     $('#capturedCC').hide();
     $('#captureCC').show('slow');
@@ -132,30 +151,6 @@ $("#first-input2, #last-input2, #email-input2, #city-input2, #zip2").bind("chang
     }
 });
 
-// function enableForm(){
-//         $('#user-continue').removeAttr("disabled");
-//         $('#user-continue').removeClass("btn-default");
-//         $('#user-continue').addClass("btn-green");
-// }
-
-
-/// bootstrap accordian add carots
-// $('#creditcardaccordion').on('shown.bs.collapse', function(){
-//     alert('he');
-// $(this).find(".accordion-toggle i.fa-caret-right").removeClass("fa-caret-right").addClass("fa-caret-down");
-// }).on('hidden.bs.collapse', function(){
-// $(this).find(".accordion-toggle i.fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-right");
-// });
-
-// function toggleIcon() {
-//     //$(this).parent().parent().find('.more-less').toggleClass('fa-caret-down fa-caret-right ');
-
-//     $('.card-heading')
-//         .find(".more-less")
-//         .toggleClass('fa-caret-right fa-caret-down');
-// }
-// $('#creditcardaccordion').on('hidden.bs.collapse', toggleIcon);
-// $('#creditcardaccordion').on('shown.bs.collapse', toggleIcon);
 
 /*******************************
 * ACCORDION WITH TOGGLE ICONS

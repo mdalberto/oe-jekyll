@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Hotjar Tracking Code for https://mdalberto.github.io/oe-jekyll/newbie-script/ -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:489765,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-
-
-    <title>
-        
-    </title>
+    <title>Prototype</title>
 
     <!-- Fonts -->
     <!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700">-->
@@ -263,7 +247,7 @@ If they have questions about price <u>click here</u> to read them more about our
 </div>
 </div>
 </a>
-<div class='collapse mt-3' id='collMoreOnPrice'>
+<div class='mt-3 collapse' id='collMoreOnPrice'>
 <div class='triangle-border top'>
 <button aria-controls='collMoreOnPrice' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collMoreOnPrice' type='button'>
 <span aria='true'>
@@ -284,52 +268,211 @@ Any time left remains on your account for a future reading.
 <p>
 There are no taxes, fees or other cost we charge to use our service. You can talk to almost any advisor. (Excludes Premium Advisors). We do not offer the $1 per/min rate on the next purchase. The advisor’s rates start from $4.99 per/min to $11.99 per/min, existing member rates are charged on 2nd purchases and on.
 </p>
+</div>
+</div>
+<div class='triangle-border left'>
 <p>
-The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
+Do you have a promo code?
+</p>
+<a aria-controls='promoCodeYes' aria-expanded='false' class='btn btn-green' data-parent='#purchasePackages' data-toggle='collapse' href='#promoCodeYes'>
+Yes
+</a>
+<a aria-controls='promoCodeNo' aria-expanded='false' class='btn btn-green collapsed' data-parent='#purchasePackages' data-toggle='collapse' href='#promoCodeNo'>
+No
+</a>
+</div>
+<!-- /////////// -->
+<div aria-multiselectable='true' id='purchasePackages' role='tablist'>
+<div class='card'>
+<div aria-labelledby='questionOne' class='collapse show' id='promoCodeYes' role='tabcard'>
+<div class='triangle-border top'>
+<p class='mb-0'>
+Ok, what is the number?
 </p>
 </div>
-</div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='promo-input'>Promo Code</label>
+<label class='col-lg-3 col-form-label' for='frmPromoCode'>Promo Code</label>
 <div class='col-lg-7'>
 <div class='input-group'>
-<input class='form-control' id='phone-input' type='text'>
+<input class='form-control' id='frmPromoCode' name='frmPromoCode' type='text'>
 <span class='input-group-btn'>
-<button class='btn btn-green' type='button'>Apply</button>
+<a class='btn btn-green' id='packageOptionPromoCodeBtn'>Apply</a>
 </span>
 </input>
 <i aria-hidden='true' class='tip fa fa-question-circle fa-lg' data-toggle='tooltip' title='Only enter something if they provide this'></i>
 </div>
 </div>
 </div>
-<!-- packages -->
+<div class='packageOption' id='packageOptionPromoCode' style='display:none'>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label'>Packages</label>
+<label class='col-lg-3 col-form-label' for='frmPackage'>Package</label>
+</div>
+<div class='col-lg-7'>
+<input class='form-control' id='frmPackage' name='frmPackage' readonly='readonly' type='text' value='100000 (New Member Pricing (Order Entry)'>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
 <div class='col-lg-7'>
 <div class='form-check'>
 <label class='form-check-label'>
-<input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
+$77.78 for 55 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
+$55.37 for 51 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
+$45.00 for 44 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div aria-labelledby='questionTwo' class='collapse' id='promoCodeNo' role='tabcard'>
+<div class='triangle-border top'>
+<p class='mb-0'>
+No problem. We have an introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account.
+</p>
+</div>
+<!-- / packages -->
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmDnis'>DNIS</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmDnis' name='frmDnis' readonly='readonly' type='text' value='215-978-7668'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmPackage'>Package</label>
+<div class='col-lg-7'>
+<select class='form-control' id='packageOptions'>
+<option value='packageDefault'>100000 (New member (pricing Order Entry))</option>
+<option value='packageOption1'>1700 (New member offer)</option>
+<option value='packageOption2'>BELIEVE (Best value is $25 package)</option>
+<option value='packageOption3'>TORIMYHERO (Tori is my hero)</option>
+</select>
+</div>
+</div>
+<div class='form-group row packageOption' id='packageDefault'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
 $30.00 for 30 minutes
 </input>
 </label>
 </div>
 <div class='form-check'>
 <label class='form-check-label'>
-<input class='form-check-input' id='gridRadios2' name='gridRadios' type='radio' value='option2'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
 $20.00 for 20 minutes
 </input>
 </label>
 </div>
 <div class='form-check'>
 <label class='form-check-label'>
-<input class='form-check-input' id='gridRadios3' name='gridRadios' type='radio' value='option3'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
 $10.00 for 10 minutes
 </input>
 </label>
 </div>
 </div>
 </div>
-<a aria-controls='coll3' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
+<div class='form-group row packageOption' id='packageOption1' style='display:none'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
+$50.00 for 30 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
+$40.00 for 20 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
+$30.00 for 10 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+<div class='form-group row packageOption' id='packageOption2' style='display:none'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
+$48.82 for 29 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
+$39.33 for 18 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
+$35.00 for 13 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+<div class='form-group row packageOption' id='packageOption3' style='display:none'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
+$77.78 for 55 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
+$55.37 for 51 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
+$45.00 for 44 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- ////////// -->
+</div>
+</div>
+<a aria-controls='coll3' aria-expanded='false' class='btn btn-green btn-fixed mt-3' data-parent='#accordion' data-toggle='collapse' href='#coll3'>
 Continue
 </a>
 </div>
@@ -359,15 +502,15 @@ Now, your first, last name exactly how it appears on the credit card.
 </p>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='first-input'>First Name</label>
+<label class='col-lg-3 col-form-label' for='FirstName'>First Name</label>
 <div class='col-lg-7'>
-<input class='form-control' id='first-input' type='text'>
+<input class='form-control' id='FirstName' type='text'>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='last-input'>Last Name</label>
+<label class='col-lg-3 col-form-label' for='LastName'>Last Name</label>
 <div class='col-lg-7'>
-<input class='form-control' id='last-input' type='text'>
+<input class='form-control' id='LastName' type='text'>
 <span class='small muted'>
 (Fraud search for duplicates will happen on this field)
 </span>
@@ -565,9 +708,9 @@ Your name, just as it appears on your CC, is it (read field below)?
 </p>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='cc-name'>CC Name</label>
+<label class='col-lg-3 col-form-label' for='frmNameCC'>CC Name</label>
 <div class='col-lg-7'>
-<input class='form-control' type='text' value='Matthew Dalberto'>
+<input class='form-control' id='frmNameCC' name='ccname' required='required' type='text' value='Matthew Dalberto'>
 </div>
 </div>
 <div class='triangle-border left'>
@@ -576,10 +719,10 @@ Please may I have your phone exactly as it’s listed with your credit card comp
 </p>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='phone-input'>CC Phone Number</label>
+<label class='col-lg-3 col-form-label' for='frmPhoneCC'>CC Phone Number</label>
 <div class='col-lg-7'>
 <div class='input-group'>
-<input class='form-control' id='phone-input' type='text'>
+<input class='form-control' id='frmPhoneCC' name='ccphone' required='required' type='text'>
 <span class='input-group-btn'>
 <button class='btn btn-secondary' id='useAni' type='button'>Use ANI</button>
 </span>
@@ -596,7 +739,7 @@ I will transfer you over to our automated system to enter the credit card inform
 </p>
 </div>
 <div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='phone-input'>
+<label class='col-lg-3 col-form-label' for='frmCCNum'>
 Capture CC
 </label>
 <div class='col-lg-8'>
@@ -617,54 +760,48 @@ below first so the Credit Card Automated IVR System can handle the entry.
 </div>
 <div id='capturedCC' style='display:none'>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb'>CC Number</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
 <div class='col-lg-7'>
-<input class='form-control' id='cc-numb' placeholder='*******************' readonly='readonly' type='text'>
-<ul class='list-unstyled mb-0'>
+<input class='form-control' id='frmCCNum' placeholder='*******************' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
 <li class='creditcard-visa mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Visa
+</span>
 </li>
 <li class='creditcard-mastercard mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 MasterCard
+</span>
 </li>
 <li class='creditcard-discover mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Discover
+</span>
 </li>
 <li class='creditcard-amex mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 American Express
+</span>
 </li>
 <li class='creditcard-dinersclub mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Diner's Club
+</span>
 </li>
 </ul>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='experation'>Experation</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
 <div class='col-lg-7'>
-<div class='row'>
-<div class='col pr-0'>
-<select class='form-control' id='gender-select'>
-<option>***</option>
-</select>
-</div>
-<div class='col'>
-<select class='form-control' id='gender-select2'>
-<option>***</option>
-</select>
-</div>
-</div>
+<input class='form-control' id='frmCCExp' name='cc-exp' type='date'>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='security-code'>Security Code</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
 <div class='col-6 col-sm-3 col-md-3 col-lg-2'>
-<input class='form-control' id='security-code' placeholder='****' readonly='readonly' type='text'>
+<input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
 </div>
 <a class='btn btn-primary btn-sm' href='' id='capture2'>Redo</a>
 </div>
@@ -675,45 +812,39 @@ Diner's Club
 <label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb2' type='text'>
-<ul class='list-unstyled mb-0'>
+<ul class='list-unstyled mb-0 mt-2'>
 <li class='creditcard-visa mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Visa
+</span>
 </li>
 <li class='creditcard-mastercard mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 MasterCard
+</span>
 </li>
 <li class='creditcard-discover mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Discover
+</span>
 </li>
 <li class='creditcard-amex mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 American Express
+</span>
 </li>
 <li class='creditcard-dinersclub mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Diner's Club
+</span>
 </li>
 </ul>
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='experation2'>Experation</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
 <div class='col-lg-7'>
-<div class='row'>
-<div class='col pr-0'>
-<select class='form-control' id='gender-select'>
-<option>Jan</option>
-</select>
-</div>
-<div class='col'>
-<select class='form-control' id='gender-select2'>
-<option>2017</option>
-</select>
-</div>
-</div>
+<input class='form-control' id='frmCCExp' name='cc-exp' type='date'>
 </div>
 </div>
 <div class='form-group row'>
@@ -781,7 +912,7 @@ Gives the customer a chance to change their mind before processing.
 </ul>
 </div>
 <p>
-<a class='mt-2 btn btn-green btn-fixed' id='processAccordian'>
+<a class='mt-2 btn btn-green btn-fixed' id='processAccordion'>
 Review Order
 </a>
 </p>
@@ -882,10 +1013,10 @@ $30.00
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <p>
-<a class='btn btn-default' id='backAccordian'>
+<a class='btn btn-default' id='backAccordion'>
 Back
 </a>
-<a class='mt-2 btn btn-green btn-fixed' id='submitAccordian'>
+<a class='mt-2 btn btn-green btn-fixed' id='submitAccordion'>
 Process Order
 </a>
 <a aria-controls='coll2-2' aria-expanded='false' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2' id='ccFailure'>
@@ -917,26 +1048,31 @@ The account Credit card had an issue. Please try again.
 <label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb2' type='text'>
-<ul class='list-unstyled mb-0'>
+<ul class='list-unstyled mb-0 mt-2'>
 <li class='creditcard-visa mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Visa
+</span>
 </li>
 <li class='creditcard-mastercard mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 MasterCard
+</span>
 </li>
 <li class='creditcard-discover mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Discover
+</span>
 </li>
 <li class='creditcard-amex mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 American Express
+</span>
 </li>
 <li class='creditcard-dinersclub mb-0'>
-<span class='sr-only'></span>
+<span class='sr-only'>
 Diner's Club
+</span>
 </li>
 </ul>
 </div>

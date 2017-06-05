@@ -85,13 +85,14 @@ prototype: 6
                       %p
                         Our best package is 30 minutes for $30.00.
 
+
                     %a.transcript-directions{"aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
                       .media
                         %i.fa.fa-exclamation-triangle.green.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
                         .media-body
                           If they have questions about price <u>click here</u> to read them more about our price details.
                      
-                    #collMoreOnPrice.collapse.mt-3
+                    #collMoreOnPrice.mt-3.collapse
                       .triangle-border.top
 
                         %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collMoreOnPrice", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collMoreOnPrice"}
@@ -107,45 +108,161 @@ prototype: 6
                         %p
                           There are no taxes, fees or other cost we charge to use our service. You can talk to almost any advisor. (Excludes Premium Advisors). We do not offer the $1 per/min rate on the next purchase. The advisor’s rates start from $4.99 per/min to $11.99 per/min, existing member rates are charged on 2nd purchases and on.
 
-                        %p
-                          The introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account. 
+
+
+
+                    .triangle-border.left
+                      %p
+                        Do you have a promo code?
+
+
+                      %a.btn.btn-green{"aria-controls" => "promoCodeYes", "aria-expanded" => "false", "data-parent" => "#purchasePackages", "data-toggle" => "collapse", :href => "#promoCodeYes"}
+                        Yes
+                      %a.btn.btn-green.collapsed{"aria-controls" => "promoCodeNo", "aria-expanded" => "false", "data-parent" => "#purchasePackages", "data-toggle" => "collapse", :href => "#promoCodeNo"}
+                        No
+
+
+
+                    ////////////
+
+
+                    #purchasePackages{"aria-multiselectable" => "true", :role => "tablist"}
                     
-                    .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "promo-input"} Promo Code
+                      .card
+                        #promoCodeYes.collapse.show{"aria-labelledby" => "questionOne", :role => "tabcard"}
+                          .triangle-border.top
+                            %p.mb-0
+                              Ok, what is the number?
 
-                      .col-lg-7
-                        .input-group
-                          %input#phone-input.form-control{:type => "text"}
-                            %span.input-group-btn
-                              %button.btn.btn-green{:type => "button"} Apply
-                         
-                          %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
+                          .form-group.row
+                            %label.col-lg-3.col-form-label{:for => "frmPromoCode"} Promo Code
 
-                    / packages
-                    .form-group.row
-                      %label.col-lg-3.col-form-label Packages
-                      .col-lg-7
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios1.form-check-input{:name => "gridRadios", :type => "radio", :value => "option1", :checked => "checked" }
-                              $30.00 for 30 minutes
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}
-                              $20.00 for 20 minutes
-                        .form-check
-                          %label.form-check-label
-                            %input#gridRadios3.form-check-input{:name => "gridRadios", :type => "radio", :value => "option3"}
-                              $10.00 for 10 minutes
-                      
-                      
-                    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
+                            .col-lg-7
+                              .input-group
+                                %input#frmPromoCode.form-control{:type => "text", :name => "frmPromoCode"}
+                                  %span.input-group-btn
+                                    %a.btn.btn-green#packageOptionPromoCodeBtn Apply
+                                
+                                %i.tip.fa.fa-question-circle.fa-lg{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Only enter something if they provide this"}
+
+
+                          .packageOption#packageOptionPromoCode{ "style" => "display:none"}
+                            .form-group.row
+                              %label.col-lg-3.col-form-label{:for => "frmPackage"} Package
+                            .col-lg-7
+                              %input#frmPackage.form-control{:name => "frmPackage", :type => "text", :value => "100000 (New Member Pricing (Order Entry)" , :readonly => "readonly"}
+
+                            .form-group.row
+                              %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
+                              .col-lg-7
+                                .form-check
+                                  %label.form-check-label
+                                    %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
+                                      $77.78 for 55 minutes
+                                .form-check
+                                  %label.form-check-label
+                                    %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
+                                      $55.37 for 51 minutes
+                                .form-check
+                                  %label.form-check-label
+                                    %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
+                                      $45.00 for 44 minutes
+
+
+
+
+                      .card
+                        #promoCodeNo.collapse{"aria-labelledby" => "questionTwo", :role => "tabcard"}
+
+                          .triangle-border.top
+                            %p.mb-0
+                              No problem. We have an introductory price is a fantastic special first-time offer.  After your first purchase, you can select to put any amount from $10.00 and up on your account.  You always decide how much you want to put on your account. 
+
+                        
+                          // packages
+                          .form-group.row
+                            %label.col-lg-3.col-form-label{:for => "frmDnis"} DNIS
+                            .col-lg-7
+                              %input#frmDnis.form-control{:name => "frmDnis", :type => "text", :value => "215-978-7668" , :readonly => "readonly"}
+                          .form-group.row
+                            %label.col-lg-3.col-form-label{:for => "frmPackage"} Package
+                            .col-lg-7
+                              %select#packageOptions.form-control
+                                %option{:value => "packageDefault"} 100000 (New member (pricing Order Entry)) 
+                                %option{:value => "packageOption1"} 1700 (New member offer)
+                                %option{:value => "packageOption2"} BELIEVE (Best value is $25 package)
+                                %option{:value => "packageOption3"} TORIMYHERO (Tori is my hero)
+                                
+                              
+                          .form-group.row.packageOption#packageDefault
+                            %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
+                            .col-lg-7
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
+                                    $30.00 for 30 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
+                                    $20.00 for 20 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
+                                    $10.00 for 10 minutes
+
+
+                          .form-group.row.packageOption#packageOption1{ "style" => "display:none"}
+
+                            %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
+                            .col-lg-7
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
+                                    $50.00 for 30 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
+                                    $40.00 for 20 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
+                                    $30.00 for 10 minutes
+                        
+                          .form-group.row.packageOption#packageOption2{ "style" => "display:none"}
+                            %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
+                            .col-lg-7
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
+                                    $48.82 for 29 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
+                                    $39.33 for 18 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
+                                    $35.00 for 13 minutes
+                          .form-group.row.packageOption#packageOption3{ "style" => "display:none"}
+
+                            %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
+                            .col-lg-7
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
+                                    $77.78 for 55 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
+                                    $55.37 for 51 minutes
+                              .form-check
+                                %label.form-check-label
+                                  %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
+                                    $45.00 for 44 minutes
+                        ///////////
+                    
+                    %a.btn.btn-green.btn-fixed.mt-3{"aria-controls" => "coll3", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll3"}
                       Continue
-
-
-
-
-
 
 
           .card
@@ -164,13 +281,13 @@ prototype: 6
                       %p.mb-0
                         Now, your first, last name exactly how it appears on the credit card. 
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "first-input"} First Name
+                      %label.col-lg-3.col-form-label{:for => "FirstName"} First Name
                       .col-lg-7
-                        %input#first-input.form-control{:type => "text"}
+                        %input#FirstName.form-control{:type => "text"}
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "last-input"} Last Name
+                      %label.col-lg-3.col-form-label{:for => "LastName"} Last Name
                       .col-lg-7
-                        %input#last-input.form-control{:type => "text"}
+                        %input#LastName.form-control{:type => "text"}
                         %span.small.muted
                           (Fraud search for duplicates will happen on this field)
 
@@ -313,19 +430,19 @@ prototype: 6
                         Your name, just as it appears on your CC, is it (read field below)?
 
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "cc-name"} CC Name
+                      %label.col-lg-3.col-form-label{:for => "frmNameCC"} CC Name
                       .col-lg-7
-                        %input.form-control{:type => "text", :value => "Matthew Dalberto"}
+                        %input#frmNameCC.form-control{:type => "text", :name => "ccname", :value => "Matthew Dalberto", :required => "required"}
 
                     .triangle-border.left
                       %p.mb-0
                         Please may I have your phone exactly as it’s listed with your credit card company? 
 
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "phone-input"} CC Phone Number
+                      %label.col-lg-3.col-form-label{:for => "frmPhoneCC"} CC Phone Number
                       .col-lg-7
                         .input-group
-                          %input#phone-input.form-control{:type => "text"}
+                          %input#frmPhoneCC.form-control{:type => "text", :name => "ccphone", :required => "required"}
                             %span.input-group-btn
                               %button#useAni.btn.btn-secondary{:type => "button"} Use ANI
                         %span.small.muted
@@ -336,7 +453,7 @@ prototype: 6
                         I will transfer you over to our automated system to enter the credit card information. Once you have completed entering the information you will be transferred back to me.
 
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => "phone-input"}
+                      %label.col-lg-3.col-form-label{:for => "frmCCNum"}
                         Capture CC
 
                       .col-lg-8
@@ -354,39 +471,33 @@ prototype: 6
                       / credit card
                     #capturedCC{:style => "display:none"}
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb"} CC Number
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
                         .col-lg-7
-                          %input#cc-numb.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
-                          %ul.list-unstyled.mb-0
+                          %input#frmCCNum.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
+                          %ul.list-unstyled.mb-0.mt-2
                             %li.creditcard-visa.mb-0
                               %span.sr-only
-                              Visa
+                                Visa
                             %li.creditcard-mastercard.mb-0
                               %span.sr-only
-                              MasterCard
+                                MasterCard
                             %li.creditcard-discover.mb-0
                               %span.sr-only
-                              Discover
+                                Discover
                             %li.creditcard-amex.mb-0
                               %span.sr-only
-                              American Express
+                                American Express
                             %li.creditcard-dinersclub.mb-0
                               %span.sr-only
-                              Diner's Club
+                                Diner's Club
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "experation"} Experation
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
                         .col-lg-7
-                          .row
-                            .col.pr-0
-                              %select#gender-select.form-control
-                                %option ***
-                            .col
-                              %select#gender-select2.form-control
-                                %option ***
+                          %input#frmCCExp.form-control{:name => "cc-exp", :type => "date"}
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "security-code"} Security Code
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
                         .col-6.col-sm-3.col-md-3.col-lg-2
-                          %input#security-code.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}/
+                          %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
                         %a#capture2.btn.btn-primary.btn-sm{:href => ""} Redo
 
                     
@@ -396,33 +507,27 @@ prototype: 6
                         %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} CC Number
                         .col-lg-7
                           %input#cc-numb2.form-control{:type => "text"}
-                          %ul.list-unstyled.mb-0
+                          %ul.list-unstyled.mb-0.mt-2
                             %li.creditcard-visa.mb-0
                               %span.sr-only
-                              Visa
+                                Visa
                             %li.creditcard-mastercard.mb-0
                               %span.sr-only
-                              MasterCard
+                                MasterCard
                             %li.creditcard-discover.mb-0
                               %span.sr-only
-                              Discover
+                                Discover
                             %li.creditcard-amex.mb-0
                               %span.sr-only
-                              American Express
+                                American Express
                             %li.creditcard-dinersclub.mb-0
                               %span.sr-only
-                              Diner's Club
+                                Diner's Club
 
                       .form-group.row
-                        %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
                         .col-lg-7
-                          .row
-                            .col.pr-0
-                              %select#gender-select.form-control
-                                %option Jan
-                            .col
-                              %select#gender-select2.form-control
-                                %option 2017
+                          %input#frmCCExp.form-control{:name => "cc-exp", :type => "date"}
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
                         .col-lg-7
@@ -468,7 +573,7 @@ prototype: 6
                           Gives the customer a chance to change their mind before processing. 
 
                     %p
-                      %a.mt-2.btn.btn-green.btn-fixed#processAccordian
+                      %a.mt-2.btn.btn-green.btn-fixed#processAccordion
                         Review Order
 
 
@@ -541,9 +646,9 @@ prototype: 6
           .row.justify-content-md-center
             .col-12.col-md-6.col-lg-6
               %p
-                %a.btn.btn-default#backAccordian
+                %a.btn.btn-default#backAccordion
                   Back  
-                %a.mt-2.btn.btn-green.btn-fixed#submitAccordian
+                %a.mt-2.btn.btn-green.btn-fixed#submitAccordion
                   Process Order         
                 %a#ccFailure{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
                   simulate cc failure due to bad input         
@@ -567,22 +672,22 @@ prototype: 6
                       %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
                       .col-lg-7
                         %input#cc-numb2.form-control{:type => "text"}
-                        %ul.list-unstyled.mb-0
+                        %ul.list-unstyled.mb-0.mt-2
                           %li.creditcard-visa.mb-0
                             %span.sr-only
-                            Visa
+                              Visa
                           %li.creditcard-mastercard.mb-0
                             %span.sr-only
-                            MasterCard
+                              MasterCard
                           %li.creditcard-discover.mb-0
                             %span.sr-only
-                            Discover
+                              Discover
                           %li.creditcard-amex.mb-0
                             %span.sr-only
-                            American Express
+                              American Express
                           %li.creditcard-dinersclub.mb-0
                             %span.sr-only
-                            Diner's Club
+                              Diner's Club
 
                     .form-group.row
                       %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation

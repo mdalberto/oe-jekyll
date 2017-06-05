@@ -1,10 +1,7 @@
 
 
-
-
-
-
 $(function () {
+
 
   $('#transcript-1-no').on('click', function(){
             $('#headingZeroInnerTwoClick').click();
@@ -25,14 +22,14 @@ $(function () {
       return false;
   });
 
-
-  $('#processAccordian').on('click', function(){
+  // process accordion
+  $('#processAccordion').on('click', function(){
       $('#accordion').hide();
        $('#confirmationScreen').show();     
       return false;
   });
 
-  $('#backAccordian').on('click', function(){
+  $('#backAccordion').on('click', function(){
       $('#accordion').show();
        $('#confirmationScreen').hide();     
       return false;
@@ -49,7 +46,7 @@ $(function () {
 
 
   // confirmation screens toggle
-  $('#submitAccordian').on('click', function(){
+  $('#submitAccordion').on('click', function(){
       $('#confirmationScreen').hide();
        $('#accordionSuccess').show();    
        $('#headingCollSuccess-1 .collapsed').click(); 
