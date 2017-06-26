@@ -10096,3 +10096,180 @@ div.panel {
   .users .users-heading {
     background-color: #ffeeba;
     font-weight: bold; }
+
+@media (max-width: 300px) and (min-height: 200px) {
+  .fraudlist-open {
+    overflow: hidden; } }
+
+.fraudlist-toggle-inner {
+  background-image: url(/images/fraudlist-toggle.svg);
+  background-position: center -48px;
+  display: block;
+  height: 48px;
+  transition: background-position 300ms ease;
+  width: 48px;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent; }
+  .fraudlist-open .fraudlist-toggle-inner {
+    background-position: center 0; }
+
+.fraudlist {
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  transition: transform 300ms ease-out;
+  z-index: 1000; }
+  @media (min-height: 200px) {
+    .fraudlist.open {
+      display: block;
+      transform: translateY(100%); }
+    .fraudlist.in {
+      transform: translateY(0); } }
+  @media (min-width: 10px) and (min-height: 200px) {
+    .fraudlist {
+      height: 35px;
+      transition-property: height;
+      display: block; }
+      .fraudlist.open, .fraudlist.in {
+        transform: none; }
+      .fraudlist.in {
+        height: 75%; } }
+
+.fraudlist-inner,
+.fraudlist-header,
+.fraudlist-header a {
+  border-radius: inherit; }
+
+.fraudlist-inner {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+.fraudlist-header {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  width: 300px; }
+  .fraudlist-header a {
+    background-color: #ffeeba;
+    display: block;
+    height: 36px;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #ec871f; }
+    .fraudlist-header a:hover, .fraudlist-header a:active, .fraudlist-header a:focus {
+      background-color: #ffe491;
+      cursor: pointer; }
+    .fraudlist-header a:active {
+      background-image: none; }
+
+.fraudlistfilters {
+  background-color: #ffeeba;
+  display: block; }
+
+.fraudlist.open .fraudlist-arrow {
+  transform: rotate(180deg); }
+
+.fraudlist-body {
+  background-color: #34495E;
+  padding-bottom: 4em;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  border-top: 4px solid #ffeeba; }
+  @media (min-width: 10px) {
+    .fraudlist-body {
+      padding-bottom: 0; } }
+
+.fraudlist-item {
+  background-color: #fff;
+  display: block;
+  font-size: 12px;
+  margin-top: -1px;
+  padding: 10px;
+  position: relative; }
+  @media (min-width: 10px) {
+    .fraudlist-item {
+      border-width: 1px; } }
+  .fraudlist-item:hover, .fraudlist-item:focus {
+    background-color: #ffeeba;
+    z-index: 2; }
+  .fraudlist-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    opacity: 0.25; }
+
+.fraudlist-item-heading {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0; }
+
+.rwd-table {
+  font-size: 14px;
+  margin: 1em auto;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1100px; }
+  .rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  .rwd-table th {
+    display: none; }
+  .rwd-table td {
+    display: block; }
+    .rwd-table td:first-child {
+      padding-top: .5em; }
+    .rwd-table td:last-child {
+      padding-bottom: .5em; }
+    .rwd-table td:before {
+      content: attr(data-th) ": ";
+      font-weight: bold;
+      width: 10em;
+      display: inline-block; }
+      @media (min-width: 800px) {
+        .rwd-table td:before {
+          display: none; } }
+  .rwd-table th, .rwd-table td {
+    text-align: left; }
+    @media (min-width: 800px) {
+      .rwd-table th, .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em; }
+        .rwd-table th:first-child, .rwd-table td:first-child {
+          padding-left: 0; }
+        .rwd-table th:last-child, .rwd-table td:last-child {
+          padding-right: 0; } }
+
+@media (min-width: 800px) {
+  .rwd-table th, .rwd-table td {
+    margin: .5em 1em .5em 30%; } }
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  overflow: hidden; }
+  .rwd-table tr {
+    border-color: #46637f; }
+  .rwd-table th, .rwd-table td {
+    margin: .5em 1em; }
+    @media (min-width: 800px) {
+      .rwd-table th, .rwd-table td {
+        padding: 1em !important; } }
+  .rwd-table th, .rwd-table td:before {
+    color: #dd5;
+    font-size: 13px; }

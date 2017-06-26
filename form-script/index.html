@@ -1035,13 +1035,53 @@ Failure
 </h5>
 </a>
 </div>
+<!-- ///////////// -->
+<!-- / packages -->
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmPackage'>Package</label>
+<div class='col-lg-7'>
+<select class='form-control' id='packageOptions'>
+<option value='packageDefault'>100000 (New member (pricing Order Entry))</option>
+<option value='packageOption1'>1700 (New member offer)</option>
+<option value='packageOption2'>BELIEVE (Best value is $25 package)</option>
+<option value='packageOption3'>TORIMYHERO (Tori is my hero)</option>
+</select>
+</div>
+</div>
+<div class='form-group row packageOption' id='packageDefault'>
+<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
+<div class='col-lg-7'>
+<div class='form-check'>
+<label class='form-check-label'>
+<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
+$30.00 for 30 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
+$20.00 for 20 minutes
+</input>
+</label>
+</div>
+<div class='form-check'>
+<label class='form-check-label'>
+<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
+$10.00 for 10 minutes
+</input>
+</label>
+</div>
+</div>
+</div>
+<!-- ///// -->
 <div aria-labelledby='headingCollFailure-1' class='collapse' id='collFailure-1' role='tabpanel'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p class='mb-0'>
-The account Credit card had an issue. Please try again.
+The account Credit card {failed, ccv was wrong, etc.}.
 </p>
 </div>
 <div class='form-group row'>
@@ -1289,131 +1329,179 @@ Call end. Return to Zipwire, end the call and enter your notation.
 </div>
 </div>
 </section>
-<footer class='footer2 clearfix'>
-<div class='container-fluid text-center'>
-<div class='users' id='users' style='display: none'>
-<a class='text-red text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches'>
+<!-- ////////// fraud list ///////////// -->
+<aside class='fraudlist' id='fraudlist'>
+<div class='fraudlist-inner'>
+<h5 class='fraudlist-header'>
+<a id='fraudlist-ctl' ref='#fraudlist-body'>
 <i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
-4 match(es) found
-</a>
-<a class='text-red text-center mb-3 font-weight-bold btn-match' href='' id='btn-matches2' style='display:none'>
+Investigate 4 matches
 <i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
-4 match(es) found
 </a>
-<div class='row users-heading'>
-<div class='col text-red'>
-Name
-<i class='fa fa-sort-desc'></i>
+</h5>
+<div class='fraudlistfilters text-center'>
+Filters go here
 </div>
-<div class='col'>
-DOB
-<i class='fa fa-sort-desc'></i>
+<div class='fraudlist-body'>
+<div id='fraudlistBody'>
+<table class='rwd-table'>
+<tr>
+<th>ANI</th>
+<th>ID</th>
+<th>Name</th>
+<th>DOB</th>
+<th>Email</th>
+<th>CC #</th>
+<th>Actions</th>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+<tr>
+<td data-th='ANI'>216-210-5631</td>
+<td data-th='ID'>123456</td>
+<td data-th='Name'>Matthew M. Dalberto</td>
+<td data-th='DOB'>03/25/1980</td>
+<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='CC Number'>***6787</td>
+<td data-th='Actions'>
+<a href=''>
+View
+</a>
+</td>
+</tr>
+</table>
 </div>
-<div class='col'>
-Email
-<i class='fa fa-sort-desc'></i>
-</div>
-<div class='col'>
-Phone
-<i class='fa fa-sort-desc'></i>
-</div>
-<div class='col'>
-Address
-<i class='fa fa-sort-desc'></i>
-</div>
-<div class='col text-center'>
-Investigate
 </div>
 </div>
-<div class='row'>
-<div class='col'>
-Matt M
-<span class='text-red'>Bee</span>
-</div>
-<div class='col'>03/25/1979</div>
-<div class='col'>mdal1388@gmail.com</div>
-<div class='col'>215-222-2211</div>
-<div class='col'>3543 Ainslie Street...</div>
-<div class='col text-center'>
-<button class='btn btn-default btn-sm' data-target='#exampleModal' data-toggle='modal' type='button'>View</button>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col'>
-Mat
-<span class='text-red'>Bee</span>
-</div>
-<div class='col'>03/20/1980</div>
-<div class='col'>mdal138@gmail.com</div>
-<div class='col'>215-111-2222</div>
-<div class='col'>1113 Chestnut Street...</div>
-<div class='col text-center'>
-<a class='btn btn-default btn-sm' href=''>View</a>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col'>
-Mark
-<span class='text-red'>Bee</span>
-</div>
-<div class='col'>03/25/1980</div>
-<div class='col'>mdal13833@gmail.com</div>
-<div class='col'>215-978-2222</div>
-<div class='col'>545 Park Street...</div>
-<div class='col text-center'>
-<a class='btn btn-default btn-sm' href=''>View</a>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col'>
-Joe
-<span class='text-red'>Bee</span>
-</div>
-<div class='col'>09/25/1980</div>
-<div class='col'>joe@gmail.com</div>
-<div class='col'>215-121-2222</div>
-<div class='col'>98 Car Street...</div>
-<div class='col text-center'>
-<a class='btn btn-default btn-sm' href=''>View</a>
-</div>
-</div>
-<hr>
-</div>
-</div>
-</footer>
-<!-- Modal -->
-<div aria-hidden='true' aria-labelledby='exampleModal' class='modal fade' id='exampleModal' role='dialog' tabindex='-1'>
-<div class='modal-dialog modal-lg' role='document'>
-<div class='modal-content'>
-<div class='modal-header text-center'>
-<h5 class='modal-title' id='exampleModalLongTitle'></h5>
-<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
-<span aria-hidden='true'></span>
-</button>
-</div>
-<div class='modal-body'>
-<h3 class='text-center'>
-Psychic Source Customer
-<br>
-Matt M Bee
-</h3>
-<hr class='mt-4'>
-<div class='container-fluid'>
-<div class='row'>
-<div class='col-6'>Bunch of relevent details</div>
-<div class='col-6'>Bunch of relevent details</div>
-</div>
-</div>
-</div>
-<div class='modal-footer text-center'>
-<button class='btn btn-default' data-dismiss='modal' type='button'>Close</button>
-</div>
-</div>
-</div>
-</div>
+</aside>
 
         
     
@@ -1426,5 +1514,7 @@ Matt M Bee
 
 <script src="/oe-jekyll/js/prototype-6.js"></script>
 
+
+<script src="/oe-jekyll/js/fraudlist.js"></script>
     </body>
 </html>
