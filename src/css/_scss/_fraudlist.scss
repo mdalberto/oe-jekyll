@@ -1,0 +1,186 @@
+$fraudlist-header-height: 36px !default;
+$fraudlist-full-max: 300px !default;
+$fraudlist-narrow-min: 10px !default;
+$fraudlist-item-padding: 10px;
+$fraudlist-screen-height-min: 200px !default;
+$zindex-fraudlist: 1000;
+$zindex-fraudlist-toggle: ($zindex-fraudlist + 1) !default;
+$yellow: #ffeeba;
+$blue: #ffeeba;
+$blue-dark: blue;
+$gray-lighter: gray;
+
+.fraudlist-open {
+  @media (max-width: $fraudlist-full-max) and (min-height: $fraudlist-screen-height-min)   {
+    overflow: hidden;
+  }
+}
+
+
+.fraudlist-toggle-inner {
+  background-image: url(/images/fraudlist-toggle.svg);
+  background-position: center -48px;
+  display: block;
+  height: 48px;
+  transition: background-position 300ms ease;
+  width: 48px;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+
+  .fraudlist-open & {
+    background-position: center 0;
+  }
+}
+
+.fraudlist {
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left:  0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  transition: transform 300ms ease-out;
+  z-index: $zindex-fraudlist;
+
+  @media (min-height: $fraudlist-screen-height-min)   {
+      &.open {
+        display: block;
+        transform: translateY(100%);
+      }
+
+      &.in {
+        transform: translateY(0);
+      }
+  }
+  
+  @media (min-width: $fraudlist-narrow-min) and (min-height: $fraudlist-screen-height-min) {
+   // box-shadow: 0 0 1em rgba(#000, 0.2);
+    //left: 50%;
+    height: ($fraudlist-header-height - 1px);
+    //margin-left: -160px;
+    transition-property: height;
+    //width: 320px;
+    display: block;
+
+    &.open,
+    &.in {
+      transform: none;
+    }
+
+    &.in {
+      height: 75%;
+    }
+    
+  }
+}
+
+.fraudlist-inner,
+.fraudlist-header,
+.fraudlist-header a {
+  border-radius: inherit;
+}
+
+.fraudlist-inner {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.fraudlist-header {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  width:300px;
+  
+  a {
+    background-color: $yellow;
+    display: block;
+    height: $fraudlist-header-height;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: $orange;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($yellow, 8%);
+      cursor:pointer;
+    }
+
+    &:active {
+      background-image: none;
+    }
+
+  }
+}
+
+.fraudlistfilters{
+      background-color: $yellow;
+      display:block;
+}
+
+.fraudlist.open .fraudlist-arrow {
+  transform: rotate(180deg);
+}
+
+.fraudlist-body {
+  background-color: #34495E;
+  padding-bottom: 4em;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  @media (min-width: $fraudlist-narrow-min) {
+    padding-bottom: 0;
+  }
+
+    border-top:4px solid $yellow;
+
+}
+
+.fraudlist-item {
+  background-color: #fff;
+  //border-color: $gray-lighter;
+  //border-style: solid;
+  //border-width: 1px 0;
+  display: block;
+  font-size: 12px;
+  margin-top: -1px;
+  padding: $fraudlist-item-padding;
+  position: relative;
+
+  @media (min-width: $fraudlist-narrow-min) {
+    border-width: 1px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: $fraudlist-item-padding;
+    top: 50%;
+    opacity: 0.25;
+  }
+}
+
+.fraudlist-item-heading {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
