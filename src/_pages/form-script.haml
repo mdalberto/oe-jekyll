@@ -24,8 +24,8 @@ prototype: 6
             %strong
               1-800-965-3049
             %i.tip.fa.fa-question-circle
-        %a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"}
-          %i.fa.fa-comment.fa-lg.green
+        //%a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"}
+        //%i.fa.fa-comment.fa-lg.green
         %hr.mb-0
 
     .row.justify-content-md-center
@@ -859,146 +859,202 @@ prototype: 6
 %aside#fraudlist.fraudlist
   .fraudlist-inner
     %h5.fraudlist-header
+
       %a#fraudlist-ctl{:ref => "#fraudlist-body"}
       
         %i.fa.fa-exclamation-triangle{ "aria-hidden" => "true"}
         Investigate 4 matches
-        %i.fa.fa-exclamation-triangle{ "aria-hidden" => "true"}
+        %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+        .bd-example.bd-example-tooltip-static
+        .tooltip.tooltip-top{"role" => "tooltip"}
+          .tooltip-inner
+            Tooltip on the top
+
+
     .fraudlistfilters.text-center
-      Filters go here
+      Filter List:
+      %a.btn
+        ANI
+        .badge.badge-orange
+          200
+      %a.btn
+        Name + DOB
+        .badge.badge-orange
+          2
+      %a.btn
+        Email
+        .badge.badge-red
+          2
+      .btn
+        CC Number
+      .btn
+        Clear Filters
+      %i.tip.fa.fa-question-circle.fa-sm{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Some filters may be disabled because there are not matches for it."}
+
+
     .fraudlist-body
       #fraudlistBody
         %table.rwd-table
           %tr
             %th ANI
-            %th ID
-            %th Name
-            %th DOB
-            %th Email
-            %th CC #
+            %th 
+              ID 
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th 
+              Name
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th 
+              DOB
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th 
+              Email
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th 
+              CC #
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
             %th Actions
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
+            %td.orange{"data-th" => "Name"} Matthew M. Dalberto
+            %td.orange{"data-th" => "DOB"} 03/25/1980
+            %td.red{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
+            %td.orange{"data-th" => "Name"} Matthew M. Dalberto
+            %td.orange{"data-th" => "DOB"} 03/25/1980
+            %td.red{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td.orange.crossout{"data-th" => "ANI"} 216-210-5631
+            %td.crossout{"data-th" => "ID"} 123456
+            %td.crossout{"data-th" => "Name"} Matthew M. Dalberto
+            %td.crossout{"data-th" => "DOB"} 03/25/1980
+            %td.crossout{"data-th" => "Email"} mdalberto@vseinc.com
+            %td.crossout{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
 
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
 
           %tr
-            %td{"data-th" => "ANI"} 216-210-5631
+            %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "ID"} 123456
             %td{"data-th" => "Name"} Matthew M. Dalberto
             %td{"data-th" => "DOB"} 03/25/1980
             %td{"data-th" => "Email"} mdalberto@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
             %td{"data-th" => "Actions"} 
-              %a{:href => "" }
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
-        -# %ul.list-unstyled.u-no-margin
-        -#   %li
-        -#     .fraudlist-item.filters{:href => ""}
-        -#       .fraudlist-item-heading This is the heading area
-        -#   %li
-        -#     %a.fraudlist-item{:href => ""}
-        -#       %h6.fraudlist-item-heading This is an entry
-        -#   %li
-        -#     %a.fraudlist-item{:href => ""}
-        -#       %h6.fraudlist-item-heading This is an entry
-        -#   %li
-        -#     %a.fraudlist-item{:href => ""}
-        -#       %h6.fraudlist-item-heading This is an entry
+
+/ Modal
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title 
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .text-center.mb-3
+          .fa.fa-user-circle-o.fa-5x.gray{"aria-hidden" => "true"}
+        %h2.text-center.orange.text-normal
+          Matthew Dalberto
+        %h5.text-center
+          ANI:
+          %span.bold.orange
+            267-210-6381
+        %h5.text-center.mb-3
+          User ID: 
+          %span.bold
+            123456
+        %hr
+        .row
+          .col-6
+            Still working on this layout and content
+          .col-6
+            More to come soon              
+
+
+      .modal-footer
+        %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+

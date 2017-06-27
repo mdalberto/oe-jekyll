@@ -150,9 +150,8 @@ DNIS:
 <i class='tip fa fa-question-circle'></i>
 </li>
 </ul>
-<a aria-hidden='true' data-placement='left' data-toggle='tooltip' id='toggleTranscriptClick' title='Turn Transcript Off'>
-<i class='fa fa-comment fa-lg green'></i>
-</a>
+<!-- /%a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"} -->
+<!-- /%i.fa.fa-comment.fa-lg.green -->
 <hr class='mb-0'>
 </div>
 </div>
@@ -1336,165 +1335,211 @@ Call end. Return to Zipwire, end the call and enter your notation.
 <a id='fraudlist-ctl' ref='#fraudlist-body'>
 <i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
 Investigate 4 matches
-<i aria-hidden='true' class='fa fa-exclamation-triangle'></i>
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+<div class='bd-example bd-example-tooltip-static'></div>
+<div class='tooltip tooltip-top' role='tooltip'>
+<div class='tooltip-inner'>
+Tooltip on the top
+</div>
+</div>
 </a>
 </h5>
 <div class='fraudlistfilters text-center'>
-Filters go here
+Filter List:
+<a class='btn'>
+ANI
+<div class='badge badge-orange'>
+200
+</div>
+</a>
+<a class='btn'>
+Name + DOB
+<div class='badge badge-orange'>
+2
+</div>
+</a>
+<a class='btn'>
+Email
+<div class='badge badge-red'>
+2
+</div>
+</a>
+<div class='btn'>
+CC Number
+</div>
+<div class='btn'>
+Clear Filters
+</div>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-sm' data-toggle='tooltip' title='Some filters may be disabled because there are not matches for it.'></i>
 </div>
 <div class='fraudlist-body'>
 <div id='fraudlistBody'>
 <table class='rwd-table'>
 <tr>
 <th>ANI</th>
-<th>ID</th>
-<th>Name</th>
-<th>DOB</th>
-<th>Email</th>
-<th>CC #</th>
+<th>
+ID
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
+<th>
+Name
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
+<th>
+DOB
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
+<th>
+Email
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
+<th>
+CC #
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
 <th>Actions</th>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
+<td class='orange' data-th='Name'>Matthew M. Dalberto</td>
+<td class='orange' data-th='DOB'>03/25/1980</td>
+<td class='red' data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
+<td class='orange' data-th='Name'>Matthew M. Dalberto</td>
+<td class='orange' data-th='DOB'>03/25/1980</td>
+<td class='red' data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td class='orange crossout' data-th='ANI'>216-210-5631</td>
+<td class='crossout' data-th='ID'>123456</td>
+<td class='crossout' data-th='Name'>Matthew M. Dalberto</td>
+<td class='crossout' data-th='DOB'>03/25/1980</td>
+<td class='crossout' data-th='Email'>mdalberto@vseinc.com</td>
+<td class='crossout' data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 <tr>
-<td data-th='ANI'>216-210-5631</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='ID'>123456</td>
 <td data-th='Name'>Matthew M. Dalberto</td>
 <td data-th='DOB'>03/25/1980</td>
 <td data-th='Email'>mdalberto@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
 <td data-th='Actions'>
-<a href=''>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
-</a>
+</btn>
 </td>
 </tr>
 </table>
@@ -1502,6 +1547,51 @@ View
 </div>
 </div>
 </aside>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade' id='myModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'></h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='text-center mb-3'>
+<div aria-hidden='true' class='fa fa-user-circle-o fa-5x gray'></div>
+</div>
+<h2 class='text-center orange text-normal'>
+Matthew Dalberto
+</h2>
+<h5 class='text-center'>
+ANI:
+<span class='bold orange'>
+267-210-6381
+</span>
+</h5>
+<h5 class='text-center mb-3'>
+User ID:
+<span class='bold'>
+123456
+</span>
+</h5>
+<hr>
+<div class='row'>
+<div class='col-6'>
+Still working on this layout and content
+</div>
+<div class='col-6'>
+More to come soon
+</div>
+</div>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-secondary' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
 
         
     

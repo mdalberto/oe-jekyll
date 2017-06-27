@@ -10,10 +10,11 @@ $blue: #ffeeba;
 $blue-dark: blue;
 $gray-lighter: gray;
 
+
 .fraudlist-open {
-  @media (max-width: $fraudlist-full-max) and (min-height: $fraudlist-screen-height-min)   {
+  //@media (max-width: $fraudlist-full-max) and (min-height: $fraudlist-screen-height-min)   {
     overflow: hidden;
-  }
+  //}
 }
 
 
@@ -41,7 +42,7 @@ $gray-lighter: gray;
   width: 100%;
   overflow: hidden;
   position: fixed;
-  transition: transform 300ms ease-out;
+  transition: transform 200ms ease-out;
   z-index: $zindex-fraudlist;
 
   @media (min-height: $fraudlist-screen-height-min)   {
@@ -74,12 +75,28 @@ $gray-lighter: gray;
     }
     
   }
+
+  .rwd-table{
+    background-color:$light-gray;
+    color: darken($fraudlist-color,75%);
+  }
+
+  // bold these helpers if under this section
+  .orange
+  {
+      font-weight:bold;
+  }
+  .red{
+       font-weight:bold;
+  }
+
+
 }
 
 .fraudlist-inner,
 .fraudlist-header,
 .fraudlist-header a {
-  border-radius: inherit;
+  border-radius: 8px 8px 0 0;
 }
 
 .fraudlist-inner {
@@ -95,19 +112,22 @@ $gray-lighter: gray;
   position: relative;
   z-index: 3;
   width:300px;
-  
+   color: lighten($fraudlist-color,50%);
+
   a {
-    background-color: $yellow;
+    background-color: $fraudlist-color;
     display: block;
     height: $fraudlist-header-height;
-    padding-top: 5px;
+    padding-top: 8px;
     text-align: center;
     text-decoration: none;
-    color: $orange;
+    font-size: 15px;
+    font-weight: bold;
+
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($yellow, 8%);
+      background-color: lighten($fraudlist-color, 12%);
       cursor:pointer;
     }
 
@@ -119,8 +139,12 @@ $gray-lighter: gray;
 }
 
 .fraudlistfilters{
-      background-color: $yellow;
+      background-color: $fraudlist-color;
       display:block;
+      min-height:40px; // need to fill up the space if empyt
+      padding:15px 0 ;
+      font-size: 13px;
+      color: lighten($fraudlist-color,50%);
 }
 
 .fraudlist.open .fraudlist-arrow {
@@ -128,10 +152,10 @@ $gray-lighter: gray;
 }
 
 .fraudlist-body {
-  background-color: #34495E;
+  //background-color: $fraudlist-color;
   padding-bottom: 4em;
   position: absolute;
-  top: 60px;
+  top: 98px; // allows for the fraudlistfilters to be seen by pushing this section down 
   right: 0;
   bottom: 0;
   left: 0;
@@ -142,9 +166,6 @@ $gray-lighter: gray;
   @media (min-width: $fraudlist-narrow-min) {
     padding-bottom: 0;
   }
-
-    border-top:4px solid $yellow;
-
 }
 
 .fraudlist-item {
@@ -182,5 +203,12 @@ $gray-lighter: gray;
   font-size: inherit;
   line-height: inherit;
   margin: 0;
+}
+
+.fraudlist-bubble{
+  text-align:center;
+
+
+
 }
 
