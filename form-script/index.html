@@ -1337,10 +1337,8 @@ Call end. Return to Zipwire, end the call and enter your notation.
 Investigate 4 matches
 <i aria-hidden='true' class='fa fa-sort-desc'></i>
 <div class='bd-example bd-example-tooltip-static'></div>
-<div class='tooltip tooltip-top' role='tooltip'>
-<div class='tooltip-inner'>
-Tooltip on the top
-</div>
+<div class='fraudlist-prompt bgd-red triangle-border bottom'>
+2 Duplicate Emails
 </div>
 </a>
 </h5>
@@ -1358,7 +1356,7 @@ Name + DOB
 2
 </div>
 </a>
-<a class='btn'>
+<a class='btn active'>
 Email
 <div class='badge badge-red'>
 2
@@ -1376,11 +1374,11 @@ Clear Filters
 <div id='fraudlistBody'>
 <table class='rwd-table'>
 <tr>
-<th>ANI</th>
 <th>
 ID
 <i aria-hidden='true' class='fa fa-sort-desc'></i>
 </th>
+<th>ANI</th>
 <th>
 Name
 <i aria-hidden='true' class='fa fa-sort-desc'></i>
@@ -1397,15 +1395,25 @@ Email
 CC #
 <i aria-hidden='true' class='fa fa-sort-desc'></i>
 </th>
+<th class='hidden-md'>
+City
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
+<th class='hidden-md'>
+State
+<i aria-hidden='true' class='fa fa-sort-desc'></i>
+</th>
 <th>Actions</th>
 </tr>
 <tr>
+<td data-th='ID'>424456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
 <td class='orange' data-th='Name'>Matthew M. Dalberto</td>
 <td class='orange' data-th='DOB'>03/25/1980</td>
 <td class='red' data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='CC Number'>***8888</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1413,12 +1421,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>194456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
 <td class='orange' data-th='Name'>Matthew M. Dalberto</td>
 <td class='orange' data-th='DOB'>03/25/1980</td>
 <td class='red' data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='CC Number'>***4564</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1426,12 +1436,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>993456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Sarah Sarah</td>
+<td data-th='DOB'>10/10/1980</td>
+<td data-th='Email'>ereree@vseinc.com</td>
+<td data-th='CC Number'>***3245</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1439,12 +1451,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>654321</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Ccccc M. Dalberto</td>
+<td data-th='DOB'>05/03/1987</td>
+<td data-th='Email'>dsfdfdsf@vseinc.com</td>
+<td data-th='CC Number'>***0034</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1452,25 +1466,14 @@ View
 </td>
 </tr>
 <tr>
-<td class='orange crossout' data-th='ANI'>216-210-5631</td>
-<td class='crossout' data-th='ID'>123456</td>
-<td class='crossout' data-th='Name'>Matthew M. Dalberto</td>
-<td class='crossout' data-th='DOB'>03/25/1980</td>
-<td class='crossout' data-th='Email'>mdalberto@vseinc.com</td>
-<td class='crossout' data-th='CC Number'>***6787</td>
-<td data-th='Actions'>
-<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
-View
-</btn>
-</td>
-</tr>
-<tr>
+<td data-th='ID'>564765</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
+<td data-th='Name'>Test33 M. Teste</td>
+<td data-th='DOB'>11/11/1990</td>
+<td data-th='Email'>sarah@vseinc.com</td>
 <td data-th='CC Number'>***6787</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1478,12 +1481,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>787560</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Racheal Racheal</td>
+<td data-th='DOB'>07/25/1957</td>
+<td data-th='Email'>ertertert@vseinc.com</td>
+<td data-th='CC Number'>***2222</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1491,12 +1496,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>555554</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Sam Liss</td>
+<td data-th='DOB'>05/11/1880</td>
+<td data-th='Email'>mdsdsdes@vseinc.com</td>
+<td data-th='CC Number'>***3245</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1504,12 +1511,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>765645</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Mike Mike</td>
+<td data-th='DOB'>08/03/1975</td>
+<td data-th='Email'>mwwwwww@vseinc.com</td>
+<td data-th='CC Number'>***9098</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1517,12 +1526,14 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>876543</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>George George</td>
+<td data-th='DOB'>06/06/1985</td>
+<td data-th='Email'>george@vseinc.com</td>
+<td data-th='CC Number'>***1111</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
@@ -1530,12 +1541,29 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='ID'>104222</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
-<td data-th='ID'>123456</td>
-<td data-th='Name'>Matthew M. Dalberto</td>
-<td data-th='DOB'>03/25/1980</td>
-<td data-th='Email'>mdalberto@vseinc.com</td>
-<td data-th='CC Number'>***6787</td>
+<td data-th='Name'>Testing33 Ryan</td>
+<td data-th='DOB'>07/11/1960</td>
+<td data-th='Email'>fdgdfg@vseinc.com</td>
+<td data-th='CC Number'>***5467</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
+<td data-th='Actions'>
+<btn class='btn-action' data-target='#myModal' data-toggle='modal'>
+View
+</btn>
+</td>
+</tr>
+<tr>
+<td data-th='ID'>546006</td>
+<td class='orange' data-th='ANI'>216-210-5631</td>
+<td data-th='Name'>Test M. Dal</td>
+<td data-th='DOB'>12/01/1980</td>
+<td data-th='Email'>Test1@vseinc.com</td>
+<td data-th='CC Number'>***4555</td>
+<td class='hidden-md' data-th='City'>Harrisburg</td>
+<td class='hidden-md' data-th='State'>Pennsylvania</td>
 <td data-th='Actions'>
 <btn class='btn-action' data-target='#myModal' data-toggle='modal'>
 View
