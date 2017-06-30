@@ -881,7 +881,7 @@ prototype: 6
         Name + DOB
         .badge.badge-orange
           2
-      %a.btn.active
+      %a.btn
         Email
         .badge.badge-red
           2
@@ -889,13 +889,15 @@ prototype: 6
         CC Number
       .btn
         Clear Filters
-      %i.tip.fa.fa-question-circle.fa-sm{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Some filters may be disabled because there are not matches for it."}
+      %i.tip.fa.fa-question-circle.fa-sm{"aria-hidden" => "true", "data-toggle" => "tooltip", :title => "Some filters may be disabled because there are no matches for it."}
 
 
     .fraudlist-body
       #fraudlistBody
         %table.rwd-table
           %tr
+            %th 
+
             %th 
               ID 
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
@@ -919,7 +921,10 @@ prototype: 6
               State
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
             %th Actions
-          %tr
+          %tr.bgd-visited
+            %td{"data-th" => "Status"}
+
+              %i.fa.fa-ban.fa-1x{ "aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "right", :title => "Suspended" }
             %td{"data-th" => "ID"} 424456
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
@@ -932,6 +937,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}
             %td{"data-th" => "ID"} 194456
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
@@ -944,6 +950,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}
             %td{"data-th" => "ID"} 993456
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Sarah Sarah
@@ -956,6 +963,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}
             %td{"data-th" => "ID"} 654321
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Ccccc M. Dalberto
@@ -967,7 +975,8 @@ prototype: 6
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
-          %tr
+          %tr.bgd-visited
+            %td{"data-th" => "Status"}
             %td{"data-th" => "ID"} 564765
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Test33 M. Teste
@@ -979,7 +988,8 @@ prototype: 6
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
-          %tr
+          %tr.bgd-visited
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 787560
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Racheal Racheal
@@ -992,6 +1002,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 555554
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Sam Liss
@@ -1004,6 +1015,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 765645
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Mike Mike
@@ -1016,6 +1028,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 876543
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} George George
@@ -1029,6 +1042,7 @@ prototype: 6
                 View
 
           %tr
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 104222
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Testing33 Ryan
@@ -1041,6 +1055,7 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 546006
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Test M. Dal

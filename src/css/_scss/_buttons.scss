@@ -171,9 +171,19 @@ a.btn-blue:focus, a.btn-blue:hover {
         position:relative;
         background-color: lighten($fraudlist-color,25%);
         color: white;
-
+        width: 100%;
+        display: block;
+        text-align: center;
+        
         &:hover{
             background-color:lighten($fraudlist-color,50%);
             cursor:pointer;
         }
+}
+
+tr.bgd-visited .btn-action{
+    background-color: darken($purple,15%);
+    &:hover{
+        background-color:darken($purple,5%);
+    }
 }

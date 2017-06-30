@@ -9864,10 +9864,18 @@ a.btn-blue:focus, a.btn-blue:hover {
   border-radius: 4px;
   position: relative;
   background-color: #6789ab;
-  color: white; }
+  color: white;
+  width: 100%;
+  display: block;
+  text-align: center; }
   .btn-action:hover {
     background-color: #b9c9d8;
     cursor: pointer; }
+
+tr.bgd-visited .btn-action {
+  background-color: #b793c0; }
+  tr.bgd-visited .btn-action:hover {
+    background-color: #ccb3d3; }
 
 .card {
   margin-left: -16px;
@@ -9919,6 +9927,9 @@ a.btn-blue:focus, a.btn-blue:hover {
 @media (min-width: 768px) and (max-width: 992px) {
   .hidden-md {
     display: none !important; } }
+
+tr.bgd-visited {
+  background: rgba(215, 195, 220, 0.4) !important; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }

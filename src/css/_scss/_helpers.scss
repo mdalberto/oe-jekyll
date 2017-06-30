@@ -46,3 +46,10 @@
         display:none !important;
     }
 }
+
+tr.bgd-visited{
+    //td{
+        background: rgba(215, 195, 220, .4) !important;
+        // aka: #d7c3dc without transparency
+    //}
+}
