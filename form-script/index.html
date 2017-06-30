@@ -1356,7 +1356,7 @@ Name + DOB
 2
 </div>
 </a>
-<a class='btn active'>
+<a class='btn'>
 Email
 <div class='badge badge-red'>
 2
@@ -1368,12 +1368,13 @@ CC Number
 <div class='btn'>
 Clear Filters
 </div>
-<i aria-hidden='true' class='tip fa fa-question-circle fa-sm' data-toggle='tooltip' title='Some filters may be disabled because there are not matches for it.'></i>
+<i aria-hidden='true' class='tip fa fa-question-circle fa-sm' data-toggle='tooltip' title='Some filters may be disabled because there are no matches for it.'></i>
 </div>
 <div class='fraudlist-body'>
 <div id='fraudlistBody'>
 <table class='rwd-table'>
 <tr>
+<th></th>
 <th>
 ID
 <i aria-hidden='true' class='fa fa-sort-desc'></i>
@@ -1405,7 +1406,10 @@ State
 </th>
 <th>Actions</th>
 </tr>
-<tr>
+<tr class='bgd-visited'>
+<td data-th='Status'>
+<i aria-hidden='true' class='fa fa-ban fa-1x' data-placement='right' data-toggle='tooltip' title='Suspended'></i>
+</td>
 <td data-th='ID'>424456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td class='orange' data-th='Name'>Matthew M. Dalberto</td>
@@ -1421,6 +1425,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>194456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td class='orange' data-th='Name'>Matthew M. Dalberto</td>
@@ -1436,6 +1441,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>993456</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Sarah Sarah</td>
@@ -1451,6 +1457,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>654321</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Ccccc M. Dalberto</td>
@@ -1465,7 +1472,8 @@ View
 </btn>
 </td>
 </tr>
-<tr>
+<tr class='bgd-visited'>
+<td data-th='Status'></td>
 <td data-th='ID'>564765</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Test33 M. Teste</td>
@@ -1480,7 +1488,8 @@ View
 </btn>
 </td>
 </tr>
-<tr>
+<tr class='bgd-visited'>
+<td data-th='Status'></td>
 <td data-th='ID'>787560</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Racheal Racheal</td>
@@ -1496,6 +1505,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>555554</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Sam Liss</td>
@@ -1511,6 +1521,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>765645</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Mike Mike</td>
@@ -1526,6 +1537,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>876543</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>George George</td>
@@ -1541,6 +1553,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>104222</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Testing33 Ryan</td>
@@ -1556,6 +1569,7 @@ View
 </td>
 </tr>
 <tr>
+<td data-th='Status'></td>
 <td data-th='ID'>546006</td>
 <td class='orange' data-th='ANI'>216-210-5631</td>
 <td data-th='Name'>Test M. Dal</td>
