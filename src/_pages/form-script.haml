@@ -866,10 +866,10 @@ prototype: 6
         Investigate 4 matches
         %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
         .bd-example.bd-example-tooltip-static
-        .tooltip.tooltip-top{"role" => "tooltip"}
-          .tooltip-inner
-            Tooltip on the top
-
+          
+        
+        .fraudlist-prompt.bgd-red.triangle-border.bottom
+          2 Duplicate Emails
 
     .fraudlistfilters.text-center
       Filter List:
@@ -881,7 +881,7 @@ prototype: 6
         Name + DOB
         .badge.badge-orange
           2
-      %a.btn
+      %a.btn.active
         Email
         .badge.badge-red
           2
@@ -896,10 +896,10 @@ prototype: 6
       #fraudlistBody
         %table.rwd-table
           %tr
-            %th ANI
             %th 
               ID 
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th ANI
             %th 
               Name
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
@@ -912,116 +912,143 @@ prototype: 6
             %th 
               CC #
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th.hidden-md
+              City
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
+            %th.hidden-md
+              State
+              %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
             %th Actions
           %tr
+            %td{"data-th" => "ID"} 424456
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
             %td.orange{"data-th" => "DOB"} 03/25/1980
             %td.red{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "CC Number"} ***8888
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 194456
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
             %td.orange{"data-th" => "DOB"} 03/25/1980
             %td.red{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "CC Number"} ***4564
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 993456
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Sarah Sarah
+            %td{"data-th" => "DOB"} 10/10/1980
+            %td{"data-th" => "Email"} ereree@vseinc.com
+            %td{"data-th" => "CC Number"} ***3245
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 654321
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Ccccc M. Dalberto
+            %td{"data-th" => "DOB"} 05/03/1987
+            %td{"data-th" => "Email"} dsfdfdsf@vseinc.com
+            %td{"data-th" => "CC Number"} ***0034
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td.orange.crossout{"data-th" => "ANI"} 216-210-5631
-            %td.crossout{"data-th" => "ID"} 123456
-            %td.crossout{"data-th" => "Name"} Matthew M. Dalberto
-            %td.crossout{"data-th" => "DOB"} 03/25/1980
-            %td.crossout{"data-th" => "Email"} mdalberto@vseinc.com
-            %td.crossout{"data-th" => "CC Number"} ***6787
-            %td{"data-th" => "Actions"} 
-              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-                View
-          %tr
+            %td{"data-th" => "ID"} 564765
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
+            %td{"data-th" => "Name"} Test33 M. Teste
+            %td{"data-th" => "DOB"} 11/11/1990
+            %td{"data-th" => "Email"} sarah@vseinc.com
             %td{"data-th" => "CC Number"} ***6787
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 787560
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Racheal Racheal
+            %td{"data-th" => "DOB"} 07/25/1957
+            %td{"data-th" => "Email"} ertertert@vseinc.com
+            %td{"data-th" => "CC Number"} ***2222
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 555554
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Sam Liss
+            %td{"data-th" => "DOB"} 05/11/1880
+            %td{"data-th" => "Email"} mdsdsdes@vseinc.com
+            %td{"data-th" => "CC Number"} ***3245
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
+            %td{"data-th" => "ID"} 765645
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Mike Mike
+            %td{"data-th" => "DOB"} 08/03/1975
+            %td{"data-th" => "Email"} mwwwwww@vseinc.com
+            %td{"data-th" => "CC Number"} ***9098
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr
+            %td{"data-th" => "ID"} 876543
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} George George
+            %td{"data-th" => "DOB"} 06/06/1985
+            %td{"data-th" => "Email"} george@vseinc.com
+            %td{"data-th" => "CC Number"} ***1111
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
 
           %tr
+            %td{"data-th" => "ID"} 104222
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Testing33 Ryan
+            %td{"data-th" => "DOB"} 07/11/1960
+            %td{"data-th" => "Email"} fdgdfg@vseinc.com
+            %td{"data-th" => "CC Number"} ***5467
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
-
           %tr
+            %td{"data-th" => "ID"} 546006
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "ID"} 123456
-            %td{"data-th" => "Name"} Matthew M. Dalberto
-            %td{"data-th" => "DOB"} 03/25/1980
-            %td{"data-th" => "Email"} mdalberto@vseinc.com
-            %td{"data-th" => "CC Number"} ***6787
+            %td{"data-th" => "Name"} Test M. Dal
+            %td{"data-th" => "DOB"} 12/01/1980
+            %td{"data-th" => "Email"} Test1@vseinc.com
+            %td{"data-th" => "CC Number"} ***4555
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View

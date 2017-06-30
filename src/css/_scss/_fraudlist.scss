@@ -40,7 +40,7 @@ $gray-lighter: gray;
   height: 100%;
   left:  0;
   width: 100%;
-  overflow: hidden;
+  //overflow: hidden;
   position: fixed;
   transition: transform 200ms ease-out;
   z-index: $zindex-fraudlist;
@@ -101,7 +101,7 @@ $gray-lighter: gray;
 
 .fraudlist-inner {
   height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   width: 100%;
 }
@@ -112,7 +112,8 @@ $gray-lighter: gray;
   position: relative;
   z-index: 3;
   width:300px;
-   color: lighten($fraudlist-color,50%);
+   //color: lighten($fraudlist-color,50%);
+   color:white;
 
   a {
     background-color: $fraudlist-color;
@@ -200,15 +201,47 @@ $gray-lighter: gray;
 }
 
 .fraudlist-item-heading {
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
 }
 
-.fraudlist-bubble{
-  text-align:center;
 
-
-
+// prompt stuff
+.fraudlist-prompt{
+    text-align:center;
+    position:absolute;
+    top: -68px;
+    left: 50%;
+    margin-left:-100px;
+    width:200px;
+    padding-top:2px;
+    padding-bottom:2px;
+    z-index:1000;
+    border-radius:6px;
+    color:white;
+    //font-weight:normal;
+    font-size:14px;
 }
 
+.fraudlist-prompt.bgd-red{
+    background-color:$oe-red;
+    border-color: $oe-red transparent;
+}
+
+.fraudlist-prompt.bgd-red.triangle-border.bottom:before{
+    border-color: $oe-red transparent;
+    left: 50%;
+    margin-left:-25px;
+}
+
+.fraudlist-prompt.bgd-orange{
+    background-color: $orange;
+    border-color: $orange;
+}
+
+.fraudlist-prompt.bgd-orange.triangle-border.bottom:before{
+    border-color: $orange transparent;
+    left: 50%;
+    margin-left:-25px;
+}

@@ -40,3 +40,9 @@
 .bold { 
   font-weight:bold;
 }
+
+.hidden-md{
+    @media (min-width: $md ) and (max-width: $lg){
+        display:none !important;
+    }
+}

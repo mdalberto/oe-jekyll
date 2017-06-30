@@ -9916,6 +9916,10 @@ a.btn-blue:focus, a.btn-blue:hover {
 .bold {
   font-weight: bold; }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .hidden-md {
+    display: none !important; } }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
 
@@ -10082,11 +10086,12 @@ div.panel {
   border-width: 15px 30px 15px 0;
   border-color: transparent #9dd02a; }
 
-.triangle-border.left:before {
-  top: 10px;
-  bottom: auto;
-  border-width: 15px 30px 15px 0;
-  border-color: transparent #9dd02a; }
+.triangle-border.bottom:before {
+  top: auto;
+  bottom: -20px;
+  left: auto;
+  left: 40px;
+  border-width: 20px 20px 0px; }
 
 .card-noborder .card {
   border: none; }
