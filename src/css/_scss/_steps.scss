@@ -1,22 +1,18 @@
 $screen-sm-max: 380px;
 $screen-md-max: 600px;
-$green: green;
-$next: gray;
+//$green: $green-bright;
+$next: $oe-blue;
 
 
 // Steps
 .steps-progressbar {
   text-align: center;
-  margin: 10px 0 15px 0;
+  margin: 0px;
   padding: 0;
   overflow: hidden;
   counter-reset: step;
   position: relative;
-    z-index: 4;
-
-  @media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
-      margin-top:30px;
-  }
+  z-index: 4;
 }
 
 .steps-progressbar li {
@@ -51,9 +47,10 @@ $next: gray;
 }
 
 .steps-progressbar li.done:before {
-    content: '✔️';
+  font-family: 'FontAwesome';
+    content: '\f00c';
       border: 3px solid $green;
-    color: $green;
+    color: inherit;
 }
 
 .steps-progressbar li.done:after {

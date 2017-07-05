@@ -11,7 +11,7 @@ prototype: 6
     .row
       .col-lg-12.text-center
         %h1.mt-3 New Psychic Source Customer
-        %ul.ani-dnis-area.text-muted.list-inline.mt-2
+        %ul.ani-dnis-area.text-muted.list-inline.mb-0
           %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "The new customer's phone number, the number of the phone they using for this call."}
             ANI: 
             %strong
@@ -25,9 +25,20 @@ prototype: 6
             %i.tip.fa.fa-question-circle
         //%a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"}
         //%i.fa.fa-comment.fa-lg.green
-        %hr.mb-0
+        //%hr.mb-0
 
-         
+        #enrollSteps.row
+          .col-12
+            %ul.steps-progressbar
+              %li.done Intro Transcript
+              %li.done Over 18  Offer
+              %li.active
+                Customer
+                %span.break-xs Info
+              %li.step-four Billing Address
+              %li Payment Info
+              %li Review
+
 
 
     .row.justify-content-md-center
@@ -878,7 +889,7 @@ prototype: 6
       %a.btn
         ANI
         .badge.badge-orange
-          1
+          11
       %a.btn
         Name + DOB
         .badge.badge-orange
@@ -940,7 +951,10 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "Status"}
+            %td.suspended{"data-th" => "Status"}
+              .ribbon-wrapper-red
+                .ribbon-red
+                  Suspended
             %td{"data-th" => "ID"} 194456
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
@@ -995,7 +1009,7 @@ prototype: 6
             %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 787560
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "Name"} Racheal Racheal
+            %td{"data-th" => "Name"} Greg dsfsdf
             %td{"data-th" => "DOB"} 07/25/1957
             %td{"data-th" => "Email"} ertertert@vseinc.com
             %td{"data-th" => "CC Number"} ***2222
@@ -1005,10 +1019,13 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "Status"}  
+            %td.suspended{"data-th" => "Status"}
+              .ribbon-wrapper-red
+                .ribbon-red
+                  Suspended
             %td{"data-th" => "ID"} 555554
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "Name"} Sam Liss
+            %td{"data-th" => "Name"} sasasdm Eissssw
             %td{"data-th" => "DOB"} 05/11/1880
             %td{"data-th" => "Email"} mdsdsdes@vseinc.com
             %td{"data-th" => "CC Number"} ***3245
@@ -1018,7 +1035,10 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
           %tr
-            %td{"data-th" => "Status"}  
+            %td.suspended{"data-th" => "Status"}
+              .ribbon-wrapper-red
+                .ribbon-red
+                  Suspended
             %td{"data-th" => "ID"} 765645
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td{"data-th" => "Name"} Mike Mike
@@ -1048,7 +1068,7 @@ prototype: 6
             %td{"data-th" => "Status"}  
             %td{"data-th" => "ID"} 104222
             %td.orange{"data-th" => "ANI"} 216-210-5631
-            %td{"data-th" => "Name"} Testing33 Ryan
+            %td{"data-th" => "Name"} Testing33 Rdsdys
             %td{"data-th" => "DOB"} 07/11/1960
             %td{"data-th" => "Email"} fdgdfg@vseinc.com
             %td{"data-th" => "CC Number"} ***5467

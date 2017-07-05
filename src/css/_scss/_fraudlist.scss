@@ -82,13 +82,13 @@ $gray-lighter: gray;
   }
 
   // bold these helpers if under this section
-  .orange
-  {
-      font-weight:bold;
-  }
-  .red{
-       font-weight:bold;
-  }
+  // .orange
+  // {
+  //     font-weight:bold;
+  // }
+  // .red{
+  //      font-weight:bold;
+  // }
 
 
 }
@@ -135,7 +135,6 @@ $gray-lighter: gray;
     &:active {
       background-image: none;
     }
-
   }
 }
 
@@ -167,6 +166,18 @@ $gray-lighter: gray;
   @media (min-width: $fraudlist-narrow-min) {
     padding-bottom: 0;
   }
+
+
+  tr{
+    font-weight:bold;
+  }
+  tr.bgd-visited{
+    font-weight:normal;
+    // background: rgba(215, 195, 220, .4) !important;
+      // aka: #d7c3dc without transparency
+  }
+
+
 }
 
 .fraudlist-item {
@@ -290,7 +301,7 @@ $gray-lighter: gray;
             left: -23px;
             top: 12px;
             width: 85px;
-            background-color: red
+            background-color: $gray-light;
         }
 
         .ribbon-red:before, .ribbon-red:after {

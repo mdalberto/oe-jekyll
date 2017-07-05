@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -9873,11 +9872,6 @@ a.btn-blue:focus, a.btn-blue:hover {
     background-color: #b9c9d8;
     cursor: pointer; }
 
-tr.bgd-visited .btn-action {
-  background-color: #b793c0; }
-  tr.bgd-visited .btn-action:hover {
-    background-color: #ccb3d3; }
-
 .card {
   margin-left: -16px;
   margin-right: -16px; }
@@ -9928,9 +9922,6 @@ tr.bgd-visited .btn-action {
 @media (min-width: 768px) and (max-width: 992px) {
   .hidden-md {
     display: none !important; } }
-
-tr.bgd-visited {
-  background: rgba(215, 195, 220, 0.4) !important; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
@@ -10209,10 +10200,6 @@ div.panel {
   .fraudlist .rwd-table {
     background-color: #ececec;
     color: black; }
-  .fraudlist .orange {
-    font-weight: bold; }
-  .fraudlist .red {
-    font-weight: bold; }
 
 .fraudlist-inner,
 .fraudlist-header,
@@ -10270,6 +10257,10 @@ div.panel {
   @media (min-width: 10px) {
     .fraudlist-body {
       padding-bottom: 0; } }
+  .fraudlist-body tr {
+    font-weight: bold; }
+  .fraudlist-body tr.bgd-visited {
+    font-weight: normal; }
 
 .fraudlist-item {
   background-color: #fff;
@@ -10361,7 +10352,7 @@ div.panel {
       left: -23px;
       top: 12px;
       width: 85px;
-      background-color: red; }
+      background-color: #636c72; }
     .suspended .ribbon-red:before, .suspended .ribbon-red:after {
       content: "";
       position: absolute;
@@ -10431,15 +10422,12 @@ div.panel {
 
 .steps-progressbar {
   text-align: center;
-  margin: 10px 0 15px 0;
+  margin: 0px;
   padding: 0;
   overflow: hidden;
   counter-reset: step;
   position: relative;
   z-index: 4; }
-  @media (min-width: 380px) and (max-width: 600px) {
-    .steps-progressbar {
-      margin-top: 30px; } }
 
 .steps-progressbar li {
   list-style-type: none;
@@ -10451,7 +10439,7 @@ div.panel {
   position: relative; }
 
 .steps-progressbar li.active, .steps-progressbar li.done {
-  color: green; }
+  color: #82bb02; }
 
 .steps-progressbar li:before {
   content: counter(step);
@@ -10460,28 +10448,29 @@ div.panel {
   line-height: 21px;
   display: block;
   font-size: 12px;
-  color: gray;
+  color: #bacad7;
   background: white;
   border-radius: 20px;
   padding-right: 1px;
   padding-top: 1px;
   margin: 0 auto 5px auto;
-  border: 3px solid gray;
+  border: 3px solid #bacad7;
   font-weight: bold; }
 
 .steps-progressbar li.done:before {
-  content: '✔️';
-  border: 3px solid green;
-  color: green; }
+  font-family: 'FontAwesome';
+  content: '\f00c';
+  border: 3px solid #82bb02;
+  color: inherit; }
 
 .steps-progressbar li.done:after {
-  background: green; }
+  background: #82bb02; }
 
 .steps-progressbar li:after {
   content: '';
   width: 100%;
   height: 4px;
-  background: gray;
+  background: #bacad7;
   position: absolute;
   left: -50%;
   top: 13px;
@@ -10492,11 +10481,11 @@ div.panel {
 
 .steps-progressbar li.active:before,
 .steps-progressbar li.active:after {
-  background: green;
+  background: #82bb02;
   color: white; }
 
 .steps-progressbar li.active:before {
-  border: 3px solid green; }
+  border: 3px solid #82bb02; }
 
 .steps-progressbar li.active2:after {
-  background: gray; }
+  background: #bacad7; }
