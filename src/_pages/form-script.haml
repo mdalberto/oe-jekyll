@@ -6,7 +6,6 @@ prototype: 6
 ---
 
 
-
 %section#services.newbieform5.card-noborder
   .container-fluid
     .row
@@ -27,6 +26,9 @@ prototype: 6
         //%a#toggleTranscriptClick{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "left", :title => "Turn Transcript Off"}
         //%i.fa.fa-comment.fa-lg.green
         %hr.mb-0
+
+         
+
 
     .row.justify-content-md-center
       .col-12.col-md-12.col-lg-12
@@ -280,26 +282,26 @@ prototype: 6
                     .triangle-border.left
                       %p.mb-0
                         Now, your first, last name exactly how it appears on the credit card. 
-                    .form-group.row
+                    .form-group.row.has-warning
                       %label.col-lg-3.col-form-label{:for => "FirstName"} First Name
                       .col-lg-7
                         %input#FirstName.form-control{:type => "text"}
-                    .form-group.row
+                    .form-group.row.has-warning
                       %label.col-lg-3.col-form-label{:for => "LastName"} Last Name
                       .col-lg-7
                         %input#LastName.form-control{:type => "text"}
-                        %span.small.muted
-                          (Fraud search for duplicates will happen on this field)
+
 
                     .triangle-border.left
                       %p.mb-0
                         Your date of birth please.  Thank you.
 
-                    .form-group.row
+                    .form-group.row.has-warning
                       %label.col-lg-3.col-form-label{:for => "birth"} Birth Date
                       .col-8.col-sm-5.col-md-6.col-lg-5
                         %input#birth.form-control{:name => "date", :type => "date"}
-
+                        .form-control-feedback
+                          Duplicates for Name + DOB found
                     .form-group.row
                       %label.col-lg-3.col-form-label{:for => "gender-select"} Gender
                       .col-8.col-sm-5.col-md-6.col-lg-5
@@ -868,20 +870,20 @@ prototype: 6
         .bd-example.bd-example-tooltip-static
           
         
-        .fraudlist-prompt.bgd-red.triangle-border.bottom
-          2 Duplicate Emails
+        -# .fraudlist-prompt.bgd-orange.triangle-border.bottom
+        -#   2 Duplicate Name + DOB
 
     .fraudlistfilters.text-center
       Filter List:
-      .btn
+      %a.btn
         ANI
         .badge.badge-orange
           1
-      .btn
+      %a.btn
         Name + DOB
         .badge.badge-orange
           2
-      .btn
+      %a.btn
         Email
         .badge.badge-red
           2
@@ -922,9 +924,10 @@ prototype: 6
               %i.fa.fa-sort-desc{ "aria-hidden" => "true"}
             %th Actions
           %tr.bgd-visited
-            %td{"data-th" => "Status"}
-
-              %i.fa.fa-ban.fa-1x{ "aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "right", :title => "Suspended" }
+            %td.suspended{"data-th" => "Status"}
+              .ribbon-wrapper-red
+                .ribbon-red
+                  Suspended
             %td{"data-th" => "ID"} 424456
             %td.orange{"data-th" => "ANI"} 216-210-5631
             %td.orange{"data-th" => "Name"} Matthew M. Dalberto
@@ -962,111 +965,111 @@ prototype: 6
             %td{"data-th" => "Actions"} 
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
-          -# %tr
-          -#   %td{"data-th" => "Status"}
-          -#   %td{"data-th" => "ID"} 654321
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Ccccc M. Dalberto
-          -#   %td{"data-th" => "DOB"} 05/03/1987
-          -#   %td{"data-th" => "Email"} dsfdfdsf@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***0034
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr.bgd-visited
-          -#   %td{"data-th" => "Status"}
-          -#   %td{"data-th" => "ID"} 564765
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Test33 M. Teste
-          -#   %td{"data-th" => "DOB"} 11/11/1990
-          -#   %td{"data-th" => "Email"} sarah@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***6787
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr.bgd-visited
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 787560
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Racheal Racheal
-          -#   %td{"data-th" => "DOB"} 07/25/1957
-          -#   %td{"data-th" => "Email"} ertertert@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***2222
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 555554
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Sam Liss
-          -#   %td{"data-th" => "DOB"} 05/11/1880
-          -#   %td{"data-th" => "Email"} mdsdsdes@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***3245
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 765645
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Mike Mike
-          -#   %td{"data-th" => "DOB"} 08/03/1975
-          -#   %td{"data-th" => "Email"} mwwwwww@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***9098
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 876543
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} George George
-          -#   %td{"data-th" => "DOB"} 06/06/1985
-          -#   %td{"data-th" => "Email"} george@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***1111
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
+          %tr
+            %td{"data-th" => "Status"}
+            %td{"data-th" => "ID"} 654321
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Ccccc M. Dalberto
+            %td{"data-th" => "DOB"} 05/03/1987
+            %td{"data-th" => "Email"} dsfdfdsf@vseinc.com
+            %td{"data-th" => "CC Number"} ***0034
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr.bgd-visited
+            %td{"data-th" => "Status"}
+            %td{"data-th" => "ID"} 564765
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Test33 M. Teste
+            %td{"data-th" => "DOB"} 11/11/1990
+            %td{"data-th" => "Email"} sarah@vseinc.com
+            %td{"data-th" => "CC Number"} ***6787
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr.bgd-visited
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 787560
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Racheal Racheal
+            %td{"data-th" => "DOB"} 07/25/1957
+            %td{"data-th" => "Email"} ertertert@vseinc.com
+            %td{"data-th" => "CC Number"} ***2222
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 555554
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Sam Liss
+            %td{"data-th" => "DOB"} 05/11/1880
+            %td{"data-th" => "Email"} mdsdsdes@vseinc.com
+            %td{"data-th" => "CC Number"} ***3245
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 765645
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Mike Mike
+            %td{"data-th" => "DOB"} 08/03/1975
+            %td{"data-th" => "Email"} mwwwwww@vseinc.com
+            %td{"data-th" => "CC Number"} ***9098
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 876543
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} George George
+            %td{"data-th" => "DOB"} 06/06/1985
+            %td{"data-th" => "Email"} george@vseinc.com
+            %td{"data-th" => "CC Number"} ***1111
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
 
-          -# %tr
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 104222
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Testing33 Ryan
-          -#   %td{"data-th" => "DOB"} 07/11/1960
-          -#   %td{"data-th" => "Email"} fdgdfg@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***5467
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
-          -# %tr
-          -#   %td{"data-th" => "Status"}  
-          -#   %td{"data-th" => "ID"} 546006
-          -#   %td.orange{"data-th" => "ANI"} 216-210-5631
-          -#   %td{"data-th" => "Name"} Test M. Dal
-          -#   %td{"data-th" => "DOB"} 12/01/1980
-          -#   %td{"data-th" => "Email"} Test1@vseinc.com
-          -#   %td{"data-th" => "CC Number"} ***4555
-          -#   %td.hidden-md{"data-th" => "City"} Harrisburg
-          -#   %td.hidden-md{"data-th" => "State"} Pennsylvania
-          -#   %td{"data-th" => "Actions"} 
-          -#     %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
-          -#       View
+          %tr
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 104222
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Testing33 Ryan
+            %td{"data-th" => "DOB"} 07/11/1960
+            %td{"data-th" => "Email"} fdgdfg@vseinc.com
+            %td{"data-th" => "CC Number"} ***5467
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
+          %tr
+            %td{"data-th" => "Status"}  
+            %td{"data-th" => "ID"} 546006
+            %td.orange{"data-th" => "ANI"} 216-210-5631
+            %td{"data-th" => "Name"} Test M. Dal
+            %td{"data-th" => "DOB"} 12/01/1980
+            %td{"data-th" => "Email"} Test1@vseinc.com
+            %td{"data-th" => "CC Number"} ***4555
+            %td.hidden-md{"data-th" => "City"} Harrisburg
+            %td.hidden-md{"data-th" => "State"} Pennsylvania
+            %td{"data-th" => "Actions"} 
+              %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
+                View
 
 / Modal
 #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}

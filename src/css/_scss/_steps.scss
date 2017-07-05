@@ -1,0 +1,93 @@
+$screen-sm-max: 380px;
+$screen-md-max: 600px;
+$green: green;
+$next: gray;
+
+
+// Steps
+.steps-progressbar {
+  text-align: center;
+  margin: 10px 0 15px 0;
+  padding: 0;
+  overflow: hidden;
+  counter-reset: step;
+  position: relative;
+    z-index: 4;
+
+  @media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
+      margin-top:30px;
+  }
+}
+
+.steps-progressbar li {
+  list-style-type: none;
+  font-size: 11px;
+  line-height:12px;
+  width: 33.33%;
+  width:16%;
+  float: left;
+  position: relative;
+}
+
+.steps-progressbar li.active , .steps-progressbar li.done{
+  color: $green;
+}
+
+.steps-progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 28px;
+    line-height: 21px;
+    display: block;
+    font-size: 12px;
+    color: $next;
+    background: white;
+    border-radius: 20px;
+    padding-right: 1px;
+    padding-top: 1px;
+    margin: 0 auto 5px auto;
+    border: 3px solid $next;
+    font-weight: bold;
+}
+
+.steps-progressbar li.done:before {
+    content: '✔️';
+      border: 3px solid $green;
+    color: $green;
+}
+
+.steps-progressbar li.done:after {
+    background: $green;
+}
+
+.steps-progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: $next;
+    position: absolute;
+    left: -50%;
+    top: 13px;
+    z-index: -1;
+}
+
+.steps-progressbar li:first-child:after {
+  content: none;
+}
+
+.steps-progressbar li.active:before,
+.steps-progressbar li.active:after {
+  background: $green;
+  color: white;
+}
+
+
+///////
+
+.steps-progressbar li.active:before {
+    border: 3px solid $green;
+}
+
+.steps-progressbar li.active2:after {
+    background: $next;
+}
