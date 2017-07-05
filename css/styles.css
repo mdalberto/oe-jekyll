@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -10298,7 +10299,7 @@ div.panel {
 
 @media (min-width: 768px) {
   .rwd-table th:first-child, .rwd-table tr td:first-child {
-    padding-right: 0px !important;
+    padding-right: 5px !important;
     text-align: right; } }
 
 .fraudlist-prompt {
@@ -10306,8 +10307,8 @@ div.panel {
   position: absolute;
   top: -68px;
   left: 50%;
-  margin-left: -100px;
-  width: 200px;
+  margin-left: -120px;
+  width: 250px;
   padding-top: 2px;
   padding-bottom: 2px;
   z-index: 1000;
@@ -10332,6 +10333,43 @@ div.panel {
   border-color: #ec871f transparent;
   left: 50%;
   margin-left: -25px; }
+
+.suspended {
+  position: relative; }
+  .suspended .ribbon-wrapper-red {
+    display: inline-block; }
+  @media (min-width: 768px) {
+    .suspended .ribbon-wrapper-red {
+      text-transform: uppercase;
+      width: 55px;
+      height: 55px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+    .suspended .ribbon-red {
+      font: bold 10px Arial Narrow;
+      color: #333;
+      text-align: center;
+      color: white;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      position: relative;
+      padding: 3px 0;
+      left: -23px;
+      top: 12px;
+      width: 85px;
+      background-color: red; }
+    .suspended .ribbon-red:before, .suspended .ribbon-red:after {
+      content: "";
+      position: absolute;
+      bottom: -3px; }
+    .suspended .ribbon-red:before {
+      left: 0; }
+    .suspended .ribbon-red:after {
+      right: 0; } }
 
 .rwd-table {
   font-size: 14px;
@@ -10390,3 +10428,75 @@ div.panel {
     color: #dd5;
     color: #6789ab;
     font-size: 13px; }
+
+.steps-progressbar {
+  text-align: center;
+  margin: 10px 0 15px 0;
+  padding: 0;
+  overflow: hidden;
+  counter-reset: step;
+  position: relative;
+  z-index: 4; }
+  @media (min-width: 380px) and (max-width: 600px) {
+    .steps-progressbar {
+      margin-top: 30px; } }
+
+.steps-progressbar li {
+  list-style-type: none;
+  font-size: 11px;
+  line-height: 12px;
+  width: 33.33%;
+  width: 16%;
+  float: left;
+  position: relative; }
+
+.steps-progressbar li.active, .steps-progressbar li.done {
+  color: green; }
+
+.steps-progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 28px;
+  line-height: 21px;
+  display: block;
+  font-size: 12px;
+  color: gray;
+  background: white;
+  border-radius: 20px;
+  padding-right: 1px;
+  padding-top: 1px;
+  margin: 0 auto 5px auto;
+  border: 3px solid gray;
+  font-weight: bold; }
+
+.steps-progressbar li.done:before {
+  content: '✔️';
+  border: 3px solid green;
+  color: green; }
+
+.steps-progressbar li.done:after {
+  background: green; }
+
+.steps-progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: gray;
+  position: absolute;
+  left: -50%;
+  top: 13px;
+  z-index: -1; }
+
+.steps-progressbar li:first-child:after {
+  content: none; }
+
+.steps-progressbar li.active:before,
+.steps-progressbar li.active:after {
+  background: green;
+  color: white; }
+
+.steps-progressbar li.active:before {
+  border: 3px solid green; }
+
+.steps-progressbar li.active2:after {
+  background: gray; }
