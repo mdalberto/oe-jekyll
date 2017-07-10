@@ -28,6 +28,19 @@ $('#packageOptionPromoCodeBtn').on('click', function(){
 });
 
 
+// For the 'cc select' accordion like behavior: show and hide potential options
+$("#ccOptions").bind("change", function () {
+    $(".ccOptions").slideUp();
+    if ($(this).val() == "ccDefault") {
+        $("#ccDefault").slideDown();
+    }
+    if ($(this).val() == "ccNewCard") {
+        $("#ccNewCard").slideDown();
+    }
+});
+
+
+
 /// ------------- above are ok to include --------------------- //
 
 $(document).ready(function(){
@@ -72,10 +85,18 @@ $( "#clickme" ).click(function() {
 
 
 $('#capture1').on('click', function(){
-    $(this).hide();
-    $('#capturedCC').show();
+    $('#captureCC2').hide();
+    $('#capturedCC2').show('slow');
     return false;
 });
+
+$('#capture5').on('click', function(){
+    $('#capturedCC2').hide();
+    $('#captureCC2').show('slow');
+    return false;
+});
+
+
 
 $('#capture2').on('click', function(){
 
@@ -97,11 +118,7 @@ $('#capture4').on('click', function(){
     return false;
 });
 
-$('#capture5').on('click', function(){
-    $('#capturedCC').hide();
-    $('#captureCC').hide();
-    return false;
-});
+
 
 $('#btn-matches').on('click', function(){
     $('.footer2').css('bottom', '-290px');

@@ -10135,10 +10135,13 @@ div.panel {
   background-position: 89.53488% 72%; }
 
 .with-inset-creditcard .creditcard-amex, .with-inset-creditcard .creditcard-cvv, .with-inset-creditcard .creditcard-dinersclub, .with-inset-creditcard .creditcard-discover, .with-inset-creditcard .creditcard-mastercard, .with-inset-creditcard .creditcard-visa {
-  top: 4.5px;
-  left: 6px;
+  top: 8px;
+  left: 23px;
   position: absolute;
   pointer-events: none; }
+
+.with-inset-creditcard .form-control {
+  padding: 0.5rem 0.75rem 0.5rem 3rem; }
 
 .creditcard-cvv {
   background-position: 89.53488% 88%; }
@@ -10362,6 +10365,38 @@ div.panel {
     .suspended .ribbon-red:after {
       right: 0; } }
 
+.modal-content .suspended .ribbon-wrapper-red {
+  text-transform: uppercase;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+.modal-content .suspended .ribbon-red {
+  font: bold 12px Arial Narrow;
+  color: #333;
+  text-align: center;
+  color: white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -30px;
+  top: 23px;
+  width: 135px;
+  background-color: #636c72; }
+.modal-content .suspended .ribbon-red:before, .modal-content .suspended .ribbon-red:after {
+  content: "";
+  position: absolute;
+  bottom: -3px; }
+.modal-content .suspended .ribbon-red:before {
+  left: 0; }
+.modal-content .suspended .ribbon-red:after {
+  right: 0; }
+
 .rwd-table {
   font-size: 14px;
   margin: 0 auto;
@@ -10419,6 +10454,9 @@ div.panel {
     color: #dd5;
     color: #6789ab;
     font-size: 13px; }
+
+#enrollSteps .text-center {
+  margin: 0 auto; }
 
 .steps-progressbar {
   text-align: center;
