@@ -28,6 +28,19 @@ $('#packageOptionPromoCodeBtn').on('click', function(){
 });
 
 
+// For the 'cc select' accordion like behavior: show and hide potential options
+$("#ccOptions").bind("change", function () {
+    $(".ccOptions").slideUp();
+    if ($(this).val() == "ccDefault") {
+        $("#ccDefault").slideDown();
+    }
+    if ($(this).val() == "ccNewCard") {
+        $("#ccNewCard").slideDown();
+    }
+});
+
+
+
 /// ------------- above are ok to include --------------------- //
 
 $(document).ready(function(){

@@ -3,7 +3,9 @@ $screen-md-max: 600px;
 //$green: $green-bright;
 $next: $oe-blue;
 
-
+#enrollSteps .text-center{
+  margin:0 auto;
+}
 // Steps
 .steps-progressbar {
   text-align: center;

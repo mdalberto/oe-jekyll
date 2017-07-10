@@ -319,3 +319,45 @@ $gray-lighter: gray;
 
     }
 }
+
+.modal-content .suspended{
+
+      .ribbon-wrapper-red {
+        text-transform: uppercase;
+          width: 120px;
+          height: 120px;
+          overflow: hidden;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+      }
+    .ribbon-red {
+        font: bold 12px Arial Narrow;
+        color: #333;
+        text-align: center;
+        color:white;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform:    rotate(-45deg);
+        -ms-transform:     rotate(-45deg);
+        -o-transform:      rotate(-45deg);
+        position: relative;
+        padding: 7px 0;
+        left: -30px;
+        top: 23px;
+        width: 135px;
+        background-color: $gray-light;
+    }
+
+    .ribbon-red:before, .ribbon-red:after {
+        content: "";
+        position:absolute;
+        bottom: -3px;
+    }
+
+    .ribbon-red:before {
+        left: 0;
+    }
+    .ribbon-red:after {
+        right: 0;
+    }
+}

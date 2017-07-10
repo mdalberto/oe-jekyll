@@ -140,11 +140,19 @@ $script-color-border: $green-bright;
 }
 
 .with-inset-creditcard .creditcard-amex, .with-inset-creditcard .creditcard-cvv, .with-inset-creditcard .creditcard-dinersclub, .with-inset-creditcard .creditcard-discover, .with-inset-creditcard .creditcard-mastercard, .with-inset-creditcard .creditcard-visa {
-    top: 4.5px;
-    left: 6px;
+    top: 8px;
+    left: 23px;
     position: absolute;
     pointer-events: none;
 }
+
+.with-inset-creditcard{
+   .form-control{
+           padding: 0.5rem 0.75rem 0.5rem 3rem;
+   }
+}
+
+
 
 .creditcard-cvv {
     background-position: 89.53488% 88%;

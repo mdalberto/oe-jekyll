@@ -154,7 +154,7 @@ DNIS:
 <!-- /%i.fa.fa-comment.fa-lg.green -->
 <!-- /%hr.mb-0 -->
 <div class='row' id='enrollSteps'>
-<div class='col-12'>
+<div class='col-md-6 text-center'>
 <ul class='steps-progressbar'>
 <li class='done'>Intro Transcript</li>
 <li class='done'>Over 18  Offer</li>
@@ -814,10 +814,12 @@ Diner's Club
 </div>
 <div class='form-group row'>
 <label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
-<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
 <input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
 </div>
-<a class='btn btn-primary btn-sm' href='' id='capture2'>Redo</a>
+</div>
 </div>
 </div>
 <!-- credit card -->
@@ -863,7 +865,7 @@ Diner's Club
 </div>
 <div class='form-group row'>
 <label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
-<div class='col-lg-7'>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
 <div class='with-inset-creditcard'>
 <input class='form-control' id='security2' type='text'>
 <span aria-hidden='true' class='creditcard-cvv'></span>
@@ -1040,7 +1042,7 @@ simulate cc failure due to bad input
 </div>
 </div>
 </div>
-<div aria-multiselectable='true' id='accordionFailure' role='tablist' style='display:none'>
+<div aria-multiselectable='true' id='accordionFailure' role='tablist'>
 <div class='card'>
 <div class='card-header' id='headingCollFailure-1' role='tab'>
 <a aria-controls='collFailure-1' aria-expanded='false' class='collapsed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-1'>
@@ -1049,47 +1051,8 @@ Failure
 </h5>
 </a>
 </div>
-<!-- ///////////// -->
-<!-- / packages -->
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='frmPackage'>Package</label>
-<div class='col-lg-7'>
-<select class='form-control' id='packageOptions'>
-<option value='packageDefault'>100000 (New member (pricing Order Entry))</option>
-<option value='packageOption1'>1700 (New member offer)</option>
-<option value='packageOption2'>BELIEVE (Best value is $25 package)</option>
-<option value='packageOption3'>TORIMYHERO (Tori is my hero)</option>
-</select>
-</div>
-</div>
-<div class='form-group row packageOption' id='packageDefault'>
-<label class='col-lg-3 col-form-label' for='PackagePlan'>Plans</label>
-<div class='col-lg-7'>
-<div class='form-check'>
-<label class='form-check-label'>
-<input checked='checked' class='form-check-input' id='PackagePlan1' name='PackagePlan' type='radio' value='option1'>
-$30.00 for 30 minutes
-</input>
-</label>
-</div>
-<div class='form-check'>
-<label class='form-check-label'>
-<input class='form-check-input' id='PackagePlan2' name='PackagePlan' type='radio' value='option2'>
-$20.00 for 20 minutes
-</input>
-</label>
-</div>
-<div class='form-check'>
-<label class='form-check-label'>
-<input class='form-check-input' id='PackagePlan3' name='PackagePlan' type='radio' value='option3'>
-$10.00 for 10 minutes
-</input>
-</label>
-</div>
-</div>
-</div>
 <!-- ///// -->
-<div aria-labelledby='headingCollFailure-1' class='collapse' id='collFailure-1' role='tabpanel'>
+<div aria-labelledby='headingCollFailure-1' id='collFailure-1' role='tabpanel'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
@@ -1099,7 +1062,105 @@ The account Credit card {failed, ccv was wrong, etc.}.
 </p>
 </div>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>Credit Card</label>
+<label class='col-lg-3 col-form-label' for=''>Try Again or New Card</label>
+<div class='col-lg-7'>
+<select class='form-control' id='ccOptions'>
+<option value='ccDefault'>AMEX ending with 2089</option>
+<option value='ccNewCard'>Add a New Card</option>
+</select>
+</div>
+</div>
+<div class='ccOptions' id='ccNewCard' style='display:none;'>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmCCNum'>
+Capture CC
+</label>
+<div class='col-lg-8'>
+<p>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+<strong>
+Press the 'Capture Via IVR' button
+</strong>
+below first so the Credit Card Automated IVR System can handle the entry.
+<i aria-hidden='true' class='tip fa fa-question-circle' data-placement='bottom' data-toggle='tooltip' title='&#39;Capture Via IVR&#39; will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use &#39;Manually Enter&#39;'></i>
+</p>
+<div class='input-group'>
+<a class='btn btn-green mr-4' href='/' id='capture1'>Capture Via IVR</a>
+<a class='btn btn-green' href='/' id='capture5'>Manually Enter</a>
+</div>
+</div>
+<!-- credit card -->
+</div>
+<div id='capturedCC2' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmCCNum' placeholder='*******************' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
+<li class='creditcard-visa mb-0'>
+<span class='sr-only'>
+Visa
+</span>
+</li>
+<li class='creditcard-mastercard mb-0'>
+<span class='sr-only'>
+MasterCard
+</span>
+</li>
+<li class='creditcard-discover mb-0'>
+<span class='sr-only'>
+Discover
+</span>
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'>
+American Express
+</span>
+</li>
+<li class='creditcard-dinersclub mb-0'>
+<span class='sr-only'>
+Diner's Club
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control'>
+<option>Jan</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control'>
+<option>2017</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process Order
+</a>
+</p>
+</div>
+<!-- credit card -->
+<div id='captureCC2' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
 <div class='col-lg-7'>
 <input class='form-control' id='cc-numb2' type='text'>
 <ul class='list-unstyled mb-0 mt-2'>
@@ -1132,7 +1193,41 @@ Diner's Club
 </div>
 </div>
 <div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='experation2'>Experation</label>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control'>
+<option>Jan</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control'>
+<option>2017</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='security2' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process Order
+</a>
+</p>
+</div>
+</div>
+<div class='ccOptions' id='ccDefault'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for=''>Experation</label>
 <div class='col-lg-7'>
 <div class='row'>
 <div class='col pr-0'>
@@ -1150,7 +1245,7 @@ Diner's Club
 </div>
 <div class='form-group row'>
 <label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
-<div class='col-6 col-sm-3 col-md-3 col-lg-2'>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
 <div class='with-inset-creditcard'>
 <input class='form-control' id='security2' type='text'>
 <span aria-hidden='true' class='creditcard-cvv'></span>
@@ -1162,6 +1257,7 @@ Diner's Club
 Try Again
 </a>
 </p>
+</div>
 </div>
 </div>
 </div>
@@ -1343,6 +1439,15 @@ Call end. Return to Zipwire, end the call and enter your notation.
 </div>
 </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- ////////// fraud list ///////////// -->
 <aside class='fraudlist' id='fraudlist'>
 <div class='fraudlist-inner'>
@@ -1627,6 +1732,13 @@ View
 <div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade' id='myModal' role='dialog' tabindex='-1'>
 <div class='modal-dialog' role='document'>
 <div class='modal-content'>
+<div class='suspended' data-th='Status'>
+<div class='ribbon-wrapper-red'>
+<div class='ribbon-red'>
+Suspended
+</div>
+</div>
+</div>
 <div class='modal-header'>
 <h5 class='modal-title' id='exampleModalLabel'></h5>
 <button aria-label='Close' class='close' data-dismiss='modal' type='button'>
@@ -1640,27 +1752,13 @@ View
 <h2 class='text-center orange text-normal'>
 Matthew Dalberto
 </h2>
-<h5 class='text-center'>
+<h5 class='text-center mb-4'>
 ANI:
 <span class='bold orange'>
 267-210-6381
 </span>
 </h5>
-<h5 class='text-center mb-3'>
-User ID:
-<span class='bold'>
-123456
-</span>
-</h5>
 <hr>
-<div class='row'>
-<div class='col-6'>
-Still working on this layout and content
-</div>
-<div class='col-6'>
-More to come soon
-</div>
-</div>
 </div>
 <div class='modal-footer'>
 <button class='btn btn-secondary' data-dismiss='modal' type='button'>Close</button>

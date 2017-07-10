@@ -28,7 +28,7 @@ prototype: 6
         //%hr.mb-0
 
         #enrollSteps.row
-          .col-12
+          .col-md-6.text-center
             %ul.steps-progressbar
               %li.done Intro Transcript
               %li.done Over 18  Offer
@@ -509,9 +509,10 @@ prototype: 6
                           %input#frmCCExp.form-control{:name => "cc-exp", :type => "date"}
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
-                        .col-6.col-sm-3.col-md-3.col-lg-2
-                          %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
-                        %a#capture2.btn.btn-primary.btn-sm{:href => ""} Redo
+                        .col-6.col-sm-7.col-md-6.col-lg-3
+                          .with-inset-creditcard
+                            %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
+                            %span.creditcard-cvv{"aria-hidden" => "true"}
 
                     
                     / credit card
@@ -543,7 +544,7 @@ prototype: 6
                           %input#frmCCExp.form-control{:name => "cc-exp", :type => "date"}
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
-                        .col-lg-7
+                        .col-6.col-sm-7.col-md-6.col-lg-3
                           .with-inset-creditcard
                             %input#security2.form-control{:type => "text"}
                             %span.creditcard-cvv{"aria-hidden" => "true"}
@@ -667,43 +668,18 @@ prototype: 6
                   simulate cc failure due to bad input         
 
 
-        #accordionFailure{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
+        #accordionFailure{"aria-multiselectable" => "true", :role => "tablist"}
           .card
             #headingCollFailure-1.card-header{:role => "tab"}
               %a.collapsed{"aria-controls" => "collFailure-1", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-1"}
                 %h5.mb-0
                   Failure
-            //////////////
-            // packages
-            .form-group.row
-              %label.col-lg-3.col-form-label{:for => "frmPackage"} Package
-              .col-lg-7
-                %select#packageOptions.form-control
-                  %option{:value => "packageDefault"} 100000 (New member (pricing Order Entry)) 
-                  %option{:value => "packageOption1"} 1700 (New member offer)
-                  %option{:value => "packageOption2"} BELIEVE (Best value is $25 package)
-                  %option{:value => "packageOption3"} TORIMYHERO (Tori is my hero)
-                
-            .form-group.row.packageOption#packageDefault
-              %label.col-lg-3.col-form-label{:for => "PackagePlan"} Plans
-              .col-lg-7
-                .form-check
-                  %label.form-check-label
-                    %input#PackagePlan1.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option1", :checked => "checked" }
-                      $30.00 for 30 minutes
-                .form-check
-                  %label.form-check-label
-                    %input#PackagePlan2.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option2"}
-                      $20.00 for 20 minutes
-                .form-check
-                  %label.form-check-label
-                    %input#PackagePlan3.form-check-input{:name => "PackagePlan", :type => "radio", :value => "option3"}
-                      $10.00 for 10 minutes
+ 
 
 
             //////
 
-            #collFailure-1.collapse{"aria-labelledby" => "headingCollFailure-1", :role => "tabpanel"}
+            #collFailure-1{"aria-labelledby" => "headingCollFailure-1", :role => "tabpanel"}
               .card-block
                 .row.justify-content-md-center
                   .col-12.col-md-6.col-lg-6  
@@ -712,48 +688,149 @@ prototype: 6
                         The account Credit card {failed, ccv was wrong, etc.}.
 
                     .form-group.row
-                      %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} Credit Card
+                      %label.col-lg-3.col-form-label{:for => ""} Try Again or New Card
                       .col-lg-7
-                        %input#cc-numb2.form-control{:type => "text"}
-                        %ul.list-unstyled.mb-0.mt-2
-                          %li.creditcard-visa.mb-0
-                            %span.sr-only
-                              Visa
-                          %li.creditcard-mastercard.mb-0
-                            %span.sr-only
-                              MasterCard
-                          %li.creditcard-discover.mb-0
-                            %span.sr-only
-                              Discover
-                          %li.creditcard-amex.mb-0
-                            %span.sr-only
-                              American Express
-                          %li.creditcard-dinersclub.mb-0
-                            %span.sr-only
-                              Diner's Club
+                        %select#ccOptions.form-control
+                          %option{:value => "ccDefault"} AMEX ending with 2089
+                          %option{:value => "ccNewCard"} Add a New Card
+     
+                    #ccNewCard.ccOptions{"style" => "display:none;"}
+                      .form-group.row
+                        %label.col-lg-3.col-form-label{:for => "frmCCNum"}
+                          Capture CC
 
-                    .form-group.row
-                      %label.col-xs-12.col-md-3.col-form-label{:for => "experation2"} Experation
-                      .col-lg-7
-                        .row
-                          .col.pr-0
-                            %select#gender-select.form-control
-                              %option Jan
-                          .col
-                            %select#gender-select2.form-control
-                              %option 2017
-                    .form-group.row
-                      %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
-                      .col-6.col-sm-3.col-md-3.col-lg-2
-                        .with-inset-creditcard
-                          %input#security2.form-control{:type => "text"}
-                          %span.creditcard-cvv{"aria-hidden" => "true"}
+                        .col-lg-8
+                          %p
+                            %i.fa.fa-exclamation-triangle.green{"aria-hidden" => "true"} 
+                            %strong
+                              Press the 'Capture Via IVR' button 
+                            below first so the Credit Card Automated IVR System can handle the entry.           
+                            %i.tip.fa.fa-question-circle{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "'Capture Via IVR' will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use 'Manually Enter'"}
+                              
+                          .input-group
+                            %a#capture1.btn.btn-green.mr-4{:href => "/"} Capture Via IVR
+                            %a#capture5.btn.btn-green{:href => "/"} Manually Enter
+                      
+                        / credit card
+                      #capturedCC2{:style => "display:none"}
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
+                          .col-lg-7
+                            %input#frmCCNum.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
+                            %ul.list-unstyled.mb-0.mt-2
+                              %li.creditcard-visa.mb-0
+                                %span.sr-only
+                                  Visa
+                              %li.creditcard-mastercard.mb-0
+                                %span.sr-only
+                                  MasterCard
+                              %li.creditcard-discover.mb-0
+                                %span.sr-only
+                                  Discover
+                              %li.creditcard-amex.mb-0
+                                %span.sr-only
+                                  American Express
+                              %li.creditcard-dinersclub.mb-0
+                                %span.sr-only
+                                  Diner's Club
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+                          .col-lg-7
+                            .row
+                              .col.pr-0
+                                %select.form-control
+                                  %option Jan
+                              .col
+                                %select.form-control
+                                  %option 2017
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
+                          .col-6.col-sm-7.col-md-6.col-lg-3
+                            .with-inset-creditcard
+                              %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
+                              %span.creditcard-cvv{"aria-hidden" => "true"}
+                        %p.mt-4
+                          %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                            Process Order
+                      
+                      / credit card
+                      #captureCC2{:style => 'display:none' }
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} CC Number
+                          .col-lg-7
+                            %input#cc-numb2.form-control{:type => "text"}
+                            %ul.list-unstyled.mb-0.mt-2
+                              %li.creditcard-visa.mb-0
+                                %span.sr-only
+                                  Visa
+                              %li.creditcard-mastercard.mb-0
+                                %span.sr-only
+                                  MasterCard
+                              %li.creditcard-discover.mb-0
+                                %span.sr-only
+                                  Discover
+                              %li.creditcard-amex.mb-0
+                                %span.sr-only
+                                  American Express
+                              %li.creditcard-dinersclub.mb-0
+                                %span.sr-only
+                                  Diner's Club
+
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+                          .col-lg-7
+                            .row
+                              .col.pr-0
+                                %select.form-control
+                                  %option Jan
+                              .col
+                                %select.form-control
+                                  %option 2017
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+                          .col-6.col-sm-7.col-md-6.col-lg-3
+                            .with-inset-creditcard
+                              %input#security2.form-control{:type => "text"}
+                              %span.creditcard-cvv{"aria-hidden" => "true"}
+                        %p.mt-4
+                          %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                            Process Order     
 
 
-                    %p.mt-4
-                      %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
-                        Try Again     
 
+
+
+
+
+
+
+
+
+
+
+
+                    #ccDefault.ccOptions
+                      .form-group.row
+                        %label.col-xs-12.col-md-3.col-form-label{:for => ""} Experation
+                        .col-lg-7
+                          .row
+                            .col.pr-0
+                              %select#gender-select.form-control
+                                %option Jan
+                            .col
+                              %select#gender-select2.form-control
+                                %option 2017
+                      .form-group.row
+                        %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+                        .col-6.col-sm-7.col-md-6.col-lg-3
+                          .with-inset-creditcard
+                            %input#security2.form-control{:type => "text"}
+                            %span.creditcard-cvv{"aria-hidden" => "true"}
+
+
+                      %p.mt-4
+                        %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                          Try Again     
 
             
         #accordionSuccess{"aria-multiselectable" => "true", :role => "tablist", :style => 'display:none'}
@@ -865,7 +942,15 @@ prototype: 6
                     .text-center
                       %p.mb-0.bold
                         Call end. Return to Zipwire, end the call and enter your notation.
-
+%br 
+%br
+%br
+%br 
+%br
+%br
+%br 
+%br
+%br
 
 /////////// fraud list /////////////
 
@@ -1095,6 +1180,11 @@ prototype: 6
 #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
+
+      .suspended{"data-th" => "Status"}
+        .ribbon-wrapper-red
+          .ribbon-red
+            Suspended
       .modal-header
         %h5#exampleModalLabel.modal-title 
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
@@ -1104,22 +1194,35 @@ prototype: 6
           .fa.fa-user-circle-o.fa-5x.gray{"aria-hidden" => "true"}
         %h2.text-center.orange.text-normal
           Matthew Dalberto
-        %h5.text-center
+        %h5.text-center.mb-4
           ANI:
           %span.bold.orange
             267-210-6381
-        %h5.text-center.mb-3
-          User ID: 
-          %span.bold
-            123456
         %hr
-        .row
-          .col-6
-            Still working on this layout and content
-          .col-6
-            More to come soon              
+        -# .row
+        -#   .col-6
+        -#     %p.bold.mb-0
+        -#       User ID: 
+        -#     %p
+        -#       123456
+        -#     %p.bold.mb-0
+        -#       Last Purchase:
+        -#     %p
+        -#       $300 - 03/25/2017
+        -#   .col-6
+        -#     %p.bold.mb-0
+        -#       Address            
+        -#     %p
+        -#       3208 Northwoods Park Dr
+        -#       %br
+        -#       Harrisburg, PA 19129
 
-
+        -#     %p.bold.mb-0
+        -#       Address            
+        -#     %p
+        -#       3208 Northwoods Park Dr
+        -#       %br
+        -#       Harrisburg, PA 19129
       .modal-footer
         %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
 
