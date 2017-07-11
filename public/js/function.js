@@ -85,18 +85,16 @@ $( "#clickme" ).click(function() {
 
 
 $('#capture1').on('click', function(){
-    $('#captureCC2').hide();
-    $('#capturedCC2').show('slow');
+    $(this).hide();
+    $('#capturedCC').show();
     return false;
 });
 
 $('#capture5').on('click', function(){
-    $('#capturedCC2').hide();
-    $('#captureCC2').show('slow');
+    $('#capturedCC').hide();
+    $('#captureCC').hide();
     return false;
 });
-
-
 
 $('#capture2').on('click', function(){
 
