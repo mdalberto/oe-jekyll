@@ -89,11 +89,15 @@ $script-color-border: $green-bright;
     border-width: 20px 20px 0px;
 }
 
+.al-warning{
+    @include media-breakpoint-up("lg") {
+        margin-left:20px;
+    }
+}
 
 .card-noborder{
     .card{
         border:none;
-        
     }
     .card-block {
         padding-top: 0;

@@ -85,8 +85,14 @@ $( "#clickme" ).click(function() {
 
 
 $('#capture1').on('click', function(){
-    $(this).hide();
-    $('#capturedCC').show();
+    $('#capturedCC2').show('slow');
+    $('#captureCC2').hide();
+    return false;
+});
+
+$('#capture5').on('click', function(){
+    $('#capturedCC2').hide();
+    $('#captureCC2').show('slow');
     return false;
 });
 
@@ -110,11 +116,7 @@ $('#capture4').on('click', function(){
     return false;
 });
 
-$('#capture5').on('click', function(){
-    $('#capturedCC').hide();
-    $('#captureCC').hide();
-    return false;
-});
+
 
 $('#btn-matches').on('click', function(){
     $('.footer2').css('bottom', '-290px');

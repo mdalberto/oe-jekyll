@@ -10096,6 +10096,10 @@ div.panel {
   left: 40px;
   border-width: 20px 20px 0px; }
 
+@media (min-width: 992px) {
+  .al-warning {
+    margin-left: 20px; } }
+
 .card-noborder .card {
   border: none; }
 .card-noborder .card-block {
