@@ -688,9 +688,10 @@ prototype: 6
                         The account Credit card {failed, ccv was wrong, etc.}.
 
                     .form-group.row
-                      %label.col-lg-3.col-form-label{:for => ""} Try Again or New Card
+                      %label.col-lg-3.col-form-label{:for => ""} Try Again or Enter a New Card
                       .col-lg-7
                         %select#ccOptions.form-control
+                          %option{:value => "ccSelect"} - select -
                           %option{:value => "ccDefault"} AMEX ending with 2089
                           %option{:value => "ccNewCard"} Add a New Card
      
@@ -809,7 +810,7 @@ prototype: 6
 
 
 
-                    #ccDefault.ccOptions
+                    #ccDefault.ccOptions{"style" => "display:none;"}
                       .form-group.row
                         %label.col-xs-12.col-md-3.col-form-label{:for => ""} Experation
                         .col-lg-7
