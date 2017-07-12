@@ -9729,6 +9729,12 @@ hr {
 .modal-header, .modal-footer {
   border: none; }
 
+.modal-header {
+  padding-bottom: 0; }
+
+.modal-body {
+  padding: 0 15px; }
+
 li {
   margin-bottom: 10px;
   line-height: 28px; }
@@ -9934,7 +9940,8 @@ h1, h3 {
   margin-bottom: 3px; }
 
 h5, .h5 {
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  line-height: 1.5rem; }
 
 .h1-home {
   font-size: 26px; }
@@ -10531,3 +10538,21 @@ div.panel {
 
 .steps-progressbar li.active2:after {
   background: #bacad7; }
+
+.rwd-table-static {
+  font-size: 14px;
+  margin: 0 auto;
+  width: 100%;
+  border: 2px solid #ececec;
+  color: black;
+  border-radius: 8px; }
+  .rwd-table-static th, .rwd-table-static td {
+    text-align: left;
+    margin: .5em 1em .5em 30%;
+    display: table-cell;
+    padding: 1em;
+    border: 1px solid #ececec; }
+    .rwd-table-static th:first-child, .rwd-table-static td:first-child {
+      color: #8c8c8c;
+      font-size: 13px;
+      font-weight: bold; }
