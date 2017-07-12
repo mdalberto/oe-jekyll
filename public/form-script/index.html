@@ -194,7 +194,7 @@ Intro Transcript
 Hi! Thank you for calling (PS) my name is (your name).
 Have you ever used our service before?
 </p>
-<a aria-controls='collIsMember' aria-expanded='false' class='btn btn-green' data-toggle='collapse' href='#collIsMember'>
+<a class='btn btn-green' data-target='#fraudModal' data-toggle='modal'>
 Yes
 </a>
 <a aria-controls='coll2' aria-expanded='true' class='btn btn-green' data-parent='#accordion' data-toggle='collapse' href='#coll2'>
@@ -1736,6 +1736,66 @@ View
 </div>
 </aside>
 <!-- Modal -->
+<div aria-hidden='true' aria-labelledby='fraudModal' class='modal fade' id='fraudModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'></h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='text-center mb-3'>
+<div aria-hidden='true' class='fa fa-user-circle-o fa-4x red'></div>
+</div>
+<h5 class='text-center red bold mb-4'>
+Duplicate Account
+</h5>
+<h5 class='text-center mb-3'>
+Please transfer the call to a Specialist
+</h5>
+<!-- /%hr -->
+<div class='row justify-content-md-center'>
+<div class='col col-md-auto'>
+<div class='text-center mb-3 bold'>
+<a class='btn btn-green btn-fixed' href='/'>
+Transfer
+</a>
+<table class='rwd-table-static mt-4 mb-5'>
+<tr>
+<td>ANI:</td>
+<td>267-210-6381</td>
+</tr>
+<tr>
+<td>First Name:</td>
+<td>Matthew</td>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td>Dalberto</td>
+</tr>
+<tr>
+<td>DOB:</td>
+<td>03/25/1976</td>
+</tr>
+<tr>
+<td>Email:</td>
+<td>mdalberto@vseinc.com</td>
+</tr>
+<tr>
+<td>CC Number:</td>
+<td>***8888</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
 <div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade' id='myModal' role='dialog' tabindex='-1'>
 <div class='modal-dialog' role='document'>
 <div class='modal-content'>
@@ -1766,6 +1826,40 @@ ANI:
 </span>
 </h5>
 <hr>
+<div class='row'>
+<div class='col-6'>
+<p class='bold mb-0'>
+User ID:
+</p>
+<p>
+123456
+</p>
+<p class='bold mb-0'>
+Last Purchase:
+</p>
+<p>
+$300 - 03/25/2017
+</p>
+</div>
+<div class='col-6'>
+<p class='bold mb-0'>
+Address
+</p>
+<p>
+3208 Northwoods Park Dr
+<br>
+Harrisburg, PA 19129
+</p>
+<p class='bold mb-0'>
+Address
+</p>
+<p>
+3208 Northwoods Park Dr
+<br>
+Harrisburg, PA 19129
+</p>
+</div>
+</div>
 </div>
 <div class='modal-footer'>
 <button class='btn btn-secondary' data-dismiss='modal' type='button'>Close</button>

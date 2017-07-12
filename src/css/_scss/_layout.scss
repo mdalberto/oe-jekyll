@@ -123,13 +123,15 @@ hr{
 }
 
 .modal-header, .modal-footer{
-
-  border:none;
+   border:none;
 }
 
-// .modal-body h3{
-//   margin-top:-40px;
-// }
+.modal-header{
+   padding-bottom:0;
+}
+.modal-body{
+   padding: 0 15px;
+}
 
 li{
   margin-bottom:10px;

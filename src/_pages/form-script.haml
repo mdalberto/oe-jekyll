@@ -59,7 +59,8 @@ prototype: 6
                       %p.mb-4
                         Hi! Thank you for calling (PS) my name is (your name).
                         Have you ever used our service before?
-                      %a.btn.btn-green{"aria-controls" => "collIsMember", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collIsMember"}
+                      
+                      %a.btn.btn-green{ "data-toggle" => "modal", "data-target" => "#fraudModal" }
                         Yes
                       %a.btn.btn-green{"aria-controls" => "coll2", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#coll2"}
                         no
@@ -1185,6 +1186,47 @@ prototype: 6
                 View
 
 / Modal
+#fraudModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "fraudModal", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title 
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .text-center.mb-3
+          .fa.fa-user-circle-o.fa-4x.red{"aria-hidden" => "true"}
+        %h5.text-center.red.bold.mb-4
+          Duplicate Account
+        %h5.text-center.mb-3
+          Please transfer the call to a Specialist
+        //%hr
+        .row.justify-content-md-center
+          .col.col-md-auto
+            .text-center.mb-3.bold
+              %a.btn.btn-green.btn-fixed{"href" => "/"}
+                Transfer
+              %table.rwd-table-static.mt-4.mb-5
+                %tr
+                  %td ANI:
+                  %td 267-210-6381
+                %tr
+                  %td First Name:
+                  %td Matthew
+                %tr
+                  %td Last Name:
+                  %td Dalberto
+                %tr
+                  %td DOB:
+                  %td 03/25/1976
+                %tr
+                  %td Email:
+                  %td mdalberto@vseinc.com
+                %tr
+                  %td CC Number:
+                  %td ***8888
+
+/ Modal
 #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
@@ -1207,30 +1249,29 @@ prototype: 6
           %span.bold.orange
             267-210-6381
         %hr
-        -# .row
-        -#   .col-6
-        -#     %p.bold.mb-0
-        -#       User ID: 
-        -#     %p
-        -#       123456
-        -#     %p.bold.mb-0
-        -#       Last Purchase:
-        -#     %p
-        -#       $300 - 03/25/2017
-        -#   .col-6
-        -#     %p.bold.mb-0
-        -#       Address            
-        -#     %p
-        -#       3208 Northwoods Park Dr
-        -#       %br
-        -#       Harrisburg, PA 19129
+        .row
+          .col-6
+            %p.bold.mb-0
+              User ID: 
+            %p
+              123456
+            %p.bold.mb-0
+              Last Purchase:
+            %p
+              $300 - 03/25/2017
+          .col-6
+            %p.bold.mb-0
+              Address            
+            %p
+              3208 Northwoods Park Dr
+              %br
+              Harrisburg, PA 19129
 
-        -#     %p.bold.mb-0
-        -#       Address            
-        -#     %p
-        -#       3208 Northwoods Park Dr
-        -#       %br
-        -#       Harrisburg, PA 19129
+            %p.bold.mb-0
+              Address            
+            %p
+              3208 Northwoods Park Dr
+              %br
+              Harrisburg, PA 19129
       .modal-footer
         %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
-

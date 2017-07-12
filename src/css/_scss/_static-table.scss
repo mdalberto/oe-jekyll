@@ -1,0 +1,29 @@
+.rwd-table-static{
+  font-size: 14px;
+  margin: 0 auto;
+  //min-width: 320px; // adjust to your needs
+  width:100%;
+    //background-color:$light-gray;
+    border:2px solid $light-gray;
+    color: darken($fraudlist-color,75%);
+    border-radius:8px;
+  th, td {
+    text-align: left;
+     margin: .5em 1em .5em 30%;
+     display: table-cell;
+    padding: 1em;
+  border: 1px solid $light-gray;
+    &:first-child {
+      color: lighten(black,55%);
+      font-size: 13px;
+      font-weight:bold;
+    }  
+  }
+
+  tr {
+    //border-color: lighten($navy, 10%);
+
+  }
+  //tr:nth-child(even) {background: $light-gray;}
+  //tr:nth-child(odd) {background: #FFF}
+}
