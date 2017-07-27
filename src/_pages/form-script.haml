@@ -5,6 +5,7 @@ permalink: /form-script/
 prototype: 6
 ---
 
+#zipwireFrame
 
 %section#services.newbieform5.card-noborder
   .container-fluid
@@ -18,7 +19,6 @@ prototype: 6
               267-210-6381 
             %i.tip.fa.fa-question-circle
           %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "Psychic Source service line phone number, our number of which they have called."}
-
             DNIS: 
             %strong
               1-800-965-3049
@@ -1185,6 +1185,78 @@ prototype: 6
               %btn.btn-action{ "data-toggle" => "modal", "data-target" => "#myModal" }
                 View
 
+
+#fraudModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "fraudModal", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %i.fa.fa-times{"aria-hidden" => "true"}
+      .modal-body
+        .text-center.mb-2
+          .fa.fa-exclamation-triangle.fa-4x.red{"aria-hidden" => "true"}
+          / <div class="fa fa-user-circle-o fa-4x red" aria-hidden="true"></div>
+        %h5.text-center.red.bold.mb-2
+          / Duplicate Account
+          Please transfer the call
+          = succeed "to" do
+            %br/
+        /
+          <h3 class="text-center mb-3 bold">
+          
+          </h3>
+        / /%hr
+        .row.justify-content-md-center
+          .col
+            #accordionTranscripts.accordion-unstyled{"aria-multiselectable" => "true", :role => "tablist"}
+              .card
+                /
+                  <div class="card-header" id="headingOne" role="tab">
+                  <a class="black" aria-controls="TcollapseZero" aria-expanded="true" data-parent="#accordionTranscripts" data-toggle="collapse" href="#TcollapseZero">
+                  
+                  </a>
+                  </div>
+                #TcollapseZero.collapse.show{"aria-labelledby" => "TheadingZero", :role => "tabpanel"}
+                  .card-block.text-center
+                    /
+                      <h4 class="text-center mb-3 mt-4 bold">
+                      
+                      </h4>
+                    %h5.mb-2.bold
+                      1. Copy Message for Specialist:
+                    = succeed "#clipboardText" do
+                      %input{:type => "text"}/
+                    = succeed "[ngxClipboard]=\"clipboardText\"" do
+                      %a.btn.btn-green.btn-fixed.mt-3
+            .card
+              /
+                <div class="card-header" id="TheadingOne" role="tab">
+                <a aria-controls="TcollapseOne" aria-expanded="true" data-parent="#accordionTranscripts" data-toggle="collapse" href="#TcollapseOne">
+                <h5 class="mb-0">
+                Customer Information
+                </h5>
+                </a>
+                </div>
+              #TcollapseOne.collapse{"aria-labelledby" => "TheadingOne", :role => "tabpanel"}
+                .card-block
+                  %p.green.bold
+                    %i.fa.fa-check-circle.fa-2x.green{"aria-hidden" => "true"}
+                    Message for Specialist has been copied
+                  %ol{:start => "2"}
+                    %li Go to your browser tab that holds the Zipwire page.
+                    %li In the left column, choose &#x2018;Directory&#x2019; tab, then &#x2018;call center&#x2019; dropdown.
+                    %li Double click on an avaliable Agent (they have a green icon).
+                    %li Right click  paste the message into Specialist chat box  send.
+                    %li Transfer to Speicalist
+                  %img.img-fluid{:src => "/images/how-to-ivr-transfer-recording-test.gif"}/
+                  %p.mt-3
+                    %a.text-small{"aria-controls" => "TcollapseZero", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseZero"}
+                      Back to message copy
+          .text-center.mb-3.bold
+
+
+
 / Modal
 #fraudModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "fraudModal", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
@@ -1226,8 +1298,8 @@ prototype: 6
                   %td CC Number:
                   %td ***8888
 
-/ Modal
-#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+/ Modal2
+#myModal2.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
 

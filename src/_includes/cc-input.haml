@@ -1,0 +1,109 @@
+.form-group.row
+%label.col-lg-3.col-form-label{:for => ""} Try Again or Enter a New Card
+.col-lg-7
+  %select#ccOptions.form-control
+    %option{:value => "ccSelect"} - select -
+    %option{:value => "ccDefault"} AMEX ending with 2089
+    %option{:value => "ccNewCard"} Add a New Card
+
+#ccNewCard.ccOptions{"style" => "display:none;"}
+.form-group.row
+  %label.col-lg-3.col-form-label{:for => "frmCCNum"}
+    Capture CC
+
+  .col-lg-8
+    %p
+      %i.fa.fa-exclamation-triangle.green{"aria-hidden" => "true"} 
+      %strong
+        Press the 'Capture Via IVR' button 
+      below first so the Credit Card Automated IVR System can handle the entry.           
+      %i.tip.fa.fa-question-circle{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "'Capture Via IVR' will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use 'Manually Enter'"}
+        
+    .input-group
+      %a#capture1.btn.btn-green.mr-4{:href => "/"} Capture Via IVR
+      %a#capture5.btn.btn-green{:href => "/"} Manually Enter
+
+  / credit card
+#capturedCC2{:style => "display:none"}
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
+    .col-lg-7
+      %input#frmCCNum.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
+      %ul.list-unstyled.mb-0.mt-2
+        %li.creditcard-visa.mb-0
+          %span.sr-only
+            Visa
+        %li.creditcard-mastercard.mb-0
+          %span.sr-only
+            MasterCard
+        %li.creditcard-discover.mb-0
+          %span.sr-only
+            Discover
+        %li.creditcard-amex.mb-0
+          %span.sr-only
+            American Express
+        %li.creditcard-dinersclub.mb-0
+          %span.sr-only
+            Diner's Club
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+    .col-lg-7
+      .row
+        .col.pr-0
+          %select.form-control
+            %option Jan
+        .col
+          %select.form-control
+            %option 2017
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
+    .col-6.col-sm-7.col-md-6.col-lg-3
+      .with-inset-creditcard
+        %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
+        %span.creditcard-cvv{"aria-hidden" => "true"}
+  %p.mt-4
+    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+      Process Order
+
+/ credit card
+#captureCC2{:style => 'display:none' }
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} CC Number
+    .col-lg-7
+      %input#cc-numb2.form-control{:type => "text"}
+      %ul.list-unstyled.mb-0.mt-2
+        %li.creditcard-visa.mb-0
+          %span.sr-only
+            Visa
+        %li.creditcard-mastercard.mb-0
+          %span.sr-only
+            MasterCard
+        %li.creditcard-discover.mb-0
+          %span.sr-only
+            Discover
+        %li.creditcard-amex.mb-0
+          %span.sr-only
+            American Express
+        %li.creditcard-dinersclub.mb-0
+          %span.sr-only
+            Diner's Club
+
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+    .col-lg-7
+      .row
+        .col.pr-0
+          %select.form-control
+            %option Jan
+        .col
+          %select.form-control
+            %option 2017
+  .form-group.row
+    %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+    .col-6.col-sm-7.col-md-6.col-lg-3
+      .with-inset-creditcard
+        %input#security2.form-control{:type => "text"}
+        %span.creditcard-cvv{"aria-hidden" => "true"}
+  %p.mt-4
+    %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+      Process Order     

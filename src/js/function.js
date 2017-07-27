@@ -1,7 +1,8 @@
 //
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
+  $('#zipwireFrame').load('https://vsedev.zipwiresw.com/agentdesktop/ #gwt-debug-acStateMenuContainer');
 })
 
 // For the 'promo code select' accordion like behavior: show and hide potential options
@@ -131,4 +132,6 @@ $('#btn-matches2').on('click', function(){
     $('#btn-matches').show();
     return false;
 });
+
+
 

@@ -9742,6 +9742,10 @@ li {
 .navbar li {
   margin-bottom: 0; }
 
+.btn.disabled, .btn:disabled {
+  cursor: not-allowed;
+  opacity: .4; }
+
 .btn {
   border-radius: 6px;
   padding: 0.75rem 1rem; }
