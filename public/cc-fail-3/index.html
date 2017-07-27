@@ -163,223 +163,51 @@ DNIS:
 </div>
 </div>
 <div class='row justify-content-md-center'>
-<div class='col-12 col-md-12 col-lg-12'>
-<div class='card'>
-<h5 class='mb-0 text-center'>
-Failure
+<div class='col-12 col-md-6 col-lg-6 mt-3'>
+<div class='media'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle red d-flex mr-1 mt-1'></i>
+<div class='media-body'>
+<h5 class='red bold'>
+Unable to Process the Card (3rd attempt)
 </h5>
+</div>
+</div>
+</div>
+</div>
+<div class='row justify-content-md-center'>
+<div class='col-12 col-md-12 col-lg-12'>
+<div class='row justify-content-md-center'>
 <div class='card-block'>
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p class='mb-0'>
-The account Credit card {failed, ccv was wrong, etc.}.
+I’m not able to complete your new account. All of your information has been saved on the service.  When you call back with a different payment option, it will be easy to pick up where we left off.  You can purchase a gift card or a prepaid credit card and call us back.
 </p>
 </div>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for=''>Try Again or Enter a New Card</label>
-<div class='col-lg-7'>
-<select class='form-control' id='ccOptions'>
-<option value='ccSelect'>- select -</option>
-<option value='ccDefault'>AMEX ending with 2089</option>
-<option value='ccNewCard'>Add a New Card</option>
-</select>
+<a aria-controls='collhowToGiftCard' aria-expanded='false' class='transcript-directions' data-toggle='collapse' href='#collhowToGiftCard' id='howToGiftCard'>
+<div class='media'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green d-flex mr-1 mt-1'></i>
+<div class='media-body'>
+If the customer asks how to purchase a card the agent responds <u class="blue">click here</u>
 </div>
 </div>
-<div class='ccOptions' id='ccNewCard' style='display:none;'>
-<div class='form-group row'>
-<label class='col-lg-3 col-form-label' for='frmCCNum'>
-Capture CC
-</label>
-<div class='col-lg-8'>
-<p>
-<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
-<strong>
-Press the 'Capture Via IVR' button
-</strong>
-below first so the Credit Card Automated IVR System can handle the entry.
-<i aria-hidden='true' class='tip fa fa-question-circle' data-placement='bottom' data-toggle='tooltip' title='&#39;Capture Via IVR&#39; will walk user through a CC number entry process that is automated and over the phone. If this is problematic, use &#39;Manually Enter&#39;'></i>
-</p>
-<div class='input-group'>
-<a class='btn btn-green mr-4' href='/' id='capture1'>Capture Via IVR</a>
-<a class='btn btn-green' href='/' id='capture5'>Manually Enter</a>
-</div>
-</div>
-<!-- credit card -->
-</div>
-<div id='capturedCC2' style='display:none'>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
-<div class='col-lg-7'>
-<input class='form-control' id='frmCCNum' placeholder='*******************' readonly='readonly' type='text'>
-<ul class='list-unstyled mb-0 mt-2'>
-<li class='creditcard-visa mb-0'>
-<span class='sr-only'>
-Visa
-</span>
-</li>
-<li class='creditcard-mastercard mb-0'>
-<span class='sr-only'>
-MasterCard
-</span>
-</li>
-<li class='creditcard-discover mb-0'>
-<span class='sr-only'>
-Discover
-</span>
-</li>
-<li class='creditcard-amex mb-0'>
-<span class='sr-only'>
-American Express
-</span>
-</li>
-<li class='creditcard-dinersclub mb-0'>
-<span class='sr-only'>
-Diner's Club
-</span>
-</li>
-</ul>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
-<div class='col-lg-7'>
-<div class='row'>
-<div class='col pr-0'>
-<select class='form-control'>
-<option>Jan</option>
-</select>
-</div>
-<div class='col'>
-<select class='form-control'>
-<option>2017</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
-<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
-<div class='with-inset-creditcard'>
-<input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
-<span aria-hidden='true' class='creditcard-cvv'></span>
-</div>
-</div>
-</div>
-<p class='mt-4'>
-<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
-Process Order
 </a>
+<div class='collapse mt-3' id='collhowToGiftCard'>
+<div class='triangle-border top'>
+<button aria-controls='collhowToGiftCard' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collhowToGiftCard' type='button'>
+<span aria='true'>
+x
+</span>
+</button>
+<p class='mb-0'>
+It’s actually pretty easy.  You can purchase one at a local store such as a pharmacy, grocery store, or convenience store.
 </p>
 </div>
-<!-- credit card -->
-<div id='captureCC2' style='display:none'>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
-<div class='col-lg-7'>
-<input class='form-control' id='cc-numb2' type='text'>
-<ul class='list-unstyled mb-0 mt-2'>
-<li class='creditcard-visa mb-0'>
-<span class='sr-only'>
-Visa
-</span>
-</li>
-<li class='creditcard-mastercard mb-0'>
-<span class='sr-only'>
-MasterCard
-</span>
-</li>
-<li class='creditcard-discover mb-0'>
-<span class='sr-only'>
-Discover
-</span>
-</li>
-<li class='creditcard-amex mb-0'>
-<span class='sr-only'>
-American Express
-</span>
-</li>
-<li class='creditcard-dinersclub mb-0'>
-<span class='sr-only'>
-Diner's Club
-</span>
-</li>
-</ul>
 </div>
-</div>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
-<div class='col-lg-7'>
-<div class='row'>
-<div class='col pr-0'>
-<select class='form-control'>
-<option>Jan</option>
-</select>
-</div>
-<div class='col'>
-<select class='form-control'>
-<option>2017</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
-<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
-<div class='with-inset-creditcard'>
-<input class='form-control' id='security2' type='text'>
-<span aria-hidden='true' class='creditcard-cvv'></span>
-</div>
-</div>
-</div>
-<p class='mt-4'>
-<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
-Process Order
+<a class='btn btn-green mt-4 btn-fixed' data-target='#endModal' data-toggle='modal'>
+Close the Call
 </a>
-</p>
-</div>
-</div>
-<div class='ccOptions' id='ccDefault' style='display:none;'>
-<div class='form-group row'>
-<label class='col-xs-12 col-md-3 col-form-label' for=''>Experation</label>
-<div class='col-lg-7'>
-<div class='row'>
-<div class='col pr-0'>
-<select class='form-control' id='gender-select'>
-<option>Jan</option>
-</select>
-</div>
-<div class='col'>
-<select class='form-control' id='gender-select2'>
-<option>2017</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class='form-group row'>
-<div class='col-11 col-form-label'>
-<p class='al-warning'>
-<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
-Re-enter security code
-</p>
-</div>
-<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
-<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
-<div class='with-inset-creditcard'>
-<input class='form-control' id='security2' type='text'>
-<span aria-hidden='true' class='creditcard-cvv'></span>
-</div>
-</div>
-</div>
-<p class='mt-4'>
-<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
-Try Again
-</a>
-</p>
-</div>
 </div>
 </div>
 </div>
@@ -388,6 +216,68 @@ Try Again
 </div>
 </div>
 </section>
+<div aria-hidden='true' aria-labelledby='endModal' class='modal fade' id='endModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'></h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<i aria-hidden='true' class='fa fa-times'></i>
+</button>
+</div>
+<div class='modal-body'>
+<div class='text-center mb-2'>
+<div aria-hidden='true' class='fa fa-exclamation-triangle fa-4x red'></div>
+</div>
+<h5 class='text-center red bold mb-2'>
+Please transfer the call
+</h5>
+<div class='row justify-content-md-center'>
+<div class='col'>
+<div aria-multiselectable='true' class='accordion-unstyled' id='accordionTranscripts' role='tablist'>
+<div class='card'>
+<div aria-labelledby='TheadingZero' class='collapse show' id='TcollapseZero' role='tabpanel'>
+<div class='card-block text-center'>
+<h5 class='mb-2 bold'>
+1. Copy Message for Specialist:
+</h5>
+<input type='text'>
+<a class='btn btn-green btn-fixed mt-3'>
+Copy
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<div aria-labelledby='TheadingOne' class='collapse' id='TcollapseOne' role='tabpanel'>
+<div class='card-block'>
+<p class='green bold'>
+<i aria-hidden='true' class='fa fa-check-circle fa-2x green'></i>
+Message for Specialist has been copied
+</p>
+<ol start='2'>
+<li>Go to your browser tab that holds the Zipwire page.</li>
+<li>In the left column, choose &#x2018;Directory&#x2019; tab, then &#x2018;call center&#x2019; dropdown.</li>
+<li>Double click on an avaliable Agent (they have a green icon).</li>
+<li>Right click  paste the message into Specialist chat box  send.</li>
+<li>Transfer to Speicalist</li>
+</ol>
+<p class='mt-3'>
+<a aria-controls='TcollapseZero' aria-expanded='true' class='text-small' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseZero'>
+Back to message copy
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class='text-center mb-3 bold'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
         
     

@@ -181,9 +181,24 @@ Unable to Process the Card
 <div class='row justify-content-md-center'>
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
-<p class='mb-0'>
-I’m sorry there was a problem processing your transaction.  It’s possible there was an error when you input your credit card information.  I can put you back into our telephone system to enter your information again or you can use a new card if you prefer.
+<p>
+I’m sorry, your bank will not authorize your transaction. Would you like to use another payment option?
 </p>
+<a aria-controls='ccFailNewYes' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailNewYes'>
+Yes
+</a>
+<a aria-controls='ccFailNewNo' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailNewNo'>
+No
+</a>
+<a aria-controls='ccFailWhy' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailWhy'>
+Why?
+</a>
+</div>
+<div aria-multiselectable='true' id='ccFailNewOptions' role='tablist'>
+<div class='card'>
+<div class='collapse mb-3' id='ccFailNewYes' role='tabcard'>
+<div class='triangle-border top'>
+I will put you back into our telephone system to enter your new information
 </div>
 <div class='form-group row'>
 <label class='col-lg-3 col-form-label' for='frmCCNum'>
@@ -332,6 +347,9 @@ Diner's Club
 <a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed disabled' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
 Process Again
 </a>
+</p>
+</div>
+</div>
 <div class='collapse mb-3' id='ccFailNewNo' role='tabcard'>
 <div class='card'>
 <div class='triangle-border top'>
@@ -373,7 +391,7 @@ To protect your privacy, your bank doesn’t share that information with us. You
 </div>
 </div>
 </div>
-</p>
+</div>
 </div>
 </div>
 </div>
