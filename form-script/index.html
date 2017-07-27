@@ -139,7 +139,8 @@
         </div>
     </div>
 </nav>-->
-        <section class='newbieform5 card-noborder' id='services'>
+        <div id='zipwireFrame'></div>
+<section class='newbieform5 card-noborder' id='services'>
 <div class='container-fluid'>
 <div class='row'>
 <div class='col-lg-12 text-center'>
@@ -1745,6 +1746,94 @@ View
 </div>
 </div>
 </aside>
+<div aria-hidden='true' aria-labelledby='fraudModal' class='modal fade' id='fraudModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='exampleModalLabel'></h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<i aria-hidden='true' class='fa fa-times'></i>
+</button>
+</div>
+<div class='modal-body'>
+<div class='text-center mb-2'>
+<div aria-hidden='true' class='fa fa-exclamation-triangle fa-4x red'></div>
+<!-- <div class="fa fa-user-circle-o fa-4x red" aria-hidden="true"></div> -->
+</div>
+<h5 class='text-center red bold mb-2'>
+<!-- Duplicate Account -->
+Please transfer the call
+<br>to
+</h5>
+<!--
+<h3 class="text-center mb-3 bold">
+</h3>
+-->
+<!-- /%hr -->
+<div class='row justify-content-md-center'>
+<div class='col'>
+<div aria-multiselectable='true' class='accordion-unstyled' id='accordionTranscripts' role='tablist'>
+<div class='card'>
+<!--
+<div class="card-header" id="headingOne" role="tab">
+<a class="black" aria-controls="TcollapseZero" aria-expanded="true" data-parent="#accordionTranscripts" data-toggle="collapse" href="#TcollapseZero">
+</a>
+</div>
+-->
+<div aria-labelledby='TheadingZero' class='collapse show' id='TcollapseZero' role='tabpanel'>
+<div class='card-block text-center'>
+<!--
+<h4 class="text-center mb-3 mt-4 bold">
+</h4>
+-->
+<h5 class='mb-2 bold'>
+1. Copy Message for Specialist:
+</h5>
+<input type='text'>#clipboardText
+<a class='btn btn-green btn-fixed mt-3'></a>[ngxClipboard]="clipboardText"
+</div>
+</div>
+</div>
+</div>
+<div class='card'>
+<!--
+<div class="card-header" id="TheadingOne" role="tab">
+<a aria-controls="TcollapseOne" aria-expanded="true" data-parent="#accordionTranscripts" data-toggle="collapse" href="#TcollapseOne">
+<h5 class="mb-0">
+Customer Information
+</h5>
+</a>
+</div>
+-->
+<div aria-labelledby='TheadingOne' class='collapse' id='TcollapseOne' role='tabpanel'>
+<div class='card-block'>
+<p class='green bold'>
+<i aria-hidden='true' class='fa fa-check-circle fa-2x green'></i>
+Message for Specialist has been copied
+</p>
+<ol start='2'>
+<li>Go to your browser tab that holds the Zipwire page.</li>
+<li>In the left column, choose &#x2018;Directory&#x2019; tab, then &#x2018;call center&#x2019; dropdown.</li>
+<li>Double click on an avaliable Agent (they have a green icon).</li>
+<li>Right click  paste the message into Specialist chat box  send.</li>
+<li>Transfer to Speicalist</li>
+</ol>
+<img class='img-fluid' src='/images/how-to-ivr-transfer-recording-test.gif'>
+<p class='mt-3'>
+<a aria-controls='TcollapseZero' aria-expanded='true' class='text-small' data-parent='#accordionTranscripts' data-toggle='collapse' href='#TcollapseZero'>
+Back to message copy
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class='text-center mb-3 bold'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!-- Modal -->
 <div aria-hidden='true' aria-labelledby='fraudModal' class='modal fade' id='fraudModal' role='dialog' tabindex='-1'>
 <div class='modal-dialog' role='document'>
@@ -1805,8 +1894,8 @@ Transfer
 </div>
 </div>
 </div>
-<!-- Modal -->
-<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade' id='myModal' role='dialog' tabindex='-1'>
+<!-- Modal2 -->
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade' id='myModal2' role='dialog' tabindex='-1'>
 <div class='modal-dialog' role='document'>
 <div class='modal-content'>
 <div class='suspended' data-th='Status'>
