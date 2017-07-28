@@ -63,25 +63,25 @@ prototype: 6
                   .form-group.row
                     %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
                     .col-lg-7
-                      %input#frmCCNum.form-control{:placeholder => "*******************", :readonly => "readonly", :type => "text"}
+                      %input#frmCCNum.form-control{:placeholder => "*************8909", :readonly => "readonly", :type => "text"}
                       %ul.list-unstyled.mb-0.mt-2
-                        %li.creditcard-visa.mb-0
+                        %li.creditcard-visa.mb-0.no-cc-version
                           %span.sr-only
                             Visa
-                        %li.creditcard-mastercard.mb-0
+                        %li.creditcard-mastercard.mb-0.no-cc-version
                           %span.sr-only
                             MasterCard
                         %li.creditcard-discover.mb-0
                           %span.sr-only
                             Discover
-                        %li.creditcard-amex.mb-0
+                        %li.creditcard-amex.mb-0.no-cc-version
                           %span.sr-only
                             American Express
-                        %li.creditcard-dinersclub.mb-0
+                        %li.creditcard-dinersclub.mb-0.no-cc-version
                           %span.sr-only
                             Diner's Club
                   .form-group.row
-                    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Expiration
                     .col-lg-7
                       .row
                         .col.pr-0
@@ -126,7 +126,7 @@ prototype: 6
                             Diner's Club
 
                   .form-group.row
-                    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+                    %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Expiration
                     .col-lg-7
                       .row
                         .col.pr-0

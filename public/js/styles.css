@@ -10158,6 +10158,9 @@ div.panel {
 .with-inset-creditcard .form-control {
   padding: 0.5rem 0.75rem 0.5rem 3rem; }
 
+.no-cc-version {
+  opacity: .2; }
+
 .creditcard-cvv {
   background-position: 89.53488% 88%; }
 
