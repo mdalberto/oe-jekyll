@@ -1,7 +1,7 @@
 --- 
 layout: default 
-title: CC Fail
-permalink: /cc-fail-2/ 
+title: CC Fail 4
+permalink: /cc-fail-4/ 
 prototype: 6
 ---
 
@@ -39,18 +39,21 @@ prototype: 6
               .col-12.col-md-6.col-lg-6  
                 .triangle-border.left
                   %p
-                    I’m sorry, your bank will not authorize your transaction. Would you like to use another payment option?
-                  %a.btn.btn-green{"aria-controls" => "ccFailNewYes", "aria-expanded" => "false", "data-parent" => "#ccFailNewOptions", "data-toggle" => "collapse", :href => "#ccFailNewYes"}
-                    Yes
-                  %a.btn.btn-green{"aria-controls" => "ccFailNewNo", "aria-expanded" => "false", "data-parent" => "#ccFailNewOptions", "data-toggle" => "collapse", :href => "#ccFailNewNo"}
-                    No
+                    I’m sorry there was a problem processing your transaction.  It’s possible there was an error when you input your credit card information. 
+                    I can put you back into our telephone system to enter your information again or you can use a new card if you prefer.
+                  %a.btn.btn-green{"aria-controls" => "ccFailNewCard", "aria-expanded" => "false", "data-parent" => "#ccFailNewOptions", "data-toggle" => "collapse", :href => "#ccFailNewCard"}
+                    New Card
+                  %a.btn.btn-green{"aria-controls" => "ccFrailTry8089", "aria-expanded" => "false", "data-parent" => "#ccFailNewOptions", "data-toggle" => "collapse", :href => "#ccFrailTry8089"}
+                    Retry Card 8089
                   %a.btn.btn-green{"aria-controls" => "ccFailWhy", "aria-expanded" => "false", "data-parent" => "#ccFailNewOptions", "data-toggle" => "collapse", :href => "#ccFailWhy"}
                     Why did the card fail?
 
-
+                
                 #ccFailNewOptions{"aria-multiselectable" => "true", :role => "tablist"}
                   .card
-                    #ccFailNewYes.collapse.mb-3{:role => "tabcard"}
+
+                    -# Answered New Card
+                    #ccFailNewCard.collapse.mb-3{:role => "tabcard"}
 
                       .triangle-border.top                    
                         I will put you back into our telephone system to enter your new information
@@ -162,35 +165,125 @@ prototype: 6
 
 
 
-                    -# Answed NO: End the call 
-                    #ccFailNewNo.collapse.mb-3{:role => "tabcard"}
-                      .card
-                        .triangle-border.top.over85                    
-                          %p.mb-0
-                            I’m not able to complete your new account. All of your information has been saved on the service.  When you call back with a different payment option, it will be easy to pick up where we left off.  You can purchase a gift card or a prepaid credit card and call us back.  
+                    -# Answed Retry (same as new except only have to enter Security Field)
+                    #ccFrailTry8089.collapse.mb-3{:role => "tabcard"}
 
-                        -# Asks How to purchase a card
-                        %a#howToGiftCard.transcript-directions{"aria-controls" => "collhowToGiftCard", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collhowToGiftCard"}
-                          .media
-                            %i.fa.fa-exclamation-triangle.green.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
-                            .media-body
-                              If the customer asks how to purchase a card the agent responds <u class="blue">click here</u>
+                      .triangle-border.top.over260                   
+                        I will put you back into our telephone system to enter your new information
+                     
+                        -# Only Security Field - new card stuff here
+                      .form-group.row
+                        %label.col-lg-3.col-form-label{:for => "frmCCNum"}
+                          Capture CC
 
-                        #collhowToGiftCard.collapse.mt-3
-                          .triangle-border.top
-                            %button.close{ :type=> "button", :aria-label => "Close", "aria-controls" => "collhowToGiftCard", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collhowToGiftCard"}
-                              %span{ :aria-hidden =>"true"}
-                                x
-                            %p.mb-0
-                              It’s actually pretty easy.  You can purchase one at a local store such as a pharmacy, grocery store, or convenience store.
+                        .col-lg-8
+                          %p
+                            %i.fa.fa-exclamation-triangle.green{"aria-hidden" => "true"} 
+                            %strong
+                              Press the 'Capture Via IVR' button 
+                            IVR System will only ask for Security Code.           
+                               
+                          .input-group
+                            %a#capture10-btn.btn.btn-green.mr-4{:href => "/"} Capture Via IVR
+                            %a#capture11-btn.btn.btn-green{:href => "/"} Manually Enter
+                      
+                        / credit card
+                      #capture10-target{:style => "display:none"}
 
-                        %a.btn.btn-green.mt-4.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
-                          Close the Call
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
+                          .col-lg-7
+                            %input#frmCCNum.form-control{:placeholder => "************8787", :readonly => "readonly", :type => "text"}
+                            %ul.list-unstyled.mb-0.mt-2
+                              %li.creditcard-visa.mb-0.no-cc-version
+                                %span.sr-only
+                                  Visa
+                              %li.creditcard-mastercard.mb-0.no-cc-version
+                                %span.sr-only
+                                  MasterCard
+                              %li.creditcard-discover.mb-0.no-cc-version
+                                %span.sr-only
+                                  Discover
+                              %li.creditcard-amex.mb-0
+                                %span.sr-only
+                                  American Express
+                              %li.creditcard-dinersclub.mb-0.no-cc-version
+                                %span.sr-only
+                                  Diner's Club
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Expiration
+                          .col-lg-7
+                            .row
+                              .col.pr-0
+                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+
+                              .col
+                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
+                          .col-6.col-sm-7.col-md-6.col-lg-3
+                            .with-inset-creditcard
+                              %input#frmCCCVC.form-control{:placeholder => "****", :readonly => "readonly", :type => "text", :name => "cvc" }
+                              %span.creditcard-cvv{"aria-hidden" => "true"}
+                        %p.mt-4
+                          %a.btn.btn-green.btn-fixed{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                            Retry
+                        
+
+                      
+                      / credit card
+                      #capture11-target{:style => 'display:none' }
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "cc-numb2"} CC Number
+                          .col-lg-7
+                            %input#frmCCNum.form-control{:placeholder => "************8787", :readonly => "readonly", :type => "text"}
+                            %ul.list-unstyled.mb-0.mt-2
+                              %li.creditcard-visa.mb-0.no-cc-version
+                                %span.sr-only
+                                  Visa
+                              %li.creditcard-mastercard.mb-0.no-cc-version
+                                %span.sr-only
+                                  MasterCard
+                              %li.creditcard-discover.mb-0.no-cc-version
+                                %span.sr-only
+                                  Discover
+                              %li.creditcard-amex.mb-0
+                                %span.sr-only
+                                  American Express
+                              %li.creditcard-dinersclub.mb-0.no-cc-version
+                                %span.sr-only
+                                  Diner's Club
+
+                        .form-group.row
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCExp"} Experation
+                          .col-lg-7
+                            .row
+                              .col.pr-0
+                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+
+                              .col
+                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+                        .form-group.row
+                          %p.col-12.mb-3
+                            %i.fa.fa-exclamation-triangle.green{"aria-hidden" => "true"} 
+                            Only Security Code is needed for a card process retry.           
+
+
+                          %label.col-xs-12.col-md-3.col-form-label{:for => "security2"} Security Code
+                          .col-6.col-sm-7.col-md-6.col-lg-3
+                            .with-inset-creditcard
+                              %input#security2.form-control{:type => "text"}
+                              %span.creditcard-cvv{"aria-hidden" => "true"}
+                        %p.mt-4
+                          %a.btn.btn-green.btn-fixed.disabled{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
+                            Retry
+
 
                     -# asks why section
                     #ccFailWhy.collapse.mb-3{:role => "tabcard"}
                       .card
-                        .triangle-border.top.over260
+                        .triangle-border.top.over350
                           %p.mb-0
                             To protect your privacy, your bank doesn’t share that information with us. You will need to contact your bank for more information.
 

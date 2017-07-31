@@ -9883,8 +9883,8 @@ a.btn-blue:focus, a.btn-blue:hover {
     cursor: pointer; }
 
 .card {
-  margin-left: -16px;
-  margin-right: -16px; }
+  margin-left: 0px;
+  margin-right: 0px; }
   @media (min-width: 768px) {
     .card {
       margin-left: 0px;
@@ -10090,7 +10090,7 @@ div.panel {
   top: -20px;
   bottom: auto;
   left: auto;
-  left: 40px;
+  left: 28px;
   border-width: 0 20px 20px; }
 
 .triangle-border.left:before {
@@ -10099,6 +10099,15 @@ div.panel {
   left: -30px;
   border-width: 15px 30px 15px 0;
   border-color: transparent #9dd02a; }
+
+.triangle-border.top.over85:before {
+  left: 85px; }
+
+.triangle-border.top.over350:before {
+  left: 350px; }
+
+.triangle-border.top.over260:before {
+  left: 180px; }
 
 .triangle-border.bottom:before {
   top: auto;

@@ -70,7 +70,7 @@ $script-color-border: $green-bright;
     top: -20px;
     bottom: auto;
     left: auto;
-    left: 40px;
+    left: 28px;
     border-width: 0 20px 20px;
 }
 .triangle-border.left:before {
@@ -80,6 +80,19 @@ $script-color-border: $green-bright;
     border-width: 15px 30px 15px 0;
     border-color: transparent $script-color-border;
 }
+
+.triangle-border.top.over85:before {
+    left: 85px;
+}
+
+.triangle-border.top.over350:before {
+    left: 350px;
+}
+
+.triangle-border.top.over260:before {
+    left: 180px;
+}
+
 
 .triangle-border.bottom:before {
     top: auto;
