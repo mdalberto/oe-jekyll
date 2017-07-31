@@ -117,7 +117,18 @@ $('#capture4').on('click', function(){
     return false;
 });
 
+$('#capture10-btn').on('click', function(){
+    $('#capture11-target').hide();
+    $('#capture10-target').show('slow');
+    return false;
+});
 
+$('#capture11-btn').on('click', function(){
+
+    $('#capture10-target').hide();
+    $('#capture11-target').show('slow');
+    return false;
+});
 
 $('#btn-matches').on('click', function(){
     $('.footer2').css('bottom', '-290px');
