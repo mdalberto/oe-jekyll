@@ -130,6 +130,23 @@ $('#capture11-btn').on('click', function(){
     return false;
 });
 
+//////
+$('#capture12-btn').on('click', function(){
+    $('#capture13-target').hide();
+    $('#capture12-target').show('slow');
+    return false;
+});
+
+$('#capture13-btn').on('click', function(){
+
+    $('#capture12-target').hide();
+    $('#capture13-target').show('slow');
+    return false;
+});
+
+
+
+
 $('#btn-matches').on('click', function(){
     $('.footer2').css('bottom', '-290px');
     $(this).hide();
