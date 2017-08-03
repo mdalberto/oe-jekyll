@@ -1,7 +1,7 @@
 --- 
 layout: default 
 title: CC Fail 3
-permalink: /cc-fail-3/ 
+permalink: /cc-fail-3rd-attempt/ 
 prototype: 6
 ---
 
@@ -58,7 +58,7 @@ prototype: 6
                       It’s actually pretty easy.  You can purchase one at a local store such as a pharmacy, grocery store, or convenience store.
 
                 %a.btn.btn-green.mt-4.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
-                  Close the Call
+                  Close This Script                        
 
 
 
@@ -70,37 +70,12 @@ prototype: 6
         %h5#exampleModalLabel.modal-title
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %i.fa.fa-times{"aria-hidden" => "true"}
-      .modal-body
-        .text-center.mb-2
-          .fa.fa-exclamation-triangle.fa-4x.red{"aria-hidden" => "true"}
-        %h5.text-center.red.bold.mb-2
-          Please transfer the call
-
-        .row.justify-content-md-center
-          .col
-            #accordionTranscripts.accordion-unstyled{"aria-multiselectable" => "true", :role => "tablist"}
-              .card
-                #TcollapseZero.collapse.show{"aria-labelledby" => "TheadingZero", :role => "tabpanel"}
-                  .card-block.text-center
-                    %h5.mb-2.bold
-                      1. Copy Message for Specialist:
-                    %input{:type => "text"}
-                    %a.btn.btn-green.btn-fixed.mt-3
-                      Copy
-            .card
-              #TcollapseOne.collapse{"aria-labelledby" => "TheadingOne", :role => "tabpanel"}
-                .card-block
-                  %p.green.bold
-                    %i.fa.fa-check-circle.fa-2x.green{"aria-hidden" => "true"}
-                    Message for Specialist has been copied
-                  %ol{:start => "2"}
-                    %li Go to your browser tab that holds the Zipwire page.
-                    %li In the left column, choose &#x2018;Directory&#x2019; tab, then &#x2018;call center&#x2019; dropdown.
-                    %li Double click on an avaliable Agent (they have a green icon).
-                    %li Right click  paste the message into Specialist chat box  send.
-                    %li Transfer to Speicalist
-                  -#%img.img-fluid{:src => "/images/how-to-ivr-transfer-recording-test.gif"}/
-                  %p.mt-3
-                    %a.text-small{"aria-controls" => "TcollapseZero", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseZero"}
-                      Back to message copy
-          .text-center.mb-3.bold
+      .modal-body.text-center
+        .mb-2
+          .fa.fa-exclamation-triangle.fa-4x.orange{"aria-hidden" => "true"}
+        %h5.text-center.orange.bold.mb-2
+          Close This Script
+        %h5.mb-2.bold
+          Don't forget to disposition in Zipwire
+        %a.btn.btn-green.btn-fixed.mt-3.mb-4{:href => "{{ site.baseurl }}/start-1/" }
+          End

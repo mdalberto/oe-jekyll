@@ -182,22 +182,38 @@ Unable to Process the Card
 <div class='col-12 col-md-6 col-lg-6'>
 <div class='triangle-border left'>
 <p>
-I’m sorry, your bank will not authorize your transaction. Would you like to use another payment option?
+I’m sorry there was a problem processing your transaction.  It’s possible there was an error when you input your credit card information.
+Is you card's expiration date <strong>Jan 2019</strong>?
 </p>
-<a aria-controls='ccFailNewYes' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailNewYes'>
+<p class='mb-0'>
+<a aria-controls='ccYesToDate' aria-expanded='false' class='btn btn-green' data-parent='#ccDateQuestion' data-toggle='collapse' href='#ccYesToDate'>
 Yes
 </a>
-<a aria-controls='ccFailNewNo' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailNewNo'>
+<a aria-controls='ccNoToDate' aria-expanded='false' class='btn btn-green' data-parent='#ccDateQuestion' data-toggle='collapse' href='#ccNoToDate'>
 No
 </a>
-<a aria-controls='ccFailWhy' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailWhy'>
-Why did the card fail?
+</p>
+</div>
+<div aria-multiselectable='true' id='ccDateQuestion' role='tablist'>
+<div class='card'>
+<div class='collapse' id='ccYesToDate' role='tabcard'>
+<div class='triangle-border top'>
+<p>
+Ok would you like to try to process this card again or enter a new card?
+</p>
+<p class='mb-0'>
+<a aria-controls='ccFrailTry8089' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFrailTry8089'>
+This Card
 </a>
+<a aria-controls='ccFailNewCard' aria-expanded='false' class='btn btn-green' data-parent='#ccFailNewOptions' data-toggle='collapse' href='#ccFailNewCard'>
+New Card
+</a>
+</p>
 </div>
 <div aria-multiselectable='true' id='ccFailNewOptions' role='tablist'>
 <div class='card'>
-<div class='collapse mb-3' id='ccFailNewYes' role='tabcard'>
-<div class='triangle-border top'>
+<div class='collapse mb-3' id='ccFailNewCard' role='tabcard'>
+<div class='triangle-border top over260'>
 I will put you back into our telephone system to enter your new information
 </div>
 <div class='form-group row'>
@@ -218,13 +234,13 @@ below first so the Credit Card Automated IVR System can handle the entry.
 <a class='btn btn-green' href='/' id='capture4'>Manually Enter</a>
 </div>
 </div>
-<!-- credit card -->
+<!-- New card credit card -->
 </div>
 <div id='capturedCC' style='display:none'>
 <div class='form-group row'>
 <label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
 <div class='col-lg-7'>
-<input class='form-control' id='frmCCNum' placeholder='************8787' readonly='readonly' type='text'>
+<input class='form-control' id='frmCCNum' placeholder='Card ending in 8787' readonly='readonly' type='text'>
 <ul class='list-unstyled mb-0 mt-2'>
 <li class='creditcard-visa mb-0 no-cc-version'>
 <span class='sr-only'>
@@ -259,10 +275,10 @@ Diner's Club
 <div class='col-lg-7'>
 <div class='row'>
 <div class='col pr-0'>
-<input class='form-control' placeholder='****' readonly='readonly' type='text'>
+<input class='form-control' placeholder='Jan' readonly='readonly' type='text'>
 </div>
 <div class='col'>
-<input class='form-control' placeholder='****' readonly='readonly' type='text'>
+<input class='form-control' placeholder='2017' readonly='readonly' type='text'>
 </div>
 </div>
 </div>
@@ -278,11 +294,11 @@ Diner's Club
 </div>
 <p class='mt-4'>
 <a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
-Process Again
+Process
 </a>
 </p>
 </div>
-<!-- credit card -->
+<!-- New credit card -->
 <div id='captureCC' style='display:none'>
 <div class='form-group row'>
 <label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
@@ -345,50 +361,343 @@ Diner's Club
 </div>
 <p class='mt-4'>
 <a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed disabled' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
-Process Again
+Process
 </a>
 </p>
 </div>
 </div>
-<div class='collapse mb-3' id='ccFailNewNo' role='tabcard'>
-<div class='card'>
+<div class='collapse mb-3' id='ccFrailTry8089' role='tabcard'>
+<div class='triangle-border top'>
+I will put you back into our telephone system to enter just your card security code again.
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmCCNum'>
+Capture CC
+</label>
+<div class='col-lg-8'>
+<p>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+<strong>
+Press the 'Capture Via IVR' button
+</strong>
+<br>
+(IVR System will ask the customer for their card's 'Security Code' only)
+</p>
+<div class='input-group'>
+<a class='btn btn-green mr-4' href='/' id='capture10-btn'>Capture Via IVR</a>
+<a class='btn btn-green' href='/' id='capture11-btn'>Manually Enter</a>
+</div>
+</div>
+<!-- credit card -->
+</div>
+<div id='capture10-target' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmCCNum' placeholder='Card ending in 8787' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
+<li class='creditcard-visa mb-0 no-cc-version'>
+<span class='sr-only'>
+Visa
+</span>
+</li>
+<li class='creditcard-mastercard mb-0 no-cc-version'>
+<span class='sr-only'>
+MasterCard
+</span>
+</li>
+<li class='creditcard-discover mb-0 no-cc-version'>
+<span class='sr-only'>
+Discover
+</span>
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'>
+American Express
+</span>
+</li>
+<li class='creditcard-dinersclub mb-0 no-cc-version'>
+<span class='sr-only'>
+Diner's Club
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Expiration</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<input class='form-control' placeholder='Jan' readonly='readonly' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='2019' readonly='readonly' type='text'>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process
+</a>
+</p>
+</div>
+<!-- credit card -->
+<div id='capture11-target' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmCCNum' placeholder='Card ending in 8787' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
+<li class='creditcard-visa mb-0 no-cc-version'>
+<span class='sr-only'>
+Visa
+</span>
+</li>
+<li class='creditcard-mastercard mb-0 no-cc-version'>
+<span class='sr-only'>
+MasterCard
+</span>
+</li>
+<li class='creditcard-discover mb-0 no-cc-version'>
+<span class='sr-only'>
+Discover
+</span>
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'>
+American Express
+</span>
+</li>
+<li class='creditcard-dinersclub mb-0 no-cc-version'>
+<span class='sr-only'>
+Diner's Club
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<input class='form-control' placeholder='Jan' readonly='readonly' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='2019' readonly='readonly' type='text'>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<p class='col-12 mb-3'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+Only Security Code is needed below.
+</p>
+<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='security2' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed disabled' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse' id='ccNoToDate' role='tabcard'>
 <div class='triangle-border top over85'>
 <p class='mb-0'>
-I’m not able to complete your new account. All of your information has been saved on the service.  When you call back with a different payment option, it will be easy to pick up where we left off.  You can purchase a gift card or a prepaid credit card and call us back.
+Ok what is the correct experation date?
 </p>
 </div>
-<a aria-controls='collhowToGiftCard' aria-expanded='false' class='transcript-directions' data-toggle='collapse' href='#collhowToGiftCard' id='howToGiftCard'>
-<div class='media'>
-<i aria-hidden='true' class='fa fa-exclamation-triangle green d-flex mr-1 mt-1'></i>
-<div class='media-body'>
-If the customer asks how to purchase a card the agent responds <u class="blue">click here</u>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Expiration</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<select class='form-control'>
+<!-- /%option --- -->
+<option>Jan</option>
+</select>
+</div>
+<div class='col'>
+<select class='form-control'>
+<option>1980</option>
+</select>
 </div>
 </div>
-</a>
-<div class='collapse mt-3' id='collhowToGiftCard'>
-<div class='triangle-border top'>
-<button aria-controls='collhowToGiftCard' aria-expanded='false' aria='Close' class='close' data-toggle='collapse' href='#collhowToGiftCard' type='button'>
-<span aria='true'>
-x
+</div>
+</div>
+<div class='triangle-border left'>
+I will put you back into our telephone system to enter just your card security code again.
+</div>
+<div class='form-group row'>
+<label class='col-lg-3 col-form-label' for='frmCCNum'>
+Capture CC
+</label>
+<div class='col-lg-8'>
+<p>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+<strong>
+Press the 'Capture Via IVR' button
+</strong>
+<br>
+(IVR System will ask the customer for their card's 'Security Code' only)
+</p>
+<div class='input-group'>
+<a class='btn btn-green mr-4' href='/' id='capture12-btn'>Capture Via IVR</a>
+<a class='btn btn-green' href='/' id='capture13-btn'>Manually Enter</a>
+</div>
+</div>
+<!-- credit card -->
+</div>
+<div id='capture12-target' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCNum'>CC Number</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmCCNum' placeholder='Card ending in 8787' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
+<li class='creditcard-visa mb-0 no-cc-version'>
+<span class='sr-only'>
+Visa
 </span>
-</button>
-<p class='mb-0'>
-It’s actually pretty easy.  You can purchase one at a local store such as a pharmacy, grocery store, or convenience store.
-</p>
+</li>
+<li class='creditcard-mastercard mb-0 no-cc-version'>
+<span class='sr-only'>
+MasterCard
+</span>
+</li>
+<li class='creditcard-discover mb-0 no-cc-version'>
+<span class='sr-only'>
+Discover
+</span>
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'>
+American Express
+</span>
+</li>
+<li class='creditcard-dinersclub mb-0 no-cc-version'>
+<span class='sr-only'>
+Diner's Club
+</span>
+</li>
+</ul>
 </div>
 </div>
-<a class='btn btn-green mt-4 btn-fixed' data-target='#endModal' data-toggle='modal'>
-Close the Call
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Expiration</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<input class='form-control' placeholder='Jan' readonly='readonly' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='2019' readonly='readonly' type='text'>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCCVC'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='frmCCCVC' name='cvc' placeholder='****' readonly='readonly' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process
 </a>
-</div>
-</div>
-<div class='collapse mb-3' id='ccFailWhy' role='tabcard'>
-<div class='card'>
-<div class='triangle-border top over260'>
-<p class='mb-0'>
-To protect your privacy, your bank doesn’t share that information with us. You will need to contact your bank for more information.
 </p>
 </div>
+<!-- credit card -->
+<div id='capture13-target' style='display:none'>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='cc-numb2'>CC Number</label>
+<div class='col-lg-7'>
+<input class='form-control' id='frmCCNum' placeholder='Card ending in 8787' readonly='readonly' type='text'>
+<ul class='list-unstyled mb-0 mt-2'>
+<li class='creditcard-visa mb-0 no-cc-version'>
+<span class='sr-only'>
+Visa
+</span>
+</li>
+<li class='creditcard-mastercard mb-0 no-cc-version'>
+<span class='sr-only'>
+MasterCard
+</span>
+</li>
+<li class='creditcard-discover mb-0 no-cc-version'>
+<span class='sr-only'>
+Discover
+</span>
+</li>
+<li class='creditcard-amex mb-0'>
+<span class='sr-only'>
+American Express
+</span>
+</li>
+<li class='creditcard-dinersclub mb-0 no-cc-version'>
+<span class='sr-only'>
+Diner's Club
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-xs-12 col-md-3 col-form-label' for='frmCCExp'>Experation</label>
+<div class='col-lg-7'>
+<div class='row'>
+<div class='col pr-0'>
+<input class='form-control' placeholder='Jan' readonly='readonly' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='2019' readonly='readonly' type='text'>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<p class='col-12 mb-3'>
+<i aria-hidden='true' class='fa fa-exclamation-triangle green'></i>
+Only Security Code is needed below.
+</p>
+<label class='col-xs-12 col-md-3 col-form-label' for='security2'>Security Code</label>
+<div class='col-6 col-sm-7 col-md-6 col-lg-3'>
+<div class='with-inset-creditcard'>
+<input class='form-control' id='security2' type='text'>
+<span aria-hidden='true' class='creditcard-cvv'></span>
+</div>
+</div>
+</div>
+<p class='mt-4'>
+<a aria-controls='coll2-2' aria-expanded='false' class='btn btn-green btn-fixed disabled' data-parent='#accordionFailure' data-toggle='collapse' href='#collFailure-2'>
+Process
+</a>
+</p>
 </div>
 </div>
 </div>
@@ -412,10 +721,10 @@ To protect your privacy, your bank doesn’t share that information with us. You
 </div>
 <div class='modal-body'>
 <div class='text-center mb-2'>
-<div aria-hidden='true' class='fa fa-exclamation-triangle fa-4x red'></div>
+<div aria-hidden='true' class='fa fa-exclamation-triangle fa-4x orange'></div>
 </div>
 <h5 class='text-center red bold mb-2'>
-Please transfer the call
+Close This Script
 </h5>
 <div class='row justify-content-md-center'>
 <div class='col'>

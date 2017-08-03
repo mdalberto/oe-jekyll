@@ -1,7 +1,7 @@
 --- 
 layout: default 
 title: CC Fail
-permalink: /cc-fail-2/ 
+permalink: /cc-fail-new-payment-only/ 
 prototype: 6
 ---
 
@@ -53,7 +53,7 @@ prototype: 6
                     #ccFailNewYes.collapse.mb-3{:role => "tabcard"}
 
                       .triangle-border.top                    
-                        I will put you back into our telephone system to enter your new information
+                        I will put you back into our telephone system to enter your new information.
                      
                         -# new card stuff here
                       .form-group.row
@@ -77,7 +77,7 @@ prototype: 6
                         .form-group.row
                           %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCNum"} CC Number
                           .col-lg-7
-                            %input#frmCCNum.form-control{:placeholder => "************8787", :readonly => "readonly", :type => "text"}
+                            %input#frmCCNum.form-control{:placeholder => "Card ending in 8787", :readonly => "readonly", :type => "text"}
                             %ul.list-unstyled.mb-0.mt-2
                               %li.creditcard-visa.mb-0.no-cc-version
                                 %span.sr-only
@@ -99,10 +99,10 @@ prototype: 6
                           .col-lg-7
                             .row
                               .col.pr-0
-                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+                                %input.form-control{:placeholder => "Mar", :readonly => "readonly", :type => "text"}
 
                               .col
-                                %input.form-control{:placeholder => "****", :readonly => "readonly", :type => "text"}
+                                %input.form-control{:placeholder => "2019", :readonly => "readonly", :type => "text"}
 
                         .form-group.row
                           %label.col-xs-12.col-md-3.col-form-label{:for => "frmCCCVC"} Security Code
@@ -157,7 +157,7 @@ prototype: 6
                               %span.creditcard-cvv{"aria-hidden" => "true"}
                         %p.mt-4
                           %a.btn.btn-green.btn-fixed.disabled{"aria-controls" => "coll2-2", "aria-expanded" => "false", "data-parent" => "#accordionFailure", "data-toggle" => "collapse", :href => "#collFailure-2"}
-                            Process Again
+                            Process
 
 
 
@@ -183,9 +183,10 @@ prototype: 6
                                 x
                             %p.mb-0
                               It’s actually pretty easy.  You can purchase one at a local store such as a pharmacy, grocery store, or convenience store.
-
+                        -# %a.btn.btn-green.mt-4.btn-fixed{:href => "{{ site.baseurl }}/start-1/" }
+                        -#   Close This Script
                         %a.btn.btn-green.mt-4.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
-                          Close the Call
+                          Close This Script                        
 
                     -# asks why section
                     #ccFailWhy.collapse.mb-3{:role => "tabcard"}
@@ -203,37 +204,13 @@ prototype: 6
         %h5#exampleModalLabel.modal-title
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %i.fa.fa-times{"aria-hidden" => "true"}
-      .modal-body
-        .text-center.mb-2
-          .fa.fa-exclamation-triangle.fa-4x.red{"aria-hidden" => "true"}
-        %h5.text-center.red.bold.mb-2
-          Please transfer the call
+      .modal-body.text-center
+        .mb-2
+          .fa.fa-exclamation-triangle.fa-4x.orange{"aria-hidden" => "true"}
+        %h5.text-center.orange.bold.mb-2
+          Close This Script
+        %h5.mb-2.bold
+          Don't forget to disposition in Zipwire
+        %a.btn.btn-green.btn-fixed.mt-3.mb-4{:href => "{{ site.baseurl }}/start-1/" }
+          End
 
-        .row.justify-content-md-center
-          .col
-            #accordionTranscripts.accordion-unstyled{"aria-multiselectable" => "true", :role => "tablist"}
-              .card
-                #TcollapseZero.collapse.show{"aria-labelledby" => "TheadingZero", :role => "tabpanel"}
-                  .card-block.text-center
-                    %h5.mb-2.bold
-                      1. Copy Message for Specialist:
-                    %input{:type => "text"}
-                    %a.btn.btn-green.btn-fixed.mt-3
-                      Copy
-            .card
-              #TcollapseOne.collapse{"aria-labelledby" => "TheadingOne", :role => "tabpanel"}
-                .card-block
-                  %p.green.bold
-                    %i.fa.fa-check-circle.fa-2x.green{"aria-hidden" => "true"}
-                    Message for Specialist has been copied
-                  %ol{:start => "2"}
-                    %li Go to your browser tab that holds the Zipwire page.
-                    %li In the left column, choose &#x2018;Directory&#x2019; tab, then &#x2018;call center&#x2019; dropdown.
-                    %li Double click on an avaliable Agent (they have a green icon).
-                    %li Right click  paste the message into Specialist chat box  send.
-                    %li Transfer to Speicalist
-                  -#%img.img-fluid{:src => "/images/how-to-ivr-transfer-recording-test.gif"}/
-                  %p.mt-3
-                    %a.text-small{"aria-controls" => "TcollapseZero", "aria-expanded" => "true", "data-parent" => "#accordionTranscripts", "data-toggle" => "collapse", :href => "#TcollapseZero"}
-                      Back to message copy
-          .text-center.mb-3.bold
