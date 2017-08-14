@@ -17,6 +17,7 @@ permalink: /start-1/
           Simulate a call has come through
     .row.mt-4
       .col-md-6
+        %p.bold.mb-0 CC Fail screens
         %a{:href => "{{ site.baseurl }}/cc-fail-expiration" }
           CC Fail Expiration
         %br
@@ -25,3 +26,16 @@ permalink: /start-1/
         %br
         %a{:href => "{{ site.baseurl }}/cc-fail-3rd-attempt" }
           CC Fail 3rd Attempt
+        %br
+        %br
+        %p.bold.mb-0 Hard stop screens (transfer to specialist)
+        %a{:href => "{{ site.baseurl }}/transfer-existing" }
+          Transfer (existing Member)
+        %br
+        %a{:href => "{{ site.baseurl }}/transfer-fldob" }
+          Transfer (first, last, dob)
+
+        %br
+        %a{:href => "{{ site.baseurl }}/transfer-email" }
+          Transfer (email)
+          

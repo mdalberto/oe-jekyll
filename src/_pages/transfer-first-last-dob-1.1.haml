@@ -1,0 +1,82 @@
+--- 
+layout: default 
+title: Transfer existing
+permalink: /transfer-fldob/ 
+prototype: 6
+---
+
+-# 3rd attempt !!!! They need to close the call
+-# 3rd Transaction Decline – Regardless of Reason for Decline
+
+%section#services.newbieform5.card-noborder
+  .container-fluid
+    .row
+      .col-lg-12.text-center
+        %h1.mt-3 New Psychic Source Customer
+        %ul.ani-dnis-area.text-muted.list-inline.mb-0
+          %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "The new customer's phone number, the number of the phone they using for this call."}
+            ANI: 
+            %strong
+              267-210-6381 
+            %i.tip.fa.fa-question-circle
+          %li.list-inline-item{"aria-hidden" => "true", "data-toggle" => "tooltip", "data-placement" => "bottom", :title => "Psychic Source service line phone number, our number of which they have called."}
+            DNIS: 
+            %strong
+              1-800-965-3049
+            %i.tip.fa.fa-question-circle
+    .row.justify-content-md-center
+      .col-12.col-md-6.col-lg-6.mt-3        
+        .media
+          %i.fa.fa-exclamation-triangle.red.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
+          .media-body
+            %h5.red.bold
+              Duplicate account: First Name, Last Name + DOB
+
+    .row.justify-content-md-center
+      .col-12.col-md-12.col-lg-12
+        .row.justify-content-md-center
+
+          .card-block
+            .row.justify-content-md-center
+              .col-12.col-md-6.col-lg-6  
+                .triangle-border.left
+                  %p.mb-0
+                    Can I put you on hold for a moment?  
+
+                .transcript-directions
+                  %ul.mb-3
+                    %li
+                      First Name:
+                      %strong
+                        Matt
+                    %li
+                      Last Name:
+                      %strong
+                        Dalberto
+                    %li
+                      DOB: 
+                      %strong
+                        03/24/1975
+
+                %a.btn.btn-green.mt-4.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
+                  Close This Script                        
+
+
+
+-# End the call modal popup code
+#endModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "endModal", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %i.fa.fa-times{"aria-hidden" => "true"}
+      .modal-body.text-center
+        .mb-2
+          .fa.fa-exclamation-triangle.fa-4x.orange{"aria-hidden" => "true"}
+        %h5.text-center.orange.bold.mb-2
+          Close This Script
+        %h5.mb-2.bold
+          Don't forget to disposition in Zipwire
+        %a.btn.btn-green.btn-fixed.mt-3.mb-4{:href => "{{ site.baseurl }}/start-1/" }
+          End
