@@ -1,12 +1,9 @@
 --- 
 layout: default 
-title: Transfer existing
-permalink: /transfer-fldob/ 
+title: Transfer first last dob
+permalink: /transfer-under-age/ 
 prototype: 6
 ---
-
--# 3rd attempt !!!! They need to close the call
--# 3rd Transaction Decline – Regardless of Reason for Decline
 
 %section#services.newbieform5.card-noborder
   .container-fluid
@@ -30,7 +27,7 @@ prototype: 6
           %i.fa.fa-exclamation-triangle.red.d-flex.mr-1.mt-1{"aria-hidden" => "true"}
           .media-body
             %h5.red.bold
-              Duplicate account: First Name, Last Name + DOB
+              End The Call (Underage)
 
     .row.justify-content-md-center
       .col-12.col-md-12.col-lg-12
@@ -41,24 +38,14 @@ prototype: 6
               .col-12.col-md-6.col-lg-6  
                 .triangle-border.left
                   %p.mb-0
-                    Can I put you on hold for a moment?  
+                    Over 18
 
-                .transcript-directions
-                  %ul.mb-3
-                    %li
-                      First Name:
-                      %strong
-                        Matt
-                    %li
-                      Last Name:
-                      %strong
-                        Dalberto
-                    %li
-                      DOB: 
-                      %strong
-                        03/24/1975
+                -#.transcript-directions
 
-                %a.btn.btn-green.mt-4.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
+                -# %p.mt-4
+                -#   %i.fa.fa-exclamation-triangle.green.mr-1{"aria-hidden" => "true"} 
+                -#   Warm transfer to a relationship specialist
+                %a.btn.btn-green.mt-3.btn-fixed{ "data-toggle" => "modal", "data-target" => "#endModal" }
                   Close This Script                        
 
 
